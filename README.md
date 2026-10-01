@@ -67,7 +67,9 @@ LightGBM D tuvo la media rolling más alta dentro de estos diagnósticos. Añadi
 
 En el bootstrap pareado, los tres IC del delta medio incluyen cero. Los p-valores con ajuste Holm fueron 1,0 para las tres comparaciones (D–B, D–A y B–A); no hay evidencia de diferencias en la media rolling al nivel del 5%. La variación entre meses reportada en la tabla es descriptiva, no inferencial.
 
-Los tres modelos foundation completaron los tres folds: 9.900 filas de septiembre, 10.400 de octubre y 9.500 de noviembre por fold, 29.800 predicciones cada uno. Las ejecuciones remotas se hicieron en Colab con T4 después de que otros aceleradores no estuvieran disponibles; los artefactos, hashes y estados están bajo [`experiments/diagnostics/04_foundation/`](experiments/diagnostics/04_foundation/). Los modelos y versiones se fijaron en sus configuraciones y manifiestos.
+Los tres modelos foundation completaron los tres folds: 9.900 filas de septiembre, 10.400 de octubre y 9.500 de noviembre por fold, 29.800 predicciones cada uno. Las ejecuciones remotas se hicieron en Colab con T4 después de que otros aceleradores no estuvieran disponibles; los hashes y estados están bajo [`experiments/diagnostics/04_foundation/`](experiments/diagnostics/04_foundation/). Los modelos y versiones se fijaron en sus configuraciones y manifiestos.
+
+Los pesos y checkpoints, modelos serializados y cachés comprimidas de features permanecen en el workspace local y no se incluyen en el historial publicado. El repositorio conserva el código, los informes, las configuraciones, los manifiestos, las métricas y las predicciones tabulares. Para regenerar archivos locales se usan los comandos de ejecución descritos en el informe de diagnósticos.
 
 ## Estructura del repositorio
 
