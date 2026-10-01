@@ -1,0 +1,110 @@
+{
+  "coverage": [
+    {
+      "fold": 202609,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/predictions.csv",
+      "rows": 9900
+    },
+    {
+      "fold": 202610,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202610/predictions.csv",
+      "rows": 10400
+    },
+    {
+      "fold": 202611,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202611/predictions.csv",
+      "rows": 9500
+    },
+    {
+      "fold": 202609,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202609/predictions.csv",
+      "rows": 9900
+    },
+    {
+      "fold": 202610,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202610/predictions.csv",
+      "rows": 10400
+    },
+    {
+      "fold": 202611,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202611/predictions.csv",
+      "rows": 9500
+    },
+    {
+      "fold": 202609,
+      "path": "experiments/diagnostics/04_foundation/tabpfn35/202609/predictions.csv",
+      "rows": 9900
+    },
+    {
+      "fold": 202610,
+      "path": "experiments/diagnostics/04_foundation/tabpfn35/202610/predictions.csv",
+      "rows": 10400
+    },
+    {
+      "fold": 202611,
+      "path": "experiments/diagnostics/04_foundation/tabpfn35/202611/predictions.csv",
+      "rows": 9500
+    },
+    {
+      "counts": {
+        "202609": 9900,
+        "202610": 10400,
+        "202611": 9500
+      },
+      "path": "experiments/diagnostics/02_trajectory/rolling_predictions.csv",
+      "rows": 29800
+    },
+    {
+      "counts": {
+        "202609": 9900,
+        "202610": 10400,
+        "202611": 9500
+      },
+      "path": "experiments/diagnostics/04_foundation/tabfm/rolling_predictions.csv",
+      "rows": 29800
+    },
+    {
+      "counts": {
+        "202609": 9900,
+        "202610": 10400,
+        "202611": 9500
+      },
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/rolling_predictions.csv",
+      "rows": 29800
+    },
+    {
+      "counts": {
+        "202609": 9900,
+        "202610": 10400,
+        "202611": 9500
+      },
+      "path": "experiments/diagnostics/04_foundation/tabpfn35/rolling_predictions.csv",
+      "rows": 29800
+    },
+    {
+      "counts": {
+        "202609": 9900,
+        "202610": 10400,
+        "202611": 9500
+      },
+      "path": "experiments/diagnostics/03_survival/cox/rolling_predictions.csv",
+      "rows": 29800
+    },
+    {
+      "counts": {
+        "202609": 9900,
+        "202610": 10400,
+        "202611": 9500
+      },
+      "path": "experiments/diagnostics/03_survival/cloglog/rolling_predictions.csv",
+      "rows": 29800
+    }
+  ],
+  "errors": [],
+  "expected_prediction_counts": {
+    "202609": 9900,
+    "202610": 10400,
+    "202611": 9500
+  },
+  "verified": true
+}

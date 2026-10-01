@@ -1,0 +1,169 @@
+{
+  "code": [
+    {
+      "bytes": 4288,
+      "path": "src/datafest/data.py",
+      "sha256": "b8405669064c5c0148871995c4149931687a06330b5b0f50d640d962384da3d9"
+    },
+    {
+      "bytes": 12705,
+      "path": "src/datafest/diagnostics.py",
+      "sha256": "7c114f0a3c5cfcbb31f78e3c46750668bb6f79f10064506c1edbdaf592c977ad"
+    },
+    {
+      "bytes": 6147,
+      "path": "src/datafest/models.py",
+      "sha256": "2740e9e484db430ad689d8dcea44c0ed41ec89cb7e6e3b4005030f203c77e1c6"
+    },
+    {
+      "bytes": 10404,
+      "path": "src/datafest/foundation.py",
+      "sha256": "0b1436b31cbdc673ca14c13ecb65f0978eb1eae463d849fe2be569ffdab3c2a4"
+    },
+    {
+      "bytes": 32027,
+      "path": "src/datafest/pipeline.py",
+      "sha256": "ca48185371f37c4ba724c457eaae47116b7cd1b75e668a7e53a328c0e4bfe2bc"
+    },
+    {
+      "bytes": 4408,
+      "path": "src/datafest/lineage.py",
+      "sha256": "85b097fcd433ad75afaa4fdea5ea0f5d7a6dd1f78d38915a938961c7b3eee48a"
+    },
+    {
+      "bytes": 2534,
+      "path": "src/datafest/features.py",
+      "sha256": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7"
+    },
+    {
+      "bytes": 81,
+      "path": "src/datafest/__init__.py",
+      "sha256": "98fac39e5f097c0f26a46a3208b8afaaf17642e1e12f5c60882667f9714b5ec3"
+    },
+    {
+      "bytes": 3342,
+      "path": "src/datafest/cli.py",
+      "sha256": "d4eb9bde97f1f944dadd9a92829bf84a0cf83d15190aa059bd78b3e6fa6acdad"
+    },
+    {
+      "bytes": 17090,
+      "path": "src/datafest/ablation.py",
+      "sha256": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f"
+    },
+    {
+      "bytes": 2933,
+      "path": "src/datafest/splitting.py",
+      "sha256": "4ec81672179d14cd45e5b2cc521cd0f45e51a8b12edeb0187a80d21264487ca3"
+    },
+    {
+      "bytes": 2501,
+      "path": "src/datafest/metrics.py",
+      "sha256": "ecd1e9f5528c5384257e6f8ad7f989e35af90b8cb0eb7431f2ab2d707ba20714"
+    },
+    {
+      "bytes": 9178,
+      "path": "src/datafest/foundation35.py",
+      "sha256": "11872f9b42ed86c551403ada1c347842e7b18d1c242ed8aa68c21f543ad90f12"
+    },
+    {
+      "bytes": 8990,
+      "path": "src/datafest/survival.py",
+      "sha256": "81f8a667e34d9bbc425d3c4caa00ee5b7ecf63f2a39c34bf2fb3f64543865726"
+    }
+  ],
+  "environment": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "python": "3.12.3"
+  },
+  "features": [],
+  "inputs": [
+    {
+      "bytes": 1027318,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_predictions.csv",
+      "sha256": "d75e75d7ab93a721c1cd434156302c2de548f09cd034fde02bc73dfc9ff0c0c7"
+    },
+    {
+      "bytes": 1027362,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_predictions.csv",
+      "sha256": "37001508351f8107d75938dfbdfa13d02a81093423ebf6d69331d580f0da07c8"
+    },
+    {
+      "bytes": 1027791,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_predictions.csv",
+      "sha256": "b3748c22c7289c6ff90de800ebff891b38c4417edbdb0dcf5da8664db9cd91dc"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 299,
+      "path": "experiments/diagnostics/01_bootstrap/config.json",
+      "sha256": "7a6a1fe385a16c05a8ad7f5ddaba6e4e17bb63e57768f4a1d63dd49a94b3205e"
+    },
+    {
+      "bytes": 1001479,
+      "path": "experiments/diagnostics/01_bootstrap/predictions_LightGBM_D.csv",
+      "sha256": "c103cc407c41e7a0bc8b4f7bf99189b52b3c809cd3c26ca0b2e94b9c9bb318a9"
+    },
+    {
+      "bytes": 1353,
+      "path": "experiments/diagnostics/01_bootstrap/metrics.csv",
+      "sha256": "5a1d0ab4c3e3e68e617a23372561573ee6143ba33e4d2e2e767b97f1ec200e28"
+    },
+    {
+      "bytes": 131117,
+      "path": "experiments/diagnostics/01_bootstrap/bootstrap_gini_draws.npz",
+      "sha256": "2538005d68490b49d6271ad7ef4c9b6d198a3802ca545e4a5ce336fae3799ca6"
+    },
+    {
+      "bytes": 1001452,
+      "path": "experiments/diagnostics/01_bootstrap/predictions_LightGBM_B.csv",
+      "sha256": "4147f022b665ad0ba4d6dccda1a332230f6ada3ce3a2bd378da19d8c182dca08"
+    },
+    {
+      "bytes": 1001479,
+      "path": "experiments/diagnostics/01_bootstrap/validation_rows.csv",
+      "sha256": "c103cc407c41e7a0bc8b4f7bf99189b52b3c809cd3c26ca0b2e94b9c9bb318a9"
+    },
+    {
+      "bytes": 1001408,
+      "path": "experiments/diagnostics/01_bootstrap/predictions_CatBoost_A.csv",
+      "sha256": "52a6b82a4e3be74c31a805b29a1c46dce6c197930a55820235cbf9b17121b38b"
+    }
+  ],
+  "parameters": {
+    "ci": "unadjusted percentile 95%",
+    "holm_family": "three rolling mean pair comparisons",
+    "p_value": "two-sided centered bootstrap with plus-one correction",
+    "replicates": 2000,
+    "resampling": "one shared customer draw across all months and models",
+    "seed": 42,
+    "unit": "id_cliente"
+  },
+  "protocol": {
+    "metric": "monthly Gini and simple rolling mean",
+    "rolling_cuts": [
+      [
+        202608,
+        202609
+      ],
+      [
+        202609,
+        202610
+      ],
+      [
+        202610,
+        202611
+      ]
+    ],
+    "temporal_std": "description only; not statistical uncertainty",
+    "tuning": false
+  },
+  "repository": {
+    "commit": "66e2f361fca99ca4782db11b58901558e2037433",
+    "dirty": true
+  },
+  "run_id": "01_bootstrap",
+  "schema_version": 1,
+  "split_artifacts": []
+}

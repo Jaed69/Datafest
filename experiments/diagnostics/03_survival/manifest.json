@@ -1,0 +1,251 @@
+{
+  "code": [
+    {
+      "bytes": 4288,
+      "path": "src/datafest/data.py",
+      "sha256": "b8405669064c5c0148871995c4149931687a06330b5b0f50d640d962384da3d9"
+    },
+    {
+      "bytes": 12705,
+      "path": "src/datafest/diagnostics.py",
+      "sha256": "7c114f0a3c5cfcbb31f78e3c46750668bb6f79f10064506c1edbdaf592c977ad"
+    },
+    {
+      "bytes": 6147,
+      "path": "src/datafest/models.py",
+      "sha256": "2740e9e484db430ad689d8dcea44c0ed41ec89cb7e6e3b4005030f203c77e1c6"
+    },
+    {
+      "bytes": 10404,
+      "path": "src/datafest/foundation.py",
+      "sha256": "0b1436b31cbdc673ca14c13ecb65f0978eb1eae463d849fe2be569ffdab3c2a4"
+    },
+    {
+      "bytes": 32027,
+      "path": "src/datafest/pipeline.py",
+      "sha256": "ca48185371f37c4ba724c457eaae47116b7cd1b75e668a7e53a328c0e4bfe2bc"
+    },
+    {
+      "bytes": 4408,
+      "path": "src/datafest/lineage.py",
+      "sha256": "85b097fcd433ad75afaa4fdea5ea0f5d7a6dd1f78d38915a938961c7b3eee48a"
+    },
+    {
+      "bytes": 2534,
+      "path": "src/datafest/features.py",
+      "sha256": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7"
+    },
+    {
+      "bytes": 81,
+      "path": "src/datafest/__init__.py",
+      "sha256": "98fac39e5f097c0f26a46a3208b8afaaf17642e1e12f5c60882667f9714b5ec3"
+    },
+    {
+      "bytes": 3342,
+      "path": "src/datafest/cli.py",
+      "sha256": "d4eb9bde97f1f944dadd9a92829bf84a0cf83d15190aa059bd78b3e6fa6acdad"
+    },
+    {
+      "bytes": 17090,
+      "path": "src/datafest/ablation.py",
+      "sha256": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f"
+    },
+    {
+      "bytes": 2933,
+      "path": "src/datafest/splitting.py",
+      "sha256": "4ec81672179d14cd45e5b2cc521cd0f45e51a8b12edeb0187a80d21264487ca3"
+    },
+    {
+      "bytes": 2501,
+      "path": "src/datafest/metrics.py",
+      "sha256": "ecd1e9f5528c5384257e6f8ad7f989e35af90b8cb0eb7431f2ab2d707ba20714"
+    },
+    {
+      "bytes": 9178,
+      "path": "src/datafest/foundation35.py",
+      "sha256": "11872f9b42ed86c551403ada1c347842e7b18d1c242ed8aa68c21f543ad90f12"
+    },
+    {
+      "bytes": 8990,
+      "path": "src/datafest/survival.py",
+      "sha256": "81f8a667e34d9bbc425d3c4caa00ee5b7ecf63f2a39c34bf2fb3f64543865726"
+    }
+  ],
+  "environment": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "python": "3.12.3"
+  },
+  "features": [
+    {
+      "bytes": 637,
+      "path": "experiments/diagnostics/03_survival/feature_schema.json",
+      "sha256": "adc3bf3a3b0e9a4597720f3e37567121278b05874d1433ce80197b65de04184d"
+    },
+    {
+      "bytes": 6353904,
+      "path": "experiments/diagnostics/03_survival/features.csv.gz",
+      "sha256": "46c44577d80e52bd09bfbfa4a981b2515c58532d980b0d530478404d52891579"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 18949939,
+      "path": "data/train.csv",
+      "sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 3612,
+      "path": "experiments/diagnostics/03_survival/models_202609.pkl",
+      "sha256": "44c4c69edd6750413fa3506a9a81d8bfd8d2161a4b9b34cdff7224aafcb5a5ae"
+    },
+    {
+      "bytes": 637,
+      "path": "experiments/diagnostics/03_survival/feature_schema.json",
+      "sha256": "adc3bf3a3b0e9a4597720f3e37567121278b05874d1433ce80197b65de04184d"
+    },
+    {
+      "bytes": 672,
+      "path": "experiments/diagnostics/03_survival/config.json",
+      "sha256": "2364cfa050fa5ea77ebbdb6765a39ca3d0b95c647d39fd3a10c3edd73a502813"
+    },
+    {
+      "bytes": 6353904,
+      "path": "experiments/diagnostics/03_survival/features.csv.gz",
+      "sha256": "46c44577d80e52bd09bfbfa4a981b2515c58532d980b0d530478404d52891579"
+    },
+    {
+      "bytes": 1744578,
+      "path": "experiments/diagnostics/03_survival/risk_intervals_202611.csv",
+      "sha256": "9980ae3a4e0fb63a4c1bebb45f85b1f14c5f051b7b7c2645ee2dec323b048c3b"
+    },
+    {
+      "bytes": 3631,
+      "path": "experiments/diagnostics/03_survival/models_202610.pkl",
+      "sha256": "478d2da4d453644caefc5c3a29c4d9eaee133f8cc06c90d6fd30748c19dc2615"
+    },
+    {
+      "bytes": 5843491,
+      "path": "experiments/diagnostics/03_survival/split_assignments.csv",
+      "sha256": "7a36f53ef05449e25102bd7dc3433be3f9bd05dd77f55149d8d7fd097f34efe4"
+    },
+    {
+      "bytes": 1557832,
+      "path": "experiments/diagnostics/03_survival/risk_intervals_202610.csv",
+      "sha256": "626b72b9240220aa8b12b7e577233b201a498f8ca234d838415fa1588b468e53"
+    },
+    {
+      "bytes": 1382752,
+      "path": "experiments/diagnostics/03_survival/risk_intervals_202609.csv",
+      "sha256": "1ec7e92be0de32ea29aae8ce8827f4622f9b8fda4c12ed4e0f360b328ff3cdfb"
+    },
+    {
+      "bytes": 2051,
+      "path": "experiments/diagnostics/03_survival/audit.json",
+      "sha256": "49b7d0a8869be5d449cbe50e4bf9688043efe57bbc5aaa12d241018f2c936c23"
+    },
+    {
+      "bytes": 3650,
+      "path": "experiments/diagnostics/03_survival/models_202611.pkl",
+      "sha256": "26d1a113c4d9126608bad6873bf4d2c9325ec15b9d2463e519f4cfb607b722e9"
+    },
+    {
+      "bytes": 223,
+      "path": "experiments/diagnostics/03_survival/cox/metrics.json",
+      "sha256": "10df114ecebd1d4f91500868b3f7ca4d64a44f1a236084ed5c5f2ec44a7c8577"
+    },
+    {
+      "bytes": 327825,
+      "path": "experiments/diagnostics/03_survival/cox/predictions_202611.csv",
+      "sha256": "64fe4aab1ee98efe35dd4e012fc18c788ef88308c0ec94cc7259d8f8ff0ae5f0"
+    },
+    {
+      "bytes": 341064,
+      "path": "experiments/diagnostics/03_survival/cox/predictions_202609.csv",
+      "sha256": "3686608ed512bf0a330901629e9509e52799adcbd66762097899fb82bede1a17"
+    },
+    {
+      "bytes": 1027619,
+      "path": "experiments/diagnostics/03_survival/cox/rolling_predictions.csv",
+      "sha256": "b605aa09aaa01f00fbdf102ac60660818f614cedf423b5dfad5b3ac50c2d9119"
+    },
+    {
+      "bytes": 358800,
+      "path": "experiments/diagnostics/03_survival/cox/predictions_202610.csv",
+      "sha256": "27cd8f74b4bea0b129cefe55bf09360e4e43824abacc72f4417dec5f2e6aa17f"
+    },
+    {
+      "bytes": 222,
+      "path": "experiments/diagnostics/03_survival/cloglog/metrics.json",
+      "sha256": "6cadb2f602688b4f534707e82f9894f9f0410a5889865d30900738242285cfa0"
+    },
+    {
+      "bytes": 327632,
+      "path": "experiments/diagnostics/03_survival/cloglog/predictions_202611.csv",
+      "sha256": "94d040277fe0a981f9d826a17dad86a940a2d4b349010991075af27633eecdd7"
+    },
+    {
+      "bytes": 340880,
+      "path": "experiments/diagnostics/03_survival/cloglog/predictions_202609.csv",
+      "sha256": "d46281baa17532e5a3b21ed7eecd9ab722f28681684c254bd2c89bf7f0e18da4"
+    },
+    {
+      "bytes": 1027180,
+      "path": "experiments/diagnostics/03_survival/cloglog/rolling_predictions.csv",
+      "sha256": "33f9001136d0a31dc885fba8963473abc8ab0b67b7a32c4148f975d3172ea443"
+    },
+    {
+      "bytes": 358738,
+      "path": "experiments/diagnostics/03_survival/cloglog/predictions_202610.csv",
+      "sha256": "53840cd7d10bd07ac5773a5d84b6b97dab628f88df5e75815cc50686e3c690fd"
+    }
+  ],
+  "parameters": {
+    "base_features": "D_month_index minus deterministic time aliases",
+    "cloglog_baseline": "categorical month in risk; calendar trend via D month_index",
+    "cox_baseline": "training-only monthly Breslow increments",
+    "cox_ties": "Breslow",
+    "fixed_ridge": {
+      "cloglog": 1e-06,
+      "cox": 0.0001
+    },
+    "ridge_selection": "fixed numeric stabilization, no validation tuning",
+    "risk_interval": "(tenure-1, tenure] only for observed rows; exit at event; last non-event is right censored",
+    "time": "months since first observation; delayed observations keep actual month spacing",
+    "unseen_tenure": "carry last training monthly baseline increment / tenure factor"
+  },
+  "protocol": {
+    "metric": "monthly Gini and simple rolling mean",
+    "rolling_cuts": [
+      [
+        202608,
+        202609
+      ],
+      [
+        202609,
+        202610
+      ],
+      [
+        202610,
+        202611
+      ]
+    ],
+    "temporal_std": "description only; not statistical uncertainty",
+    "tuning": false
+  },
+  "repository": {
+    "commit": "66e2f361fca99ca4782db11b58901558e2037433",
+    "dirty": true
+  },
+  "run_id": "03_survival",
+  "schema_version": 1,
+  "split_artifacts": [
+    {
+      "bytes": 5843491,
+      "path": "experiments/diagnostics/03_survival/split_assignments.csv",
+      "sha256": "7a36f53ef05449e25102bd7dc3433be3f9bd05dd77f55149d8d7fd097f34efe4"
+    }
+  ]
+}

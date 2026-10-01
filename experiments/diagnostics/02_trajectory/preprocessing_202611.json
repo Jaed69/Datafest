@@ -1,0 +1,36 @@
+{
+  "category_maps": {
+    "banda_riesgo": {
+      "high": 0,
+      "low": 1,
+      "medium": 2
+    },
+    "canal_adquisicion": {
+      "branch": 0,
+      "call_center": 1,
+      "mobile": 2,
+      "partner": 3,
+      "web": 4
+    },
+    "dispositivo_principal": {
+      "android": 0,
+      "ios": 1,
+      "otro": 2,
+      "web": 3
+    },
+    "ocupacion": {
+      "clerical": 0,
+      "manager": 1,
+      "manual": 2,
+      "professional": 3,
+      "self_employed": 4
+    },
+    "region": {
+      "central": 0,
+      "east": 1,
+      "north": 2,
+      "south": 3,
+      "west": 4
+    }
+  }
+}

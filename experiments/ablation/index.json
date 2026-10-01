@@ -1,0 +1,273 @@
+{
+  "batch_id": "20261001T051935820299Z_7e1c7547",
+  "manifest": {
+    "bytes": 61768,
+    "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/manifest.json",
+    "sha256": "970f0174b981544dde4078d59e16a79ce01e468562401d2f4308303d6bd9e7a0"
+  },
+  "report": {
+    "bytes": 2894,
+    "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/results.md",
+    "sha256": "c16c50ebb00ba4ca580dd35f9c26cb8fca4c9826660491277a727ab4440099e9"
+  },
+  "runs": [
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2628960417948105,
+          "202611": 0.23402161368764007
+        },
+        "frozen_mean_gini": 0.2484588277412253,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24938869456802193,
+        "frozen_std_gini": 0.014437214053585223,
+        "rolling_gini_by_month": {
+          "202609": 0.23931434026165332,
+          "202610": 0.2628960417948105,
+          "202611": 0.23509335824415278
+        },
+        "rolling_mean_gini": 0.24576791343353888,
+        "rolling_std_gini": 0.012233390322342216
+      },
+      "model": "lightgbm",
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_A",
+      "variant": "A"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.27044540031886144,
+          "202611": 0.2245666921757734
+        },
+        "frozen_mean_gini": 0.24750604624731742,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24886162346924734,
+        "frozen_std_gini": 0.022939354071544016,
+        "rolling_gini_by_month": {
+          "202609": 0.24193394722187733,
+          "202610": 0.27044540031886144,
+          "202611": 0.2336841934660998
+        },
+        "rolling_mean_gini": 0.24868784700227953,
+        "rolling_std_gini": 0.01574924239449144
+      },
+      "model": "lightgbm",
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_B_absolute",
+      "variant": "B_absolute"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.27044540031886144,
+          "202611": 0.2245666921757734
+        },
+        "frozen_mean_gini": 0.24750604624731742,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24886162346924734,
+        "frozen_std_gini": 0.022939354071544016,
+        "rolling_gini_by_month": {
+          "202609": 0.24193394722187733,
+          "202610": 0.27044540031886144,
+          "202611": 0.2336841934660998
+        },
+        "rolling_mean_gini": 0.24868784700227953,
+        "rolling_std_gini": 0.01574924239449144
+      },
+      "model": "lightgbm",
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_B_month_index",
+      "variant": "B_month_index"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.26411670033421064,
+          "202611": 0.23069249853811868
+        },
+        "frozen_mean_gini": 0.24740459943616466,
+        "frozen_pooled_oct_nov_gini_secondary": 0.2485542250517856,
+        "frozen_std_gini": 0.01671210089804598,
+        "rolling_gini_by_month": {
+          "202609": 0.23866642149605077,
+          "202610": 0.26411670033421064,
+          "202611": 0.23158234307739844
+        },
+        "rolling_mean_gini": 0.2447884883025533,
+        "rolling_std_gini": 0.013969750105518043
+      },
+      "model": "lightgbm",
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_C",
+      "variant": "C"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2677348409222553,
+          "202611": 0.2236150361140501
+        },
+        "frozen_mean_gini": 0.2456749385181527,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24708107576119698,
+        "frozen_std_gini": 0.022059902404102605,
+        "rolling_gini_by_month": {
+          "202609": 0.24336741896859415,
+          "202610": 0.2677348409222553,
+          "202611": 0.24203064558385123
+        },
+        "rolling_mean_gini": 0.25104430182490023,
+        "rolling_std_gini": 0.011814604304018338
+      },
+      "model": "lightgbm",
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_D_absolute",
+      "variant": "D_absolute"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2677348409222553,
+          "202611": 0.2236150361140501
+        },
+        "frozen_mean_gini": 0.2456749385181527,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24708107576119698,
+        "frozen_std_gini": 0.022059902404102605,
+        "rolling_gini_by_month": {
+          "202609": 0.24336741896859415,
+          "202610": 0.2677348409222553,
+          "202611": 0.24203064558385123
+        },
+        "rolling_mean_gini": 0.25104430182490023,
+        "rolling_std_gini": 0.011814604304018338
+      },
+      "model": "lightgbm",
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_D_month_index",
+      "variant": "D_month_index"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2650774297491123,
+          "202611": 0.23614268858053222
+        },
+        "frozen_mean_gini": 0.25061005916482226,
+        "frozen_pooled_oct_nov_gini_secondary": 0.2513766538862918,
+        "frozen_std_gini": 0.01446737058429004,
+        "rolling_gini_by_month": {
+          "202609": 0.2471285207376619,
+          "202610": 0.2650774297491123,
+          "202611": 0.23574699138664612
+        },
+        "rolling_mean_gini": 0.24931764729114012,
+        "rolling_std_gini": 0.012073741754567071
+      },
+      "model": "catboost",
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_A",
+      "variant": "A"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2675555794570843,
+          "202611": 0.23045102842045528
+        },
+        "frozen_mean_gini": 0.2490033039387698,
+        "frozen_pooled_oct_nov_gini_secondary": 0.2500919725605364,
+        "frozen_std_gini": 0.01855227551831451,
+        "rolling_gini_by_month": {
+          "202609": 0.24633478227591987,
+          "202610": 0.2675555794570843,
+          "202611": 0.23456248606115682
+        },
+        "rolling_mean_gini": 0.24948428259805366,
+        "rolling_std_gini": 0.013652241993348909
+      },
+      "model": "catboost",
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_B_absolute",
+      "variant": "B_absolute"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2617133362687398,
+          "202611": 0.23601130676713766
+        },
+        "frozen_mean_gini": 0.24886232151793874,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24962419236005107,
+        "frozen_std_gini": 0.012851014750801082,
+        "rolling_gini_by_month": {
+          "202609": 0.2441940681256456,
+          "202610": 0.2617133362687398,
+          "202611": 0.2337302288259111
+        },
+        "rolling_mean_gini": 0.24654587774009884,
+        "rolling_std_gini": 0.01154445990901264
+      },
+      "model": "catboost",
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_B_month_index",
+      "variant": "B_month_index"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2651968907098865,
+          "202611": 0.2365385581914965
+        },
+        "frozen_mean_gini": 0.2508677244506915,
+        "frozen_pooled_oct_nov_gini_secondary": 0.25166106037423064,
+        "frozen_std_gini": 0.014329166259195003,
+        "rolling_gini_by_month": {
+          "202609": 0.22701029708147114,
+          "202610": 0.2651968907098865,
+          "202611": 0.23371712512798748
+        },
+        "rolling_mean_gini": 0.24197477097311504,
+        "rolling_std_gini": 0.016647232390863003
+      },
+      "model": "catboost",
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_C",
+      "variant": "C"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.26499088007295923,
+          "202611": 0.23266986379654298
+        },
+        "frozen_mean_gini": 0.2488303719347511,
+        "frozen_pooled_oct_nov_gini_secondary": 0.25011779247802046,
+        "frozen_std_gini": 0.01616050813820813,
+        "rolling_gini_by_month": {
+          "202609": 0.2409126186441113,
+          "202610": 0.26499088007295923,
+          "202611": 0.2389067067570858
+        },
+        "rolling_mean_gini": 0.24827006849138544,
+        "rolling_std_gini": 0.011851724926060249
+      },
+      "model": "catboost",
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_D_absolute",
+      "variant": "D_absolute"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2654358126314351,
+          "202611": 0.2287015123305367
+        },
+        "frozen_mean_gini": 0.2470686624809859,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24808127311989114,
+        "frozen_std_gini": 0.018367150150449207,
+        "rolling_gini_by_month": {
+          "202609": 0.2312842993789752,
+          "202610": 0.2654358126314351,
+          "202611": 0.2384041109748729
+        },
+        "rolling_mean_gini": 0.24504140766176108,
+        "rolling_std_gini": 0.014711033157476709
+      },
+      "model": "catboost",
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_D_month_index",
+      "variant": "D_month_index"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "bytes": 3014,
+    "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/summary.csv",
+    "sha256": "274eabadf5fed6c5fe711e7abb4c2b02405c276eb3250234f93313ac692e5878"
+  }
+}

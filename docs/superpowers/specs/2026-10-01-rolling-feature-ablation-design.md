@@ -23,7 +23,7 @@ Las variables de historial son `n_observaciones_previas`, `mes_primera_aparicion
 
 Los cortes principales son entrenar con datos hasta agosto y evaluar septiembre; hasta septiembre y evaluar octubre; hasta octubre y evaluar noviembre. Se informa Gini Sep, Oct y Nov, media aritmética de los tres y desviación estándar poblacional (`ddof=0`). Se incluyen resultados por corte aunque un tratamiento de mes tenga combinaciones repetidas deduplicadas.
 
-Las configuraciones se seleccionan para cada combinación modelo/variante con los folds walk-forward internos cuya validación termina a más tardar en agosto. Así, la configuración y las iteraciones quedan fijadas antes de puntuar septiembre, octubre o noviembre en los cortes externos. La cantidad de iteraciones se fija con la mediana de best iterations internos del candidato seleccionado. No hay búsqueda ni early stopping en los cortes externos.
+Los parámetros estructurales de cada algoritmo se fijan de antemano en la configuración baseline del proyecto y se mantienen iguales en A–D y en ambas codificaciones de mes. La cantidad de iteraciones se elige por algoritmo con folds walk-forward internos hasta agosto, promediando los controles A y C sin mes; se usa la mediana de las mejores iteraciones de esos folds. Configuración e iteraciones quedan fijadas antes de puntuar septiembre, octubre o noviembre. No hay búsqueda ni early stopping en los cortes externos.
 
 Se mantiene una evaluación frozen por cada combinación: entrenar hasta septiembre y predecir octubre y noviembre con el mismo modelo. Se reporta Gini de octubre, Gini de noviembre, media y desviación estándar, además del pooled como dato secundario. No participa en la decisión principal.
 

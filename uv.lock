@@ -87,6 +87,7 @@ dependencies = [
     { name = "numpy" },
     { name = "pandas" },
     { name = "scikit-learn" },
+    { name = "scipy" },
 ]
 
 [package.optional-dependencies]
@@ -102,6 +103,7 @@ requires-dist = [
     { name = "pandas", specifier = "==3.0.2" },
     { name = "pytest", marker = "extra == 'dev'", specifier = "==8.3.5" },
     { name = "scikit-learn", specifier = "==1.8.0" },
+    { name = "scipy", specifier = "==1.18.1" },
 ]
 provides-extras = ["dev"]
 

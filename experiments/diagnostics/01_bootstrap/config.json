@@ -1,0 +1,9 @@
+{
+  "ci": "unadjusted percentile 95%",
+  "holm_family": "three rolling mean pair comparisons",
+  "p_value": "two-sided centered bootstrap with plus-one correction",
+  "replicates": 2000,
+  "resampling": "one shared customer draw across all months and models",
+  "seed": 42,
+  "unit": "id_cliente"
+}

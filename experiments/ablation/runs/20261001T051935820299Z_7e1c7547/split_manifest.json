@@ -1,0 +1,32 @@
+{
+  "assignments": {
+    "bytes": 11762282,
+    "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/split_assignments.csv",
+    "sha256": "ee843f3392a794345c9d9debab23cc83ce88a6da937219348a21753c980077cf"
+  },
+  "frozen_train_through": 202609,
+  "frozen_valid_months": [
+    202610,
+    202611
+  ],
+  "rolling_cuts": [
+    {
+      "train_through": 202608,
+      "valid_month": 202609
+    },
+    {
+      "train_through": 202609,
+      "valid_month": 202610
+    },
+    {
+      "train_through": 202610,
+      "valid_month": 202611
+    }
+  ],
+  "source": {
+    "bytes": 18949939,
+    "path": "data/train.csv",
+    "sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1"
+  },
+  "split_id": "rolling_aug_sep_oct_nov_plus_frozen_sep_oct_nov"
+}

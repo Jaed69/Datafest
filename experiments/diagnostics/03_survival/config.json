@@ -1,0 +1,14 @@
+{
+  "base_features": "D_month_index minus deterministic time aliases",
+  "cloglog_baseline": "categorical month in risk; calendar trend via D month_index",
+  "cox_baseline": "training-only monthly Breslow increments",
+  "cox_ties": "Breslow",
+  "fixed_ridge": {
+    "cloglog": 1e-06,
+    "cox": 0.0001
+  },
+  "ridge_selection": "fixed numeric stabilization, no validation tuning",
+  "risk_interval": "(tenure-1, tenure] only for observed rows; exit at event; last non-event is right censored",
+  "time": "months since first observation; delayed observations keep actual month spacing",
+  "unseen_tenure": "carry last training monthly baseline increment / tenure factor"
+}

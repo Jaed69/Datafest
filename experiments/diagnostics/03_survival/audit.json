@@ -1,0 +1,71 @@
+[
+  {
+    "baseline_hazard_training_only": {
+      "1": 0.13929632048988297,
+      "2": 0.14670099282586854,
+      "3": 0.1384155131032995,
+      "4": 0.13969533036779927,
+      "5": 0.1452554995854485,
+      "6": 0.1386390569541311,
+      "7": 0.13035039974254037,
+      "8": 0.12519656721053207
+    },
+    "cloglog_gradient_max": 8.74784862665497e-07,
+    "cloglog_iterations": 29,
+    "cox_gradient_max": 8.835616443742531e-07,
+    "cox_iterations": 15,
+    "events": 12107,
+    "right_censored_customers": 8601,
+    "risk_rows": 80300,
+    "train_through": 202608,
+    "validation_beyond_training_tenure": 2995,
+    "validation_month": 202609
+  },
+  {
+    "baseline_hazard_training_only": {
+      "1": 0.1383955354030965,
+      "2": 0.14369641311660614,
+      "3": 0.13752189350399338,
+      "4": 0.138856537639237,
+      "5": 0.14607952228472057,
+      "6": 0.1397695020966314,
+      "7": 0.1345274864454484,
+      "8": 0.12396810244723266,
+      "9": 0.1303360295087802
+    },
+    "cloglog_gradient_max": 9.404893480933925e-07,
+    "cloglog_iterations": 32,
+    "cox_gradient_max": 3.391509599705474e-07,
+    "cox_iterations": 15,
+    "events": 13500,
+    "right_censored_customers": 8507,
+    "risk_rows": 90200,
+    "train_through": 202609,
+    "validation_beyond_training_tenure": 2614,
+    "validation_month": 202610
+  },
+  {
+    "baseline_hazard_training_only": {
+      "1": 0.14016106505673231,
+      "2": 0.14476945235955688,
+      "3": 0.13899162635871587,
+      "4": 0.13971564771857753,
+      "5": 0.14567792834054832,
+      "6": 0.1375931248368383,
+      "7": 0.1338034585109852,
+      "8": 0.12666801344351836,
+      "9": 0.12895924246823146,
+      "10": 0.13814268302300886
+    },
+    "cloglog_gradient_max": 9.050841137367712e-07,
+    "cloglog_iterations": 33,
+    "cox_gradient_max": 9.630449180779952e-07,
+    "cox_iterations": 14,
+    "events": 15128,
+    "right_censored_customers": 8772,
+    "risk_rows": 100600,
+    "train_through": 202610,
+    "validation_beyond_training_tenure": 2259,
+    "validation_month": 202611
+  }
+]

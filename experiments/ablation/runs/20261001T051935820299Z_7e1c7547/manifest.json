@@ -1,0 +1,1624 @@
+{
+  "code": [
+    {
+      "bytes": 17090,
+      "path": "src/datafest/ablation.py",
+      "sha256": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f"
+    },
+    {
+      "bytes": 2341,
+      "path": "src/datafest/cli.py",
+      "sha256": "bc73d8ffb437cebbdf78c0972af51210ad0bc7495669265b198b3f4489fea738"
+    },
+    {
+      "bytes": 6147,
+      "path": "src/datafest/models.py",
+      "sha256": "2740e9e484db430ad689d8dcea44c0ed41ec89cb7e6e3b4005030f203c77e1c6"
+    },
+    {
+      "bytes": 2534,
+      "path": "src/datafest/features.py",
+      "sha256": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7"
+    },
+    {
+      "bytes": 4288,
+      "path": "src/datafest/data.py",
+      "sha256": "b8405669064c5c0148871995c4149931687a06330b5b0f50d640d962384da3d9"
+    },
+    {
+      "bytes": 2501,
+      "path": "src/datafest/metrics.py",
+      "sha256": "ecd1e9f5528c5384257e6f8ad7f989e35af90b8cb0eb7431f2ab2d707ba20714"
+    },
+    {
+      "bytes": 2933,
+      "path": "src/datafest/splitting.py",
+      "sha256": "4ec81672179d14cd45e5b2cc521cd0f45e51a8b12edeb0187a80d21264487ca3"
+    },
+    {
+      "bytes": 622,
+      "path": "pyproject.toml",
+      "sha256": "0b35bc471733f523ff0a73193fe9606d3cd42ce7c771870c78810b8576c6ca24"
+    },
+    {
+      "bytes": 48982,
+      "path": "uv.lock",
+      "sha256": "470e602723f6f4d1da9de54e139093b338e6eb8d2d35246dc3356d595ce8b85b"
+    }
+  ],
+  "created_at_utc": "2026-10-01T05:21:07.050654+00:00",
+  "environment": {
+    "datafest": "0.1.0",
+    "python": "3.12.3"
+  },
+  "features": [
+    {
+      "bytes": 10182,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/feature_schemas.json",
+      "sha256": "d5fca54caa893bccc4a3608b9d97dc097e1b16c72f0dd820cfbf51a5170553bf"
+    }
+  ],
+  "frozen_configurations": {
+    "catboost": {
+      "config": {
+        "depth": 6,
+        "l2_leaf_reg": 3.0,
+        "learning_rate": 0.05,
+        "name": "baseline"
+      },
+      "iterations": 192,
+      "selection_months": [
+        202605,
+        202606,
+        202607,
+        202608
+      ],
+      "selection_variants": [
+        "A",
+        "C"
+      ]
+    },
+    "lightgbm": {
+      "config": {
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 20,
+        "name": "baseline",
+        "num_leaves": 31,
+        "reg_lambda": 0.0
+      },
+      "iterations": 58,
+      "selection_months": [
+        202605,
+        202606,
+        202607,
+        202608
+      ],
+      "selection_variants": [
+        "A",
+        "C"
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "bytes": 18949939,
+      "path": "data/train.csv",
+      "sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1"
+    },
+    {
+      "bytes": 1688138,
+      "path": "data/test.csv",
+      "sha256": "31a6c85ec6d885ca5a83009974b6b8f2a02cb9ab8f85220da8c5f826541e1624"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 3014,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/summary.csv",
+      "sha256": "274eabadf5fed6c5fe711e7abb4c2b02405c276eb3250234f93313ac692e5878"
+    },
+    {
+      "bytes": 2894,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/results.md",
+      "sha256": "c16c50ebb00ba4ca580dd35f9c26cb8fca4c9826660491277a727ab4440099e9"
+    },
+    {
+      "bytes": 10182,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/feature_schemas.json",
+      "sha256": "d5fca54caa893bccc4a3608b9d97dc097e1b16c72f0dd820cfbf51a5170553bf"
+    },
+    {
+      "bytes": 11762282,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/split_assignments.csv",
+      "sha256": "ee843f3392a794345c9d9debab23cc83ce88a6da937219348a21753c980077cf"
+    },
+    {
+      "bytes": 773,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/split_manifest.json",
+      "sha256": "3e364663e936d2bf2fa4f922a4ade397c5ad7f1451977f86773f945b7a00d7ee"
+    },
+    {
+      "bytes": 204114,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_202609.txt",
+      "sha256": "06cac4989a8031a5a29e5fc34fa54bd681359856ccca2ca32535ae481f02e99e"
+    },
+    {
+      "bytes": 203979,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_202610.txt",
+      "sha256": "a371786ba6179654a9486b330e67313b590927522ff9dbcbf90dbeaddb666a57"
+    },
+    {
+      "bytes": 204175,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_202611.txt",
+      "sha256": "0233358b03ab931125dd1f24db700ff3873c779f294ed6928a6ecc935b4daa55"
+    },
+    {
+      "bytes": 203979,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/frozen_sep.txt",
+      "sha256": "a371786ba6179654a9486b330e67313b590927522ff9dbcbf90dbeaddb666a57"
+    },
+    {
+      "bytes": 1027636,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_predictions.csv",
+      "sha256": "8f821dbc4247e7d9db67525fbaaf58e8ebe5c297d12ae98c3306d7595e79fc5a"
+    },
+    {
+      "bytes": 686721,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/frozen_oct_nov.csv",
+      "sha256": "d9d9155ec30d4ec8f377fb54d2a262c4669c5d22c37b219c913492c5ca6ce47e"
+    },
+    {
+      "bytes": 477,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/metrics.json",
+      "sha256": "f04646596604d27708fbed52401538d90fa6d4467644d4e229cf2bf1dccc3996"
+    },
+    {
+      "bytes": 203913,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_202609.txt",
+      "sha256": "6f71b6c3ec28f14933586e330edbdf013a2216b310ab530856af3f70ae955330"
+    },
+    {
+      "bytes": 204090,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_202610.txt",
+      "sha256": "d6820b05e46b546f6ac427f4c8dfe3911ffac2404d04f394c87d1af6cc570c20"
+    },
+    {
+      "bytes": 204165,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_202611.txt",
+      "sha256": "cf529e6654fa5ac9ed6f95a2ee3f1665e55fd42cd383b94c64de08036d1bb5be"
+    },
+    {
+      "bytes": 204090,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/frozen_sep.txt",
+      "sha256": "d6820b05e46b546f6ac427f4c8dfe3911ffac2404d04f394c87d1af6cc570c20"
+    },
+    {
+      "bytes": 1027362,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_predictions.csv",
+      "sha256": "37001508351f8107d75938dfbdfa13d02a81093423ebf6d69331d580f0da07c8"
+    },
+    {
+      "bytes": 686510,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/frozen_oct_nov.csv",
+      "sha256": "fc8311ad78f04ec0e30dd4cd570dc325b69df934eafa276a42250d83312a4265"
+    },
+    {
+      "bytes": 477,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/metrics.json",
+      "sha256": "9def99e63d145dab455c2678b4ff92e75940418c959428bc729e8e2d5262a3f3"
+    },
+    {
+      "bytes": 204011,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_202609.txt",
+      "sha256": "5da871245be5508f84574daca437ab4424451bfa89898a9478924f9889f51509"
+    },
+    {
+      "bytes": 204206,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_202610.txt",
+      "sha256": "b089babf872e9000772776f6c8b75347829e145b8844a478aed929dfc03905ec"
+    },
+    {
+      "bytes": 204312,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_202611.txt",
+      "sha256": "a40cd72c64d3b9d0b678cff5628a79152a4f14b5b3caa24b64b90c5b98f50344"
+    },
+    {
+      "bytes": 204206,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/frozen_sep.txt",
+      "sha256": "b089babf872e9000772776f6c8b75347829e145b8844a478aed929dfc03905ec"
+    },
+    {
+      "bytes": 1027362,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_predictions.csv",
+      "sha256": "37001508351f8107d75938dfbdfa13d02a81093423ebf6d69331d580f0da07c8"
+    },
+    {
+      "bytes": 686510,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/frozen_oct_nov.csv",
+      "sha256": "fc8311ad78f04ec0e30dd4cd570dc325b69df934eafa276a42250d83312a4265"
+    },
+    {
+      "bytes": 477,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/metrics.json",
+      "sha256": "9def99e63d145dab455c2678b4ff92e75940418c959428bc729e8e2d5262a3f3"
+    },
+    {
+      "bytes": 204054,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_202609.txt",
+      "sha256": "ace2f42bf54736c011e30bb035d868dbebb88b8520ccb5e752344c776759bfb7"
+    },
+    {
+      "bytes": 204254,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_202610.txt",
+      "sha256": "6c8c06b7d9e096d29c23407e80916ef90902a5ac90851335c18bff42979f5cc1"
+    },
+    {
+      "bytes": 204419,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_202611.txt",
+      "sha256": "edd8c1cad045231f85da917e75a2598f0305225a9f1c3b5e5d7c766bc59fd553"
+    },
+    {
+      "bytes": 204254,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/frozen_sep.txt",
+      "sha256": "6c8c06b7d9e096d29c23407e80916ef90902a5ac90851335c18bff42979f5cc1"
+    },
+    {
+      "bytes": 1027567,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_predictions.csv",
+      "sha256": "6aec99b4601f5817156433b03182dae0c6f1481534112e51ad27e3771f9cc14e"
+    },
+    {
+      "bytes": 686744,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/frozen_oct_nov.csv",
+      "sha256": "128c06ea8ce58c073af716bec0e4e47442eacba4af57917919015f8c3022426b"
+    },
+    {
+      "bytes": 477,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/metrics.json",
+      "sha256": "15a8785b455156e6a195996ecb7c9e6d2072b5c409a810458fc7ef636b0079da"
+    },
+    {
+      "bytes": 204247,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_202609.txt",
+      "sha256": "0d1f8d8daf62629649edbd2f1dbc4d38e390186d1d9da8b6780d14f06c0edb22"
+    },
+    {
+      "bytes": 204201,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_202610.txt",
+      "sha256": "f94cd7dbcd083a319ea976d30436def47ede94828eb28ccd49a2fbb1f3eb6a1a"
+    },
+    {
+      "bytes": 204385,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_202611.txt",
+      "sha256": "caf774e45ae950dadee9cff5d65dad8c19cd8713765da5d9ec266e21c7b74cc4"
+    },
+    {
+      "bytes": 204201,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/frozen_sep.txt",
+      "sha256": "f94cd7dbcd083a319ea976d30436def47ede94828eb28ccd49a2fbb1f3eb6a1a"
+    },
+    {
+      "bytes": 1027318,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_predictions.csv",
+      "sha256": "d75e75d7ab93a721c1cd434156302c2de548f09cd034fde02bc73dfc9ff0c0c7"
+    },
+    {
+      "bytes": 686659,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/frozen_oct_nov.csv",
+      "sha256": "e0f7bfcf20b3d727c95b97e95dbe1116d964c9828fb35878d63c0a96be9d8d71"
+    },
+    {
+      "bytes": 476,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/metrics.json",
+      "sha256": "2ba0a1d00b9dde4bb34517efbb1275c4c06650effb118523b68ee0198e93251b"
+    },
+    {
+      "bytes": 204343,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_202609.txt",
+      "sha256": "8f3b1173b8c8847020b65be530bf9bb8054ca7344f0b5695c2e5b09356237abc"
+    },
+    {
+      "bytes": 204303,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_202610.txt",
+      "sha256": "fed71cc4fd995a9980d18a18e8f2ce2f4f5ee782c8e5bc99da64f22bce461f38"
+    },
+    {
+      "bytes": 204508,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_202611.txt",
+      "sha256": "2c6727d92f36cb6d2190fa5c574ef3f70ca2d5a6eec2324ccd874bda0fda4278"
+    },
+    {
+      "bytes": 204303,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/frozen_sep.txt",
+      "sha256": "fed71cc4fd995a9980d18a18e8f2ce2f4f5ee782c8e5bc99da64f22bce461f38"
+    },
+    {
+      "bytes": 1027318,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_predictions.csv",
+      "sha256": "d75e75d7ab93a721c1cd434156302c2de548f09cd034fde02bc73dfc9ff0c0c7"
+    },
+    {
+      "bytes": 686659,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/frozen_oct_nov.csv",
+      "sha256": "e0f7bfcf20b3d727c95b97e95dbe1116d964c9828fb35878d63c0a96be9d8d71"
+    },
+    {
+      "bytes": 476,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/metrics.json",
+      "sha256": "2ba0a1d00b9dde4bb34517efbb1275c4c06650effb118523b68ee0198e93251b"
+    },
+    {
+      "bytes": 217644,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_202609.cbm",
+      "sha256": "92f9f2cae8ece98f590dab9bf60b139ecb64dafa0a133136d052b33d5d606e50"
+    },
+    {
+      "bytes": 214796,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_202610.cbm",
+      "sha256": "a98e2af34fe15e1e7b7f56f7c9769d22a261d50f9b0978a27c104886043a09c8"
+    },
+    {
+      "bytes": 220264,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_202611.cbm",
+      "sha256": "4ca96139ba9fa40723ba6776ac8bf821edbd9f54d48bd101343234f8db2d972a"
+    },
+    {
+      "bytes": 214796,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/frozen_sep.cbm",
+      "sha256": "70176e9fe336eda4384d320f416ed04ea6cc302606978c2f8a7da8dd447a5f13"
+    },
+    {
+      "bytes": 1027791,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_predictions.csv",
+      "sha256": "b3748c22c7289c6ff90de800ebff891b38c4417edbdb0dcf5da8664db9cd91dc"
+    },
+    {
+      "bytes": 686674,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/frozen_oct_nov.csv",
+      "sha256": "600fb693cd6b0a3ad7a0231803498156b6e79a1e71c97373173039568d15e1ec"
+    },
+    {
+      "bytes": 475,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/metrics.json",
+      "sha256": "06cba7faaf7653c590813a95bc335c2cb4b8ff1b4aa99acaa260c17fb29eb499"
+    },
+    {
+      "bytes": 219312,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_202609.cbm",
+      "sha256": "a8bb1d2697752cf39262e9d532a65302f0c09faa82794b4873fd8ed928598fc3"
+    },
+    {
+      "bytes": 219076,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_202610.cbm",
+      "sha256": "75eec81aff84fa743a47d84d5252cec37697c307cdead27aba069bd3276805af"
+    },
+    {
+      "bytes": 218904,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_202611.cbm",
+      "sha256": "82025be42188f4d593360931901b6d69a08642a509d4f0b6543e5107c6350591"
+    },
+    {
+      "bytes": 219076,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/frozen_sep.cbm",
+      "sha256": "6174a5cf4df87187589faf3d2f08a7961f704241ce32c1fec4df95ce615dd64a"
+    },
+    {
+      "bytes": 1027389,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_predictions.csv",
+      "sha256": "b8736fcba664d051f62a63b46841d81d0357e97223126f28a52db5fe26174808"
+    },
+    {
+      "bytes": 686681,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/frozen_oct_nov.csv",
+      "sha256": "35ca75a413aa2a018bf49f8d1eb8c626449556cd9509c7d0202c335f11ec0cf2"
+    },
+    {
+      "bytes": 475,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/metrics.json",
+      "sha256": "c456b99d32088f3533f5d60abb2be4ec39719c0cc19c727a3be05a756d316578"
+    },
+    {
+      "bytes": 211472,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_202609.cbm",
+      "sha256": "b446251c8fbf33f497163b3f853756f46cf83c3d64ab0bcefe236d30262be1f9"
+    },
+    {
+      "bytes": 214300,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_202610.cbm",
+      "sha256": "6324c0eb1cd71c8f1ad1b81beb61ac5bff60eeeda0d2e7d601ad2894f6127623"
+    },
+    {
+      "bytes": 211880,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_202611.cbm",
+      "sha256": "d6bddb5b7e887c0f1dc91c0e42fe3c778713b268dede04f55e150a62970dbea2"
+    },
+    {
+      "bytes": 214300,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/frozen_sep.cbm",
+      "sha256": "2f1cdf281e585dd057b4b7bf47363e2fa46cf0019650dd4726ffc5a68ae61815"
+    },
+    {
+      "bytes": 1027550,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_predictions.csv",
+      "sha256": "84c542395cfc120f9a0ff734bcea3bedc8cc64be4e594972830a7a28c8d3d637"
+    },
+    {
+      "bytes": 686812,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/frozen_oct_nov.csv",
+      "sha256": "2dc791c6ba7f98e329078fa1e4f0b9294430164ed5ae836c8e26d3dd5e4af327"
+    },
+    {
+      "bytes": 475,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/metrics.json",
+      "sha256": "fd50ef8e358e593dfc4152267a75897dce703fc481aad5db4ffe54c5821809b0"
+    },
+    {
+      "bytes": 214396,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_202609.cbm",
+      "sha256": "83ec7376fd481dbff8c81e04169c5320fd39f25e362b615c7d222cef412b5c8e"
+    },
+    {
+      "bytes": 216800,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_202610.cbm",
+      "sha256": "48a780ab4627636a8c97219161b0d93769ea358c9b36f36de867decc89b5eaa6"
+    },
+    {
+      "bytes": 218444,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_202611.cbm",
+      "sha256": "89add1081a07f5e85592c86743346d2ba97e306e261afa0a4be8954183c0ec78"
+    },
+    {
+      "bytes": 216800,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/frozen_sep.cbm",
+      "sha256": "af67cdea5461c15619a5eeccdb2e1842a4812895fda46fd73f71c182fb2e1ea4"
+    },
+    {
+      "bytes": 1027624,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_predictions.csv",
+      "sha256": "c6e0b17f0099ddd10289cdbf9661ca7d146b31f6b7afc4fad56c6f7fab8a315b"
+    },
+    {
+      "bytes": 686779,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/frozen_oct_nov.csv",
+      "sha256": "29c7eb386f0c7e1e96b22d110aaea857711c40e09f217f9316d83acee5e57dfe"
+    },
+    {
+      "bytes": 476,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/metrics.json",
+      "sha256": "bf59d467908629e45b970cf523cfedac8433e0487e922bc0b467f016da98151a"
+    },
+    {
+      "bytes": 217216,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_202609.cbm",
+      "sha256": "4136779876f73861f67f8f0ad8a31114b5c56f5bd5c5ef4bc6ca1fb6d2703810"
+    },
+    {
+      "bytes": 221732,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_202610.cbm",
+      "sha256": "89ac0d88b6000e8837bb679dd8e424f9cb23bb43374fe26610729a1306bc43ce"
+    },
+    {
+      "bytes": 220892,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_202611.cbm",
+      "sha256": "3072f6409644f8726ec1dbf54b89630f334601e8d3f9a65e31632815e2e66229"
+    },
+    {
+      "bytes": 221732,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/frozen_sep.cbm",
+      "sha256": "080f8e2d278691cbe01275cdcf7f393b9b963448678c8673fe0f03e7de22aac5"
+    },
+    {
+      "bytes": 1027507,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_predictions.csv",
+      "sha256": "087be01dc4739e6454b158f044318d8d3092593d6fc27bd1004772d1faafa055"
+    },
+    {
+      "bytes": 686640,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/frozen_oct_nov.csv",
+      "sha256": "49aec8e508222d79e2b8b06974212e628acd0462a1fd6dc42532c7c6cfdeae46"
+    },
+    {
+      "bytes": 476,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/metrics.json",
+      "sha256": "efc400b3a28e90af514df5c970cd133d4e2987e9bdf9bb859665e748a54913d0"
+    },
+    {
+      "bytes": 213360,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_202609.cbm",
+      "sha256": "df342083d9d3dcf6903a69de1e46c1fc4c0d3e7dc0f00f3e518608cf0dad5a5c"
+    },
+    {
+      "bytes": 215568,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_202610.cbm",
+      "sha256": "63732f25151225ed95809cb9ddf9546b1911a0027cd21f4b4ef8598d79e23f8e"
+    },
+    {
+      "bytes": 219388,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_202611.cbm",
+      "sha256": "51a871fb29317b8b50413a398451fdb266e8cfb2b47d04468ded15afc9ac7251"
+    },
+    {
+      "bytes": 215568,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/frozen_sep.cbm",
+      "sha256": "731691dfaa09bdd85b54c727d585db8cf957897194949590b5739306dee2e460"
+    },
+    {
+      "bytes": 1027579,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_predictions.csv",
+      "sha256": "2479f921e9eca48e5dcefa808ce7094d49d13f35f562d74f46e48bfd88cae472"
+    },
+    {
+      "bytes": 686748,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/frozen_oct_nov.csv",
+      "sha256": "22c33baca2b7069c3ffff5832b3b4855a2b52228fc09f1b14214c8aefa2da4ca"
+    },
+    {
+      "bytes": 474,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/metrics.json",
+      "sha256": "46e59f51840602c7a074a07c5715b3921527676a537264267d21f669f3023e46"
+    }
+  ],
+  "protocol": {
+    "frozen_train_through": 202609,
+    "frozen_valid_months": [
+      202610,
+      202611
+    ],
+    "hyperparameter_selection_valid_through": 202608,
+    "pooled_metric_role": "secondary only",
+    "primary_metric": "per-month Gini; report mean and population std",
+    "rolling_cuts": [
+      {
+        "train_through": 202608,
+        "valid_month": 202609
+      },
+      {
+        "train_through": 202609,
+        "valid_month": 202610
+      },
+      {
+        "train_through": 202610,
+        "valid_month": 202611
+      }
+    ]
+  },
+  "report": {
+    "bytes": 2894,
+    "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/results.md",
+    "sha256": "c16c50ebb00ba4ca580dd35f9c26cb8fca4c9826660491277a727ab4440099e9"
+  },
+  "run_id": "20261001T051935820299Z_7e1c7547",
+  "runs": [
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2628960417948105,
+          "202611": 0.23402161368764007
+        },
+        "frozen_mean_gini": 0.2484588277412253,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24938869456802193,
+        "frozen_std_gini": 0.014437214053585223,
+        "rolling_gini_by_month": {
+          "202609": 0.23931434026165332,
+          "202610": 0.2628960417948105,
+          "202611": 0.23509335824415278
+        },
+        "rolling_mean_gini": 0.24576791343353888,
+        "rolling_std_gini": 0.012233390322342216
+      },
+      "metrics_file": {
+        "bytes": 477,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/metrics.json",
+        "sha256": "f04646596604d27708fbed52401538d90fa6d4467644d4e229cf2bf1dccc3996"
+      },
+      "model_name": "lightgbm",
+      "models": [
+        {
+          "bytes": 204114,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_202609.txt",
+          "sha256": "06cac4989a8031a5a29e5fc34fa54bd681359856ccca2ca32535ae481f02e99e"
+        },
+        {
+          "bytes": 203979,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_202610.txt",
+          "sha256": "a371786ba6179654a9486b330e67313b590927522ff9dbcbf90dbeaddb666a57"
+        },
+        {
+          "bytes": 204175,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_202611.txt",
+          "sha256": "0233358b03ab931125dd1f24db700ff3873c779f294ed6928a6ecc935b4daa55"
+        },
+        {
+          "bytes": 203979,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/frozen_sep.txt",
+          "sha256": "a371786ba6179654a9486b330e67313b590927522ff9dbcbf90dbeaddb666a57"
+        }
+      ],
+      "month_encoding": "none",
+      "parameters": {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "iterations": 58,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027636,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/rolling_predictions.csv",
+          "sha256": "8f821dbc4247e7d9db67525fbaaf58e8ebe5c297d12ae98c3306d7595e79fc5a"
+        },
+        {
+          "bytes": 686721,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/A/frozen_oct_nov.csv",
+          "sha256": "d9d9155ec30d4ec8f377fb54d2a262c4669c5d22c37b219c913492c5ca6ce47e"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_A",
+      "variant": "A",
+      "variant_group": "base"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.27044540031886144,
+          "202611": 0.2245666921757734
+        },
+        "frozen_mean_gini": 0.24750604624731742,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24886162346924734,
+        "frozen_std_gini": 0.022939354071544016,
+        "rolling_gini_by_month": {
+          "202609": 0.24193394722187733,
+          "202610": 0.27044540031886144,
+          "202611": 0.2336841934660998
+        },
+        "rolling_mean_gini": 0.24868784700227953,
+        "rolling_std_gini": 0.01574924239449144
+      },
+      "metrics_file": {
+        "bytes": 477,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/metrics.json",
+        "sha256": "9def99e63d145dab455c2678b4ff92e75940418c959428bc729e8e2d5262a3f3"
+      },
+      "model_name": "lightgbm",
+      "models": [
+        {
+          "bytes": 203913,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_202609.txt",
+          "sha256": "6f71b6c3ec28f14933586e330edbdf013a2216b310ab530856af3f70ae955330"
+        },
+        {
+          "bytes": 204090,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_202610.txt",
+          "sha256": "d6820b05e46b546f6ac427f4c8dfe3911ffac2404d04f394c87d1af6cc570c20"
+        },
+        {
+          "bytes": 204165,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_202611.txt",
+          "sha256": "cf529e6654fa5ac9ed6f95a2ee3f1665e55fd42cd383b94c64de08036d1bb5be"
+        },
+        {
+          "bytes": 204090,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/frozen_sep.txt",
+          "sha256": "d6820b05e46b546f6ac427f4c8dfe3911ffac2404d04f394c87d1af6cc570c20"
+        }
+      ],
+      "month_encoding": "absolute",
+      "parameters": {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "iterations": 58,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027362,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/rolling_predictions.csv",
+          "sha256": "37001508351f8107d75938dfbdfa13d02a81093423ebf6d69331d580f0da07c8"
+        },
+        {
+          "bytes": 686510,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_absolute/frozen_oct_nov.csv",
+          "sha256": "fc8311ad78f04ec0e30dd4cd570dc325b69df934eafa276a42250d83312a4265"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_B_absolute",
+      "variant": "B_absolute",
+      "variant_group": "base_month"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.27044540031886144,
+          "202611": 0.2245666921757734
+        },
+        "frozen_mean_gini": 0.24750604624731742,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24886162346924734,
+        "frozen_std_gini": 0.022939354071544016,
+        "rolling_gini_by_month": {
+          "202609": 0.24193394722187733,
+          "202610": 0.27044540031886144,
+          "202611": 0.2336841934660998
+        },
+        "rolling_mean_gini": 0.24868784700227953,
+        "rolling_std_gini": 0.01574924239449144
+      },
+      "metrics_file": {
+        "bytes": 477,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/metrics.json",
+        "sha256": "9def99e63d145dab455c2678b4ff92e75940418c959428bc729e8e2d5262a3f3"
+      },
+      "model_name": "lightgbm",
+      "models": [
+        {
+          "bytes": 204011,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_202609.txt",
+          "sha256": "5da871245be5508f84574daca437ab4424451bfa89898a9478924f9889f51509"
+        },
+        {
+          "bytes": 204206,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_202610.txt",
+          "sha256": "b089babf872e9000772776f6c8b75347829e145b8844a478aed929dfc03905ec"
+        },
+        {
+          "bytes": 204312,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_202611.txt",
+          "sha256": "a40cd72c64d3b9d0b678cff5628a79152a4f14b5b3caa24b64b90c5b98f50344"
+        },
+        {
+          "bytes": 204206,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/frozen_sep.txt",
+          "sha256": "b089babf872e9000772776f6c8b75347829e145b8844a478aed929dfc03905ec"
+        }
+      ],
+      "month_encoding": "month_index",
+      "parameters": {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "iterations": 58,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027362,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/rolling_predictions.csv",
+          "sha256": "37001508351f8107d75938dfbdfa13d02a81093423ebf6d69331d580f0da07c8"
+        },
+        {
+          "bytes": 686510,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/B_month_index/frozen_oct_nov.csv",
+          "sha256": "fc8311ad78f04ec0e30dd4cd570dc325b69df934eafa276a42250d83312a4265"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_B_month_index",
+      "variant": "B_month_index",
+      "variant_group": "base_month"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.26411670033421064,
+          "202611": 0.23069249853811868
+        },
+        "frozen_mean_gini": 0.24740459943616466,
+        "frozen_pooled_oct_nov_gini_secondary": 0.2485542250517856,
+        "frozen_std_gini": 0.01671210089804598,
+        "rolling_gini_by_month": {
+          "202609": 0.23866642149605077,
+          "202610": 0.26411670033421064,
+          "202611": 0.23158234307739844
+        },
+        "rolling_mean_gini": 0.2447884883025533,
+        "rolling_std_gini": 0.013969750105518043
+      },
+      "metrics_file": {
+        "bytes": 477,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/metrics.json",
+        "sha256": "15a8785b455156e6a195996ecb7c9e6d2072b5c409a810458fc7ef636b0079da"
+      },
+      "model_name": "lightgbm",
+      "models": [
+        {
+          "bytes": 204054,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_202609.txt",
+          "sha256": "ace2f42bf54736c011e30bb035d868dbebb88b8520ccb5e752344c776759bfb7"
+        },
+        {
+          "bytes": 204254,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_202610.txt",
+          "sha256": "6c8c06b7d9e096d29c23407e80916ef90902a5ac90851335c18bff42979f5cc1"
+        },
+        {
+          "bytes": 204419,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_202611.txt",
+          "sha256": "edd8c1cad045231f85da917e75a2598f0305225a9f1c3b5e5d7c766bc59fd553"
+        },
+        {
+          "bytes": 204254,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/frozen_sep.txt",
+          "sha256": "6c8c06b7d9e096d29c23407e80916ef90902a5ac90851335c18bff42979f5cc1"
+        }
+      ],
+      "month_encoding": "none",
+      "parameters": {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "iterations": 58,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027567,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/rolling_predictions.csv",
+          "sha256": "6aec99b4601f5817156433b03182dae0c6f1481534112e51ad27e3771f9cc14e"
+        },
+        {
+          "bytes": 686744,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/C/frozen_oct_nov.csv",
+          "sha256": "128c06ea8ce58c073af716bec0e4e47442eacba4af57917919015f8c3022426b"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_C",
+      "variant": "C",
+      "variant_group": "history"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2677348409222553,
+          "202611": 0.2236150361140501
+        },
+        "frozen_mean_gini": 0.2456749385181527,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24708107576119698,
+        "frozen_std_gini": 0.022059902404102605,
+        "rolling_gini_by_month": {
+          "202609": 0.24336741896859415,
+          "202610": 0.2677348409222553,
+          "202611": 0.24203064558385123
+        },
+        "rolling_mean_gini": 0.25104430182490023,
+        "rolling_std_gini": 0.011814604304018338
+      },
+      "metrics_file": {
+        "bytes": 476,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/metrics.json",
+        "sha256": "2ba0a1d00b9dde4bb34517efbb1275c4c06650effb118523b68ee0198e93251b"
+      },
+      "model_name": "lightgbm",
+      "models": [
+        {
+          "bytes": 204247,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_202609.txt",
+          "sha256": "0d1f8d8daf62629649edbd2f1dbc4d38e390186d1d9da8b6780d14f06c0edb22"
+        },
+        {
+          "bytes": 204201,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_202610.txt",
+          "sha256": "f94cd7dbcd083a319ea976d30436def47ede94828eb28ccd49a2fbb1f3eb6a1a"
+        },
+        {
+          "bytes": 204385,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_202611.txt",
+          "sha256": "caf774e45ae950dadee9cff5d65dad8c19cd8713765da5d9ec266e21c7b74cc4"
+        },
+        {
+          "bytes": 204201,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/frozen_sep.txt",
+          "sha256": "f94cd7dbcd083a319ea976d30436def47ede94828eb28ccd49a2fbb1f3eb6a1a"
+        }
+      ],
+      "month_encoding": "absolute",
+      "parameters": {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "iterations": 58,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027318,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/rolling_predictions.csv",
+          "sha256": "d75e75d7ab93a721c1cd434156302c2de548f09cd034fde02bc73dfc9ff0c0c7"
+        },
+        {
+          "bytes": 686659,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_absolute/frozen_oct_nov.csv",
+          "sha256": "e0f7bfcf20b3d727c95b97e95dbe1116d964c9828fb35878d63c0a96be9d8d71"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_D_absolute",
+      "variant": "D_absolute",
+      "variant_group": "base_history_month"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2677348409222553,
+          "202611": 0.2236150361140501
+        },
+        "frozen_mean_gini": 0.2456749385181527,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24708107576119698,
+        "frozen_std_gini": 0.022059902404102605,
+        "rolling_gini_by_month": {
+          "202609": 0.24336741896859415,
+          "202610": 0.2677348409222553,
+          "202611": 0.24203064558385123
+        },
+        "rolling_mean_gini": 0.25104430182490023,
+        "rolling_std_gini": 0.011814604304018338
+      },
+      "metrics_file": {
+        "bytes": 476,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/metrics.json",
+        "sha256": "2ba0a1d00b9dde4bb34517efbb1275c4c06650effb118523b68ee0198e93251b"
+      },
+      "model_name": "lightgbm",
+      "models": [
+        {
+          "bytes": 204343,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_202609.txt",
+          "sha256": "8f3b1173b8c8847020b65be530bf9bb8054ca7344f0b5695c2e5b09356237abc"
+        },
+        {
+          "bytes": 204303,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_202610.txt",
+          "sha256": "fed71cc4fd995a9980d18a18e8f2ce2f4f5ee782c8e5bc99da64f22bce461f38"
+        },
+        {
+          "bytes": 204508,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_202611.txt",
+          "sha256": "2c6727d92f36cb6d2190fa5c574ef3f70ca2d5a6eec2324ccd874bda0fda4278"
+        },
+        {
+          "bytes": 204303,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/frozen_sep.txt",
+          "sha256": "fed71cc4fd995a9980d18a18e8f2ce2f4f5ee782c8e5bc99da64f22bce461f38"
+        }
+      ],
+      "month_encoding": "month_index",
+      "parameters": {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "iterations": 58,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027318,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/rolling_predictions.csv",
+          "sha256": "d75e75d7ab93a721c1cd434156302c2de548f09cd034fde02bc73dfc9ff0c0c7"
+        },
+        {
+          "bytes": 686659,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/lightgbm/D_month_index/frozen_oct_nov.csv",
+          "sha256": "e0f7bfcf20b3d727c95b97e95dbe1116d964c9828fb35878d63c0a96be9d8d71"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_lightgbm_D_month_index",
+      "variant": "D_month_index",
+      "variant_group": "base_history_month"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2650774297491123,
+          "202611": 0.23614268858053222
+        },
+        "frozen_mean_gini": 0.25061005916482226,
+        "frozen_pooled_oct_nov_gini_secondary": 0.2513766538862918,
+        "frozen_std_gini": 0.01446737058429004,
+        "rolling_gini_by_month": {
+          "202609": 0.2471285207376619,
+          "202610": 0.2650774297491123,
+          "202611": 0.23574699138664612
+        },
+        "rolling_mean_gini": 0.24931764729114012,
+        "rolling_std_gini": 0.012073741754567071
+      },
+      "metrics_file": {
+        "bytes": 475,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/metrics.json",
+        "sha256": "06cba7faaf7653c590813a95bc335c2cb4b8ff1b4aa99acaa260c17fb29eb499"
+      },
+      "model_name": "catboost",
+      "models": [
+        {
+          "bytes": 217644,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_202609.cbm",
+          "sha256": "92f9f2cae8ece98f590dab9bf60b139ecb64dafa0a133136d052b33d5d606e50"
+        },
+        {
+          "bytes": 214796,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_202610.cbm",
+          "sha256": "a98e2af34fe15e1e7b7f56f7c9769d22a261d50f9b0978a27c104886043a09c8"
+        },
+        {
+          "bytes": 220264,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_202611.cbm",
+          "sha256": "4ca96139ba9fa40723ba6776ac8bf821edbd9f54d48bd101343234f8db2d972a"
+        },
+        {
+          "bytes": 214796,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/frozen_sep.cbm",
+          "sha256": "70176e9fe336eda4384d320f416ed04ea6cc302606978c2f8a7da8dd447a5f13"
+        }
+      ],
+      "month_encoding": "none",
+      "parameters": {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "iterations": 192,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027791,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/rolling_predictions.csv",
+          "sha256": "b3748c22c7289c6ff90de800ebff891b38c4417edbdb0dcf5da8664db9cd91dc"
+        },
+        {
+          "bytes": 686674,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/A/frozen_oct_nov.csv",
+          "sha256": "600fb693cd6b0a3ad7a0231803498156b6e79a1e71c97373173039568d15e1ec"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_A",
+      "variant": "A",
+      "variant_group": "base"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2675555794570843,
+          "202611": 0.23045102842045528
+        },
+        "frozen_mean_gini": 0.2490033039387698,
+        "frozen_pooled_oct_nov_gini_secondary": 0.2500919725605364,
+        "frozen_std_gini": 0.01855227551831451,
+        "rolling_gini_by_month": {
+          "202609": 0.24633478227591987,
+          "202610": 0.2675555794570843,
+          "202611": 0.23456248606115682
+        },
+        "rolling_mean_gini": 0.24948428259805366,
+        "rolling_std_gini": 0.013652241993348909
+      },
+      "metrics_file": {
+        "bytes": 475,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/metrics.json",
+        "sha256": "c456b99d32088f3533f5d60abb2be4ec39719c0cc19c727a3be05a756d316578"
+      },
+      "model_name": "catboost",
+      "models": [
+        {
+          "bytes": 219312,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_202609.cbm",
+          "sha256": "a8bb1d2697752cf39262e9d532a65302f0c09faa82794b4873fd8ed928598fc3"
+        },
+        {
+          "bytes": 219076,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_202610.cbm",
+          "sha256": "75eec81aff84fa743a47d84d5252cec37697c307cdead27aba069bd3276805af"
+        },
+        {
+          "bytes": 218904,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_202611.cbm",
+          "sha256": "82025be42188f4d593360931901b6d69a08642a509d4f0b6543e5107c6350591"
+        },
+        {
+          "bytes": 219076,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/frozen_sep.cbm",
+          "sha256": "6174a5cf4df87187589faf3d2f08a7961f704241ce32c1fec4df95ce615dd64a"
+        }
+      ],
+      "month_encoding": "absolute",
+      "parameters": {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "iterations": 192,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027389,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/rolling_predictions.csv",
+          "sha256": "b8736fcba664d051f62a63b46841d81d0357e97223126f28a52db5fe26174808"
+        },
+        {
+          "bytes": 686681,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_absolute/frozen_oct_nov.csv",
+          "sha256": "35ca75a413aa2a018bf49f8d1eb8c626449556cd9509c7d0202c335f11ec0cf2"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_B_absolute",
+      "variant": "B_absolute",
+      "variant_group": "base_month"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2617133362687398,
+          "202611": 0.23601130676713766
+        },
+        "frozen_mean_gini": 0.24886232151793874,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24962419236005107,
+        "frozen_std_gini": 0.012851014750801082,
+        "rolling_gini_by_month": {
+          "202609": 0.2441940681256456,
+          "202610": 0.2617133362687398,
+          "202611": 0.2337302288259111
+        },
+        "rolling_mean_gini": 0.24654587774009884,
+        "rolling_std_gini": 0.01154445990901264
+      },
+      "metrics_file": {
+        "bytes": 475,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/metrics.json",
+        "sha256": "fd50ef8e358e593dfc4152267a75897dce703fc481aad5db4ffe54c5821809b0"
+      },
+      "model_name": "catboost",
+      "models": [
+        {
+          "bytes": 211472,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_202609.cbm",
+          "sha256": "b446251c8fbf33f497163b3f853756f46cf83c3d64ab0bcefe236d30262be1f9"
+        },
+        {
+          "bytes": 214300,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_202610.cbm",
+          "sha256": "6324c0eb1cd71c8f1ad1b81beb61ac5bff60eeeda0d2e7d601ad2894f6127623"
+        },
+        {
+          "bytes": 211880,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_202611.cbm",
+          "sha256": "d6bddb5b7e887c0f1dc91c0e42fe3c778713b268dede04f55e150a62970dbea2"
+        },
+        {
+          "bytes": 214300,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/frozen_sep.cbm",
+          "sha256": "2f1cdf281e585dd057b4b7bf47363e2fa46cf0019650dd4726ffc5a68ae61815"
+        }
+      ],
+      "month_encoding": "month_index",
+      "parameters": {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "iterations": 192,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027550,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/rolling_predictions.csv",
+          "sha256": "84c542395cfc120f9a0ff734bcea3bedc8cc64be4e594972830a7a28c8d3d637"
+        },
+        {
+          "bytes": 686812,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/B_month_index/frozen_oct_nov.csv",
+          "sha256": "2dc791c6ba7f98e329078fa1e4f0b9294430164ed5ae836c8e26d3dd5e4af327"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_B_month_index",
+      "variant": "B_month_index",
+      "variant_group": "base_month"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2651968907098865,
+          "202611": 0.2365385581914965
+        },
+        "frozen_mean_gini": 0.2508677244506915,
+        "frozen_pooled_oct_nov_gini_secondary": 0.25166106037423064,
+        "frozen_std_gini": 0.014329166259195003,
+        "rolling_gini_by_month": {
+          "202609": 0.22701029708147114,
+          "202610": 0.2651968907098865,
+          "202611": 0.23371712512798748
+        },
+        "rolling_mean_gini": 0.24197477097311504,
+        "rolling_std_gini": 0.016647232390863003
+      },
+      "metrics_file": {
+        "bytes": 476,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/metrics.json",
+        "sha256": "bf59d467908629e45b970cf523cfedac8433e0487e922bc0b467f016da98151a"
+      },
+      "model_name": "catboost",
+      "models": [
+        {
+          "bytes": 214396,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_202609.cbm",
+          "sha256": "83ec7376fd481dbff8c81e04169c5320fd39f25e362b615c7d222cef412b5c8e"
+        },
+        {
+          "bytes": 216800,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_202610.cbm",
+          "sha256": "48a780ab4627636a8c97219161b0d93769ea358c9b36f36de867decc89b5eaa6"
+        },
+        {
+          "bytes": 218444,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_202611.cbm",
+          "sha256": "89add1081a07f5e85592c86743346d2ba97e306e261afa0a4be8954183c0ec78"
+        },
+        {
+          "bytes": 216800,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/frozen_sep.cbm",
+          "sha256": "af67cdea5461c15619a5eeccdb2e1842a4812895fda46fd73f71c182fb2e1ea4"
+        }
+      ],
+      "month_encoding": "none",
+      "parameters": {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "iterations": 192,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027624,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/rolling_predictions.csv",
+          "sha256": "c6e0b17f0099ddd10289cdbf9661ca7d146b31f6b7afc4fad56c6f7fab8a315b"
+        },
+        {
+          "bytes": 686779,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/C/frozen_oct_nov.csv",
+          "sha256": "29c7eb386f0c7e1e96b22d110aaea857711c40e09f217f9316d83acee5e57dfe"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_C",
+      "variant": "C",
+      "variant_group": "history"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.26499088007295923,
+          "202611": 0.23266986379654298
+        },
+        "frozen_mean_gini": 0.2488303719347511,
+        "frozen_pooled_oct_nov_gini_secondary": 0.25011779247802046,
+        "frozen_std_gini": 0.01616050813820813,
+        "rolling_gini_by_month": {
+          "202609": 0.2409126186441113,
+          "202610": 0.26499088007295923,
+          "202611": 0.2389067067570858
+        },
+        "rolling_mean_gini": 0.24827006849138544,
+        "rolling_std_gini": 0.011851724926060249
+      },
+      "metrics_file": {
+        "bytes": 476,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/metrics.json",
+        "sha256": "efc400b3a28e90af514df5c970cd133d4e2987e9bdf9bb859665e748a54913d0"
+      },
+      "model_name": "catboost",
+      "models": [
+        {
+          "bytes": 217216,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_202609.cbm",
+          "sha256": "4136779876f73861f67f8f0ad8a31114b5c56f5bd5c5ef4bc6ca1fb6d2703810"
+        },
+        {
+          "bytes": 221732,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_202610.cbm",
+          "sha256": "89ac0d88b6000e8837bb679dd8e424f9cb23bb43374fe26610729a1306bc43ce"
+        },
+        {
+          "bytes": 220892,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_202611.cbm",
+          "sha256": "3072f6409644f8726ec1dbf54b89630f334601e8d3f9a65e31632815e2e66229"
+        },
+        {
+          "bytes": 221732,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/frozen_sep.cbm",
+          "sha256": "080f8e2d278691cbe01275cdcf7f393b9b963448678c8673fe0f03e7de22aac5"
+        }
+      ],
+      "month_encoding": "absolute",
+      "parameters": {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "iterations": 192,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027507,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/rolling_predictions.csv",
+          "sha256": "087be01dc4739e6454b158f044318d8d3092593d6fc27bd1004772d1faafa055"
+        },
+        {
+          "bytes": 686640,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_absolute/frozen_oct_nov.csv",
+          "sha256": "49aec8e508222d79e2b8b06974212e628acd0462a1fd6dc42532c7c6cfdeae46"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_D_absolute",
+      "variant": "D_absolute",
+      "variant_group": "base_history_month"
+    },
+    {
+      "metrics": {
+        "frozen_gini_by_month": {
+          "202610": 0.2654358126314351,
+          "202611": 0.2287015123305367
+        },
+        "frozen_mean_gini": 0.2470686624809859,
+        "frozen_pooled_oct_nov_gini_secondary": 0.24808127311989114,
+        "frozen_std_gini": 0.018367150150449207,
+        "rolling_gini_by_month": {
+          "202609": 0.2312842993789752,
+          "202610": 0.2654358126314351,
+          "202611": 0.2384041109748729
+        },
+        "rolling_mean_gini": 0.24504140766176108,
+        "rolling_std_gini": 0.014711033157476709
+      },
+      "metrics_file": {
+        "bytes": 474,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/metrics.json",
+        "sha256": "46e59f51840602c7a074a07c5715b3921527676a537264267d21f669f3023e46"
+      },
+      "model_name": "catboost",
+      "models": [
+        {
+          "bytes": 213360,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_202609.cbm",
+          "sha256": "df342083d9d3dcf6903a69de1e46c1fc4c0d3e7dc0f00f3e518608cf0dad5a5c"
+        },
+        {
+          "bytes": 215568,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_202610.cbm",
+          "sha256": "63732f25151225ed95809cb9ddf9546b1911a0027cd21f4b4ef8598d79e23f8e"
+        },
+        {
+          "bytes": 219388,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_202611.cbm",
+          "sha256": "51a871fb29317b8b50413a398451fdb266e8cfb2b47d04468ded15afc9ac7251"
+        },
+        {
+          "bytes": 215568,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/frozen_sep.cbm",
+          "sha256": "731691dfaa09bdd85b54c727d585db8cf957897194949590b5739306dee2e460"
+        }
+      ],
+      "month_encoding": "month_index",
+      "parameters": {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "iterations": 192,
+        "selection_months": [
+          202605,
+          202606,
+          202607,
+          202608
+        ],
+        "selection_variants": [
+          "A",
+          "C"
+        ]
+      },
+      "predictions": [
+        {
+          "bytes": 1027579,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/rolling_predictions.csv",
+          "sha256": "2479f921e9eca48e5dcefa808ce7094d49d13f35f562d74f46e48bfd88cae472"
+        },
+        {
+          "bytes": 686748,
+          "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/catboost/D_month_index/frozen_oct_nov.csv",
+          "sha256": "22c33baca2b7069c3ffff5832b3b4855a2b52228fc09f1b14214c8aefa2da4ca"
+        }
+      ],
+      "run_id": "20261001T051935820299Z_7e1c7547_catboost_D_month_index",
+      "variant": "D_month_index",
+      "variant_group": "base_history_month"
+    }
+  ],
+  "schema_version": 1,
+  "split": {
+    "bytes": 773,
+    "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/split_manifest.json",
+    "sha256": "3e364663e936d2bf2fa4f922a4ade397c5ad7f1451977f86773f945b7a00d7ee"
+  },
+  "split_artifacts": [
+    {
+      "bytes": 11762282,
+      "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/split_assignments.csv",
+      "sha256": "ee843f3392a794345c9d9debab23cc83ce88a6da937219348a21753c980077cf"
+    }
+  ],
+  "summary": {
+    "bytes": 3014,
+    "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/summary.csv",
+    "sha256": "274eabadf5fed6c5fe711e7abb4c2b02405c276eb3250234f93313ac692e5878"
+  },
+  "tuning_cv": {
+    "catboost": [
+      {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "iterations_median": 192,
+        "mean_gini": 0.26137849348762987
+      }
+    ],
+    "lightgbm": [
+      {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "iterations_median": 58,
+        "mean_gini": 0.2672534847090762
+      }
+    ]
+  }
+}

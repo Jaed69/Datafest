@@ -1,0 +1,26 @@
+{
+  "features": "D_month_index + interaction trajectory",
+  "frozen_lightgbm": {
+    "config": {
+      "learning_rate": 0.05,
+      "max_depth": -1,
+      "min_child_samples": 20,
+      "name": "baseline",
+      "num_leaves": 31,
+      "reg_lambda": 0.0
+    },
+    "iterations": 58,
+    "selection_months": [
+      202605,
+      202606,
+      202607,
+      202608
+    ],
+    "selection_variants": [
+      "A",
+      "C"
+    ]
+  },
+  "reset": "current observed value < previous observed value",
+  "slope_units": "days of interaction per calendar month; absent with one observation"
+}
