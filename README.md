@@ -30,6 +30,24 @@ Las corridas registran configuración, artefactos, predicciones y métricas en m
 
 Las comparaciones principales excluyen `id_cliente` como predictor. El ID crudo se trata como diagnóstico y no como señal candidata a menos que supere controles temporales y por grupos de clientes. Las variables históricas usan únicamente el prefijo temporal observado del cliente y nunca `objetivo`. No se modifican los CSV originales de `data/`.
 
+## Feature engineering
+
+Las columnas originales de cliente se mantienen como variables base. La ablación añadió, por separado, calendario e historial para medir su aporte. Cada fila conserva como fecha `mes`; se probó sin calendario, con el entero `AAAAMM` o con `month_index` consecutivo —enero de 2026 = 0—. `id_cliente` se usa para agrupar al construir el historial y luego se elimina de las variantes principales.
+
+Las cinco variables de historial se calculan ordenando cada cliente por mes, sin consultar `objetivo`:
+
+| Feature | Cálculo hasta la fila actual |
+| --- | --- |
+| `n_observaciones_previas` | Número de filas anteriores del cliente; vale 0 en su primera observación. |
+| `mes_primera_aparicion` | Primer mes observado para ese cliente, en formato `AAAAMM`. |
+| `meses_desde_entrada` | Distancia entre el mes actual y el primero, medida en meses calendario. |
+| `meses_en_riesgo` | `meses_desde_entrada + 1`; cuenta también el mes actual. |
+| `cliente_recurrente` | Indicador de si existe al menos una observación anterior. |
+
+La variante D usada como referencia combina las variables base, el mes y esas cinco variables de historial; D_month_index es la misma variante con el calendario codificado como índice consecutivo. La comparación también incluyó A (solo base), B (base + mes) y C (base + historial).
+
+En un experimento diagnóstico se amplió D_month_index con nueve variables de `dias_ultima_interaccion`: lags de una y dos observaciones, diferencia actual menos lag 1, pendiente lineal por mes calendario, mínimo, máximo y media acumulados, indicador de reset y conteo acumulado de resets. Los lags cuentan observaciones previas —aunque haya huecos entre meses— y quedan ausentes si aún no hay suficientes observaciones. La pendiente queda ausente con una sola observación. Un reset indica que el valor actual cayó estrictamente respecto de la observación anterior. Las estadísticas acumuladas incluyen la fila actual. Pruebas de prefijo y de perturbación de meses futuros verifican que ninguna de estas features incorpora información futura.
+
 ## Experimentos realizados
 
 ### Ablation de calendario e historial
