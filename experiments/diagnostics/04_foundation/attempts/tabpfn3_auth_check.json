@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-10-01T14:13:07.898602+00:00",
+  "credential_valid": true,
+  "accepted_licenses": {
+    "tabpfn_3": true,
+    "tabpfn_3_5": true
+  },
+  "credential_source": ".env; value omitted"
+}

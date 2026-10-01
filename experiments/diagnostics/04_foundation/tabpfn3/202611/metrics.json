@@ -1,0 +1,7 @@
+{
+  "gini_by_month": {
+    "202611": 0.22351968946994583
+  },
+  "mean_rolling_gini": 0.22351968946994583,
+  "temporal_std_ddof0": 0.0
+}

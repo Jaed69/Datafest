@@ -1,0 +1,75 @@
+[colab] Uploaded '/tmp/datafest-colab-7_m46rvy/bundle.tar.gz' to '/content/datafest-bundle.tar.gz'
+Collecting uv
+  Downloading uv-0.12.21-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Downloading uv-0.12.21-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.4/20.4 MB 94.5 MB/s eta 0:00:00
+Installing collected packages: uv
+Successfully installed uv-0.12.21
+warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?
+Downloading cpython-3.12.14-linux-x86_64-gnu (download) (32.7MiB)
+ Downloaded cpython-3.12.14-linux-x86_64-gnu (download)
+Using CPython 3.12.14
+Creating virtual environment at: datafest-env
+Activate with: source datafest-env/bin/activate
+Using Python 3.12.14 environment at: datafest-env
+   Updating https://github.com/google-research/tabfm.git (fbb665569425fd2f490c6576b3af967876fe11ff)
+    Updated https://github.com/google-research/tabfm.git (fbb665569425fd2f490c6576b3af967876fe11ff)
+Resolved 82 packages in 3.20s
+Downloading torch (528.9MiB)
+   Building tabfm @ git+https://github.com/google-research/tabfm.git@fbb665569425fd2f490c6576b3af967876fe11ff
+Downloading nvidia-nvjitlink (40.5MiB)
+Downloading pillow (6.6MiB)
+Downloading sympy (6.0MiB)
+Downloading networkx (2.0MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading hf-xet (4.3MiB)
+Downloading lightgbm (3.4MiB)
+Downloading cuda-bindings (6.8MiB)
+Downloading triton (236.5MiB)
+Downloading matplotlib (9.4MiB)
+Downloading plotly (9.2MiB)
+Downloading nvidia-cusparse (139.2MiB)
+Downloading scikit-learn (8.5MiB)
+Downloading catboost (94.6MiB)
+Downloading pandas (10.4MiB)
+Downloading fonttools (5.1MiB)
+Downloading nvidia-cudnn-cu13 (527.5MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading nvidia-cuda-cupti (10.2MiB)
+Downloading nvidia-cuda-runtime (2.1MiB)
+Downloading scipy (33.7MiB)
+Downloading nvidia-nvshmem-cu13 (57.6MiB)
+Downloading nvidia-cuda-nvrtc (86.0MiB)
+Downloading nvidia-nccl-cu13 (206.0MiB)
+Downloading nvidia-cusparselt-cu13 (162.3MiB)
+Downloading numpy (15.9MiB)
+Downloading nvidia-cufile (1.2MiB)
+Downloading nvidia-cusolver (191.6MiB)
+Downloading nvidia-curand (56.8MiB)
+Downloading nvidia-cublas (403.5MiB)
+Downloading nvidia-cufft (204.2MiB)
+      Built tabfm @ git+https://github.com/google-research/tabfm.git@fbb665569425fd2f490c6576b3af967876fe11ff
+ Downloaded nvidia-cufile
+ Downloaded kiwisolver
+ Downloaded pydantic-core
+ Downloaded nvidia-cuda-runtime
+ Downloaded networkx
+ Downloaded lightgbm
+ Downloaded hf-xet
+ Downloaded fonttools
+ Downloaded sympy
+ Downloaded pillow
+ Downloaded cuda-bindings
+ Downloaded scikit-learn
+ Downloaded plotly
+ Downloaded matplotlib
+ Downloaded nvidia-cuda-cupti
+ Downloaded pandas
+ Downloaded numpy
+ Downloaded scipy
+ Downloaded nvidia-nvjitlink
+ Downloaded nvidia-curand
+ Downloaded nvidia-nvshmem-cu13
+ Downloaded nvidia-cuda-nvrtc
+ Downloaded catboost
+ Downloaded nvidia-cusparse

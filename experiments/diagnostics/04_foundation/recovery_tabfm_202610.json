@@ -1,0 +1,11 @@
+{
+  "checkpoint_recovered_from": {
+    "bytes": 3279246544,
+    "path": "experiments/diagnostics/04_foundation/tabfm/202609/checkpoint/tabfm_v1_0_0.pt",
+    "sha256": "0433ba8871c664a714929d09c6630ddf9db1d5fac28178d11ea31dbfb3299ca6"
+  },
+  "exact_expected_sha256": "0433ba8871c664a714929d09c6630ddf9db1d5fac28178d11ea31dbfb3299ca6",
+  "fold_state": "complete",
+  "reason": "remote session vanished during checkpoint transfer; identical immutable pretrained checkpoint reused",
+  "verified": true
+}

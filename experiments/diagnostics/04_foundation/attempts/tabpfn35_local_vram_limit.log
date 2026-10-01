@@ -1,0 +1,86 @@
+[tabpfn35] 202608 -> 202609 on cuda
+[W1001 09:51:11.125067690 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 371195904 bytes (free: 225705984, total: 3895132160).
+Traceback (most recent call last):
+  File "/home/chris/Documentos/projects/Datafest/scripts/run_tabpfn_local.py", line 66, in <module>
+    main()
+  File "/home/chris/Documentos/projects/Datafest/scripts/run_tabpfn_local.py", line 58, in main
+    print(run_foundation(args.model,Path('data'),root,'cuda',args.fold),flush=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/src/datafest/foundation35.py", line 138, in run_foundation
+    prediction=estimator.predict_proba(x.loc[vm].reset_index(drop=True))[:,positive[0]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1616, in predict_proba
+    return self._predict_proba(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1630, in _predict_proba
+    self._raw_predict(X, return_logits=False).float().detach().cpu().numpy()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1542, in _raw_predict
+    return self.forward(
+           ^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1876, in forward
+    for output, config in tqdm(
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tqdm/std.py", line 1175, in __iter__
+    yield from iterable
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/inference.py", line 753, in iter_outputs
+    for output, ensemble_member in zip(
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/inference.py", line 71, in __next__
+    value = next(self._inner)
+            ^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/parallel_execute.py", line 86, in parallel_execute
+    yield from _execute_in_current_thread(devices[0], functions)
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/parallel_execute.py", line 97, in _execute_in_current_thread
+    yield function(device=device)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/inference.py", line 812, in _call_model
+    return model(
+           ^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/architectures/tabpfn_v3_5.py", line 2355, in forward
+    x_BRiD, _ = block(
+                ^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/architectures/tabpfn_v3_5.py", line 1596, in forward
+    x_BRE = chunked_evaluate_maybe_inplace(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/architectures/shared/chunked_evaluate.py", line 70, in chunked_evaluate_maybe_inplace
+    x_chunk.add_(f(x_chunk, *args, **kwargs))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/architectures/tabpfn_v3_5.py", line 1590, in _attn_fn
+    out, _ = self.icl_attention(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/architectures/tabpfn_v3_5.py", line 1256, in forward
+    q = self.q_norm(
+        ^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/architectures/tabpfn_v3_5.py", line 528, in forward
+    return F.rms_norm(
+           ^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/nn/functional.py", line 3012, in rms_norm
+    return torch.rms_norm(input, normalized_shape, weight, eps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

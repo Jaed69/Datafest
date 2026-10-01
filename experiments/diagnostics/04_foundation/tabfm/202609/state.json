@@ -1,0 +1,134 @@
+{
+  "artifacts": [
+    {
+      "bytes": 3333911723,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/fitted_estimator.pkl",
+      "sha256": "fff96bf543e9c41b1af01428ab4750c4e98389fbadce612aefebe184b7a2f60c"
+    },
+    {
+      "bytes": 1605,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/parameters.json",
+      "sha256": "18f3fd61790a37711443256eb9979f591a853825ed6ff4ccc5c1ca6f122cb950"
+    },
+    {
+      "bytes": 136,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/metrics.json",
+      "sha256": "f58223b43932a645913f0aa47923aa33f53ba090b6c0ce9415ee24b83280a0f5"
+    },
+    {
+      "bytes": 54650655,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/context_generator.pkl",
+      "sha256": "f8a2b1d9a256cbd6460179eb0cde4eb1d1978db951bee3cde3154fbd3dbf4c4f"
+    },
+    {
+      "bytes": 340499,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/predictions.csv",
+      "sha256": "e764e18d0cc8527989c6f67583943d7a5168c8ae7e72a618319a3b8ed197f2a0"
+    },
+    {
+      "bytes": 3,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/checkpoint/config.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "bytes": 3279246544,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/checkpoint/tabfm_v1_0_0.pt",
+      "sha256": "0433ba8871c664a714929d09c6630ddf9db1d5fac28178d11ea31dbfb3299ca6"
+    }
+  ],
+  "context": {
+    "actual_context_rows_per_member": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "documentation": "https://github.com/google-research/tabfm",
+    "documented_default_max_context_rows": 100,
+    "effective_max_num_rows": 100,
+    "note": "Explicit max_num_rows=100 preserves the plan's published context default despite constructor drift.",
+    "runtime_default_max_num_rows": null,
+    "version": "TabFM v1.0.0"
+  },
+  "elapsed_seconds": 1344.269363386,
+  "identity": {
+    "code_sha256": {
+      "ablation.py": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f",
+      "features.py": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7",
+      "foundation.py": "0b1436b31cbdc673ca14c13ecb65f0978eb1eae463d849fe2be569ffdab3c2a4"
+    },
+    "feature_columns": [
+      "edad",
+      "ingresos",
+      "ratio_deuda_ingresos",
+      "antiguedad_cuenta_meses",
+      "numero_productos",
+      "saldo_promedio",
+      "dias_ultima_transaccion",
+      "ocupacion",
+      "region",
+      "canal_adquisicion",
+      "banda_riesgo",
+      "tiene_tarjeta_credito",
+      "activo_movil",
+      "es_nuevo_cliente",
+      "tiene_prestamo",
+      "antiguedad_direccion_meses",
+      "visitas_web_ultimos_90_dias",
+      "distancia_sucursal_km",
+      "dispositivo_principal",
+      "dia_preferido_pago",
+      "tiene_seguro",
+      "dias_ultima_interaccion",
+      "n_observaciones_previas",
+      "mes_primera_aparicion",
+      "meses_desde_entrada",
+      "meses_en_riesgo",
+      "cliente_recurrente",
+      "month_index"
+    ],
+    "features_sha256": "52ac23a93a70515ad83184ab9cc5361b8fa0fab2683fb80e8ba321d0c044d156",
+    "model": "tabfm",
+    "train_sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1",
+    "versions": {
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scikit-learn": "1.8.0",
+      "tabfm": "1.0.1",
+      "torch": "2.14.1"
+    }
+  },
+  "n_train": 80300,
+  "n_validation": 9900,
+  "status": "complete",
+  "train_through": 202608,
+  "validation_month": 202609
+}

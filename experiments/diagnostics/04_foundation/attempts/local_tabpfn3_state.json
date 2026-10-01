@@ -1,0 +1,56 @@
+{
+  "elapsed_seconds": 1.838661133995629,
+  "error": "TabPFN requires a one-time license acceptance to download\nmodel weights for local inference, but no interactive terminal\nis available.\n\nTo authenticate in a non-interactive environment:\n  1. Open https://ux.priorlabs.ai in a browser and log in (or register)\n  2. Accept the license on the Licenses tab\n  3. Copy your API Key from https://ux.priorlabs.ai/account\n  4. Set the environment variable: export TABPFN_TOKEN=\"<your-api-key>\"\n     or in Python (before calling .fit()): import os; os.environ[\"TABPFN_TOKEN\"] = \"<your-api-key>\"",
+  "error_type": "TabPFNLicenseError",
+  "identity": {
+    "code_sha256": {
+      "ablation.py": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f",
+      "features.py": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7",
+      "foundation.py": "aeac271c5babd556c70810c8304967a236aef8c9774995278197d05806c3d958"
+    },
+    "feature_columns": [
+      "edad",
+      "ingresos",
+      "ratio_deuda_ingresos",
+      "antiguedad_cuenta_meses",
+      "numero_productos",
+      "saldo_promedio",
+      "dias_ultima_transaccion",
+      "ocupacion",
+      "region",
+      "canal_adquisicion",
+      "banda_riesgo",
+      "tiene_tarjeta_credito",
+      "activo_movil",
+      "es_nuevo_cliente",
+      "tiene_prestamo",
+      "antiguedad_direccion_meses",
+      "visitas_web_ultimos_90_dias",
+      "distancia_sucursal_km",
+      "dispositivo_principal",
+      "dia_preferido_pago",
+      "tiene_seguro",
+      "dias_ultima_interaccion",
+      "n_observaciones_previas",
+      "mes_primera_aparicion",
+      "meses_desde_entrada",
+      "meses_en_riesgo",
+      "cliente_recurrente",
+      "month_index"
+    ],
+    "model": "tabpfn3",
+    "train_sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1",
+    "versions": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scikit-learn": "1.9.1",
+      "tabpfn": "9.0.0",
+      "torch": "2.14.1"
+    }
+  },
+  "next_action": "resume same fold on Colab for memory/timeout failures",
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/chris/Documentos/projects/Datafest/src/datafest/foundation.py\", line 126, in run_foundation\n    estimator.fit(x.loc[tm].reset_index(drop=True),train.loc[tm,\"objetivo\"].to_numpy(int))\n  File \"/usr/lib/python3.12/contextlib.py\", line 81, in inner\n    return func(*args, **kwds)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py\", line 928, in fit\n    byte_size = self._initialize_model_variables()\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py\", line 708, in _initialize_model_variables\n    return initialize_model_variables_helper(self, self.estimator_type)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/base.py\", line 521, in initialize_model_variables_helper\n    initialize_tabpfn_model(\n  File \"/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/base.py\", line 211, in initialize_tabpfn_model\n    load_model_criterion_config(\n  File \"/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/model_loading.py\", line 753, in load_model_criterion_config\n    raise res[0]\n  File \"/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/model_loading.py\", line 566, in _download_model\n    ensure_license_accepted(hf_repo_id=_HF_REPOS[version])\n  File \"/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/browser_auth.py\", line 621, in ensure_license_accepted\n    raise TabPFNLicenseError(\ntabpfn.errors.TabPFNLicenseError: TabPFN requires a one-time license acceptance to download\nmodel weights for local inference, but no interactive terminal\nis available.\n\nTo authenticate in a non-interactive environment:\n  1. Open https://ux.priorlabs.ai in a browser and log in (or register)\n  2. Accept the license on the Licenses tab\n  3. Copy your API Key from https://ux.priorlabs.ai/account\n  4. Set the environment variable: export TABPFN_TOKEN=\"<your-api-key>\"\n     or in Python (before calling .fit()): import os; os.environ[\"TABPFN_TOKEN\"] = \"<your-api-key>\"\n",
+  "train_through": 202608,
+  "validation_month": 202609
+}

@@ -1,0 +1,240 @@
+{
+  "code": [
+    {
+      "bytes": 2534,
+      "path": "src/datafest/features.py",
+      "sha256": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7"
+    },
+    {
+      "bytes": 4408,
+      "path": "src/datafest/lineage.py",
+      "sha256": "85b097fcd433ad75afaa4fdea5ea0f5d7a6dd1f78d38915a938961c7b3eee48a"
+    },
+    {
+      "bytes": 32027,
+      "path": "src/datafest/pipeline.py",
+      "sha256": "ca48185371f37c4ba724c457eaae47116b7cd1b75e668a7e53a328c0e4bfe2bc"
+    },
+    {
+      "bytes": 2933,
+      "path": "src/datafest/splitting.py",
+      "sha256": "4ec81672179d14cd45e5b2cc521cd0f45e51a8b12edeb0187a80d21264487ca3"
+    },
+    {
+      "bytes": 6147,
+      "path": "src/datafest/models.py",
+      "sha256": "2740e9e484db430ad689d8dcea44c0ed41ec89cb7e6e3b4005030f203c77e1c6"
+    },
+    {
+      "bytes": 3342,
+      "path": "src/datafest/cli.py",
+      "sha256": "d4eb9bde97f1f944dadd9a92829bf84a0cf83d15190aa059bd78b3e6fa6acdad"
+    },
+    {
+      "bytes": 8990,
+      "path": "src/datafest/survival.py",
+      "sha256": "81f8a667e34d9bbc425d3c4caa00ee5b7ecf63f2a39c34bf2fb3f64543865726"
+    },
+    {
+      "bytes": 2501,
+      "path": "src/datafest/metrics.py",
+      "sha256": "ecd1e9f5528c5384257e6f8ad7f989e35af90b8cb0eb7431f2ab2d707ba20714"
+    },
+    {
+      "bytes": 4288,
+      "path": "src/datafest/data.py",
+      "sha256": "b8405669064c5c0148871995c4149931687a06330b5b0f50d640d962384da3d9"
+    },
+    {
+      "bytes": 81,
+      "path": "src/datafest/__init__.py",
+      "sha256": "98fac39e5f097c0f26a46a3208b8afaaf17642e1e12f5c60882667f9714b5ec3"
+    },
+    {
+      "bytes": 10404,
+      "path": "src/datafest/foundation.py",
+      "sha256": "0b1436b31cbdc673ca14c13ecb65f0978eb1eae463d849fe2be569ffdab3c2a4"
+    },
+    {
+      "bytes": 12705,
+      "path": "src/datafest/diagnostics.py",
+      "sha256": "7c114f0a3c5cfcbb31f78e3c46750668bb6f79f10064506c1edbdaf592c977ad"
+    },
+    {
+      "bytes": 17090,
+      "path": "src/datafest/ablation.py",
+      "sha256": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f"
+    }
+  ],
+  "environment": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "python": "3.12.14"
+  },
+  "features": [
+    {
+      "bytes": 1672,
+      "path": "experiments/diagnostics/04_foundation/tabfm/feature_schema.json",
+      "sha256": "ec5c8c70062c45b880c9e0f5eff9ce66ea73bc80bbaffd7c0fabfa75e0ade199"
+    },
+    {
+      "bytes": 6399564,
+      "path": "experiments/diagnostics/04_foundation/tabfm/features.csv.gz",
+      "sha256": "52ac23a93a70515ad83184ab9cc5361b8fa0fab2683fb80e8ba321d0c044d156"
+    },
+    {
+      "bytes": 5843491,
+      "path": "experiments/diagnostics/04_foundation/tabfm/split_assignments.csv",
+      "sha256": "7a36f53ef05449e25102bd7dc3433be3f9bd05dd77f55149d8d7fd097f34efe4"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 18949939,
+      "path": "data/train.csv",
+      "sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 3333911723,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/fitted_estimator.pkl",
+      "sha256": "fff96bf543e9c41b1af01428ab4750c4e98389fbadce612aefebe184b7a2f60c"
+    },
+    {
+      "bytes": 1605,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/parameters.json",
+      "sha256": "18f3fd61790a37711443256eb9979f591a853825ed6ff4ccc5c1ca6f122cb950"
+    },
+    {
+      "bytes": 136,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/metrics.json",
+      "sha256": "f58223b43932a645913f0aa47923aa33f53ba090b6c0ce9415ee24b83280a0f5"
+    },
+    {
+      "bytes": 54650655,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/context_generator.pkl",
+      "sha256": "f8a2b1d9a256cbd6460179eb0cde4eb1d1978db951bee3cde3154fbd3dbf4c4f"
+    },
+    {
+      "bytes": 340499,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/predictions.csv",
+      "sha256": "e764e18d0cc8527989c6f67583943d7a5168c8ae7e72a618319a3b8ed197f2a0"
+    },
+    {
+      "bytes": 2013,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/config.json",
+      "sha256": "1f34b072c0ce8de02d09b20234812116e2f69d7c441169223d39d710226ed511"
+    },
+    {
+      "bytes": 3837,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/state.json",
+      "sha256": "b1d8230db7f2418f7d850b462f744471ec7d51de8d3651d9a90de8ef57feb72a"
+    },
+    {
+      "bytes": 3,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/checkpoint/config.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "bytes": 3279246544,
+      "path": "experiments/diagnostics/04_foundation/tabfm/202609/checkpoint/tabfm_v1_0_0.pt",
+      "sha256": "0433ba8871c664a714929d09c6630ddf9db1d5fac28178d11ea31dbfb3299ca6"
+    }
+  ],
+  "parameters": {
+    "defaults": true,
+    "device": "cuda",
+    "features": "exact D_month_index",
+    "identity": {
+      "code_sha256": {
+        "ablation.py": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f",
+        "features.py": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7",
+        "foundation.py": "0b1436b31cbdc673ca14c13ecb65f0978eb1eae463d849fe2be569ffdab3c2a4"
+      },
+      "feature_columns": [
+        "edad",
+        "ingresos",
+        "ratio_deuda_ingresos",
+        "antiguedad_cuenta_meses",
+        "numero_productos",
+        "saldo_promedio",
+        "dias_ultima_transaccion",
+        "ocupacion",
+        "region",
+        "canal_adquisicion",
+        "banda_riesgo",
+        "tiene_tarjeta_credito",
+        "activo_movil",
+        "es_nuevo_cliente",
+        "tiene_prestamo",
+        "antiguedad_direccion_meses",
+        "visitas_web_ultimos_90_dias",
+        "distancia_sucursal_km",
+        "dispositivo_principal",
+        "dia_preferido_pago",
+        "tiene_seguro",
+        "dias_ultima_interaccion",
+        "n_observaciones_previas",
+        "mes_primera_aparicion",
+        "meses_desde_entrada",
+        "meses_en_riesgo",
+        "cliente_recurrente",
+        "month_index"
+      ],
+      "features_sha256": "52ac23a93a70515ad83184ab9cc5361b8fa0fab2683fb80e8ba321d0c044d156",
+      "model": "tabfm",
+      "train_sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1",
+      "versions": {
+        "numpy": "2.4.4",
+        "pandas": "3.0.2",
+        "scikit-learn": "1.8.0",
+        "tabfm": "1.0.1",
+        "torch": "2.14.1"
+      }
+    },
+    "model": "tabfm",
+    "source_snapshot": {
+      "archive": {
+        "bytes": 55589,
+        "path": "experiments/diagnostics/04_foundation/source_snapshot.tar.gz",
+        "sha256": "3eb73d61e924d2bec1989caf681f29f0f7399698ec26c419c8ecda081ca09bd8"
+      },
+      "git_commit": "12d8ee4c95ec5e1125b88323cb2fde7dea2d6cbc"
+    },
+    "timeout_seconds": 1800,
+    "versions": {
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scikit-learn": "1.8.0",
+      "tabfm": "1.0.1",
+      "torch": "2.14.1"
+    }
+  },
+  "protocol": {
+    "metric": "monthly Gini and simple rolling mean",
+    "rolling_cuts": [
+      [
+        202608,
+        202609
+      ],
+      [
+        202609,
+        202610
+      ],
+      [
+        202610,
+        202611
+      ]
+    ],
+    "temporal_std": "description only; not statistical uncertainty",
+    "tuning": false
+  },
+  "repository": {
+    "commit": null,
+    "dirty": true
+  },
+  "run_id": "202609",
+  "schema_version": 1,
+  "split_artifacts": []
+}

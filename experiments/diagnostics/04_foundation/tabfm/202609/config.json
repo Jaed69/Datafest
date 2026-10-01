@@ -1,0 +1,69 @@
+{
+  "defaults": true,
+  "device": "cuda",
+  "features": "exact D_month_index",
+  "identity": {
+    "code_sha256": {
+      "ablation.py": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f",
+      "features.py": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7",
+      "foundation.py": "0b1436b31cbdc673ca14c13ecb65f0978eb1eae463d849fe2be569ffdab3c2a4"
+    },
+    "feature_columns": [
+      "edad",
+      "ingresos",
+      "ratio_deuda_ingresos",
+      "antiguedad_cuenta_meses",
+      "numero_productos",
+      "saldo_promedio",
+      "dias_ultima_transaccion",
+      "ocupacion",
+      "region",
+      "canal_adquisicion",
+      "banda_riesgo",
+      "tiene_tarjeta_credito",
+      "activo_movil",
+      "es_nuevo_cliente",
+      "tiene_prestamo",
+      "antiguedad_direccion_meses",
+      "visitas_web_ultimos_90_dias",
+      "distancia_sucursal_km",
+      "dispositivo_principal",
+      "dia_preferido_pago",
+      "tiene_seguro",
+      "dias_ultima_interaccion",
+      "n_observaciones_previas",
+      "mes_primera_aparicion",
+      "meses_desde_entrada",
+      "meses_en_riesgo",
+      "cliente_recurrente",
+      "month_index"
+    ],
+    "features_sha256": "52ac23a93a70515ad83184ab9cc5361b8fa0fab2683fb80e8ba321d0c044d156",
+    "model": "tabfm",
+    "train_sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1",
+    "versions": {
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scikit-learn": "1.8.0",
+      "tabfm": "1.0.1",
+      "torch": "2.14.1"
+    }
+  },
+  "model": "tabfm",
+  "source_snapshot": {
+    "archive": {
+      "bytes": 55589,
+      "path": "experiments/diagnostics/04_foundation/source_snapshot.tar.gz",
+      "sha256": "3eb73d61e924d2bec1989caf681f29f0f7399698ec26c419c8ecda081ca09bd8"
+    },
+    "git_commit": "12d8ee4c95ec5e1125b88323cb2fde7dea2d6cbc"
+  },
+  "timeout_seconds": 1800,
+  "versions": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.8.0",
+    "tabfm": "1.0.1",
+    "torch": "2.14.1"
+  }
+}

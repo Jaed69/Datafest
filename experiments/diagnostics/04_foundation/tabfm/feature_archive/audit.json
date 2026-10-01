@@ -1,0 +1,15 @@
+{
+  "canonical_csv_sha256": "a9e0ac5e78deb1b095ce6b6a7cee8fe66956c8057fc026e49ba0b830c069ed48",
+  "difference": "four-byte gzip timestamp only; identical feature CSV content",
+  "october_original_serialization": {
+    "bytes": 6399564,
+    "path": "experiments/diagnostics/04_foundation/tabfm/feature_archive/features_952556306081a1d5d8f49e750cc80eda71382bc30d18341043556a7128dec937.csv.gz",
+    "sha256": "952556306081a1d5d8f49e750cc80eda71382bc30d18341043556a7128dec937"
+  },
+  "september_archive": {
+    "bytes": 6399564,
+    "path": "experiments/diagnostics/04_foundation/tabfm/feature_archive/features_52ac23a93a70515ad83184ab9cc5361b8fa0fab2683fb80e8ba321d0c044d156.csv.gz",
+    "sha256": "52ac23a93a70515ad83184ab9cc5361b8fa0fab2683fb80e8ba321d0c044d156"
+  },
+  "september_manifest_rebased": "feature path moved to immutable archive; recorded bytes/hash unchanged"
+}

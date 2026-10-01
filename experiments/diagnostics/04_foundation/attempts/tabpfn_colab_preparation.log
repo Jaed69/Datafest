@@ -1,0 +1,188 @@
+[colab] Uploaded '/tmp/datafest-tabpfn-preparation.tar.gz' to '/content/datafest-preparation.tar.gz'
+Collecting uv
+  Downloading uv-0.12.21-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Downloading uv-0.12.21-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.4/20.4 MB 91.1 MB/s eta 0:00:00
+Installing collected packages: uv
+Successfully installed uv-0.12.21
+warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?
+Downloading cpython-3.12.14-linux-x86_64-gnu (download) (32.7MiB)
+ Downloaded cpython-3.12.14-linux-x86_64-gnu (download)
+Using CPython 3.12.14
+Creating virtual environment at: datafest-env
+Activate with: source datafest-env/bin/activate
+Using Python 3.12.14 environment at: datafest-env
+   Updating https://github.com/google-research/tabfm.git (fbb665569425fd2f490c6576b3af967876fe11ff)
+    Updated https://github.com/google-research/tabfm.git (fbb665569425fd2f490c6576b3af967876fe11ff)
+Resolved 82 packages in 2.58s
+   Building tabfm @ git+https://github.com/google-research/tabfm.git@fbb665569425fd2f490c6576b3af967876fe11ff
+Downloading nvidia-cusparse (139.2MiB)
+Downloading pillow (6.6MiB)
+Downloading nvidia-cufile (1.2MiB)
+Downloading sympy (6.0MiB)
+Downloading hf-xet (4.3MiB)
+Downloading nvidia-nccl-cu13 (206.0MiB)
+Downloading fonttools (5.1MiB)
+Downloading scipy (33.7MiB)
+Downloading nvidia-cusolver (191.6MiB)
+Downloading matplotlib (9.4MiB)
+Downloading networkx (2.0MiB)
+Downloading nvidia-cusparselt-cu13 (162.3MiB)
+Downloading nvidia-cuda-runtime (2.1MiB)
+Downloading nvidia-nvjitlink (40.5MiB)
+Downloading nvidia-cufft (204.2MiB)
+Downloading triton (236.5MiB)
+Downloading numpy (15.9MiB)
+Downloading nvidia-cudnn-cu13 (527.5MiB)
+Downloading cuda-bindings (6.8MiB)
+Downloading lightgbm (3.4MiB)
+Downloading torch (528.9MiB)
+Downloading nvidia-cublas (403.5MiB)
+Downloading nvidia-cuda-nvrtc (86.0MiB)
+Downloading plotly (9.2MiB)
+Downloading catboost (94.6MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading scikit-learn (8.5MiB)
+Downloading nvidia-nvshmem-cu13 (57.6MiB)
+Downloading nvidia-cuda-cupti (10.2MiB)
+Downloading nvidia-curand (56.8MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading pandas (10.4MiB)
+      Built tabfm @ git+https://github.com/google-research/tabfm.git@fbb665569425fd2f490c6576b3af967876fe11ff
+ Downloaded nvidia-cufile
+ Downloaded kiwisolver
+ Downloaded pydantic-core
+ Downloaded networkx
+ Downloaded nvidia-cuda-runtime
+ Downloaded lightgbm
+ Downloaded hf-xet
+ Downloaded fonttools
+ Downloaded sympy
+ Downloaded pillow
+ Downloaded cuda-bindings
+ Downloaded scikit-learn
+ Downloaded plotly
+ Downloaded matplotlib
+ Downloaded nvidia-cuda-cupti
+ Downloaded pandas
+ Downloaded numpy
+ Downloaded scipy
+ Downloaded nvidia-nvjitlink
+ Downloaded nvidia-curand
+ Downloaded nvidia-nvshmem-cu13
+ Downloaded nvidia-cuda-nvrtc
+ Downloaded catboost
+ Downloaded nvidia-cusparse
+ Downloaded nvidia-cusparselt-cu13
+ Downloaded nvidia-cusolver
+ Downloaded nvidia-cufft
+ Downloaded nvidia-nccl-cu13
+ Downloaded triton
+ Downloaded nvidia-cublas
+ Downloaded nvidia-cudnn-cu13
+ Downloaded torch
+Prepared 82 packages in 57.36s
+Installed 82 packages in 604ms
+ + absl-py==2.5.0
+ + annotated-types==0.8.0
+ + anyio==4.15.1
+ + catboost==1.2.8
+ + certifi==2026.7.22
+ + charset-normalizer==3.5.2
+ + click==8.5.0
+ + cloudpickle==3.1.2
+ + contourpy==1.4.0
+ + cuda-bindings==13.4.3
+ + cuda-pathfinder==1.8.2
+ + cuda-toolkit==13.0.3.0
+ + cycler==0.12.1
+ + einops==0.8.2
+ + filelock==4.0.7
+ + fonttools==4.66.1
+ + fsspec==2026.9.0
+ + graphviz==0.21
+ + h11==0.16.0
+ + hf-xet==1.6.0
+ + httpcore2==2.13.1
+ + httpx2==2.13.1
+ + huggingface-hub==2.0.0
+ + idna==3.20
+ + jaxtyping==0.2.38
+ + jinja2==3.1.6
+ + joblib==1.6.0
+ + kiwisolver==1.5.1
+ + lightgbm==4.6.0
+ + markupsafe==3.0.3
+ + matplotlib==3.11.2
+ + mpmath==1.3.0
+ + narwhals==2.26.0
+ + networkx==3.7
+ + numpy==2.4.4
+ + nvidia-cublas==13.1.1.3
+ + nvidia-cuda-cupti==13.0.85
+ + nvidia-cuda-nvrtc==13.0.88
+ + nvidia-cuda-runtime==13.0.96
+ + nvidia-cudnn-cu13==9.24.0.43
+ + nvidia-cufft==12.0.0.61
+ + nvidia-cufile==1.15.1.6
+ + nvidia-curand==10.4.0.35
+ + nvidia-cusolver==12.0.4.66
+ + nvidia-cusparse==12.6.3.3
+ + nvidia-cusparselt-cu13==0.8.1
+ + nvidia-nccl-cu13==2.30.7
+ + nvidia-nvjitlink==13.4.92
+ + nvidia-nvshmem-cu13==3.4.5
+ + nvidia-nvtx==13.0.85
+ + packaging==26.3
+ + pandas==3.0.2
+ + pillow==12.3.0
+ + plotly==7.1.0
+ + pydantic==2.13.5
+ + pydantic-core==2.46.5
+ + pydantic-settings==2.15.0
+ + pydot==4.0.1
+ + pyparsing==3.3.3
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.4
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + safetensors==0.8.0
+ + scikit-learn==1.8.0
+ + scipy==1.18.1
+ + setuptools==84.0.0
+ + six==1.17.0
+ + skrub==0.10.1
+ + sympy==1.14.0
+ + tabfm==1.0.1 (from git+https://github.com/google-research/tabfm.git@fbb665569425fd2f490c6576b3af967876fe11ff)
+ + tabpfn==9.0.0
+ + threadpoolctl==3.7.0
+ + torch==2.14.1
+ + tqdm==4.70.1
+ + triton==3.8.0
+ + truststore==0.10.4
+ + typeguard==2.13.3
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+ + urllib3==2.8.0
+ + wadler-lindig==0.1.7
+Thu Oct  1 14:40:55 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |
+| N/A   45C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+prepared_runtime_ready

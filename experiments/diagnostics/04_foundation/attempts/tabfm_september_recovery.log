@@ -1,0 +1,16 @@
+Recovered 8431 bytes to experiments/diagnostics/04_foundation/tabfm/manifest.json
+Recovered 5843491 bytes to experiments/diagnostics/04_foundation/tabfm/split_assignments.csv
+Recovered 6399564 bytes to experiments/diagnostics/04_foundation/tabfm/features.csv.gz
+Recovered 2013 bytes to experiments/diagnostics/04_foundation/tabfm/config.json
+Recovered 66 bytes to experiments/diagnostics/04_foundation/tabfm/state.json
+Recovered 3333911723 bytes to experiments/diagnostics/04_foundation/tabfm/202609/fitted_estimator.pkl
+Recovered 1605 bytes to experiments/diagnostics/04_foundation/tabfm/202609/parameters.json
+Recovered 136 bytes to experiments/diagnostics/04_foundation/tabfm/202609/metrics.json
+Recovered 54650655 bytes to experiments/diagnostics/04_foundation/tabfm/202609/context_generator.pkl
+Recovered 340499 bytes to experiments/diagnostics/04_foundation/tabfm/202609/predictions.csv
+Recovered 2013 bytes to experiments/diagnostics/04_foundation/tabfm/202609/config.json
+Recovered 3837 bytes to experiments/diagnostics/04_foundation/tabfm/202609/state.json
+Recovered 3 bytes to experiments/diagnostics/04_foundation/tabfm/202609/checkpoint/config.json
+Recovered 3279246544 bytes to experiments/diagnostics/04_foundation/tabfm/202609/checkpoint/tabfm_v1_0_0.pt
+Recovered 7455 bytes to experiments/diagnostics/04_foundation/tabfm/202609/manifest.json
+Fold 202609 recovered and verified

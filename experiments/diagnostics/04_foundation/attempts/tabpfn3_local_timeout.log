@@ -1,0 +1,33 @@
+Token valid: True Accepted licenses: {'tabpfn_3': True, 'tabpfn_3_5': True}
+[tabpfn3] 202608 -> 202609 on cuda
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/chris/Documentos/projects/Datafest/src/datafest/foundation.py", line 153, in run_foundation
+    prediction=estimator.predict_proba(x.loc[vm].reset_index(drop=True))[:,positive[0]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1616, in predict_proba
+    return self._predict_proba(X)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1630, in _predict_proba
+    self._raw_predict(X, return_logits=False).float().detach().cpu().numpy()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1542, in _raw_predict
+    return self.forward(
+           ^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/classifier.py", line 1876, in forward
+    for output, config in tqdm(
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tqdm/std.py", line 1175, in __iter__
+    yield from iterable
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/inference.py", line 753, in iter_outputs
+    for output, ensemble_member in zip(
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/tabpfn/inference.py", line 74, in __next__
+    torch.cuda.synchronize(self._device)
+  File "/home/chris/Documentos/projects/Datafest/.foundation-venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 1281, in synchronize
+    return torch._C._cuda_synchronize()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chris/Documentos/projects/Datafest/src/datafest/foundation.py", line 25, in _timeout
+    raise FoldTimeout("Fold exceeded 1800 seconds; resume on Colab")
+datafest.foundation.FoldTimeout: Fold exceeded 1800 seconds; resume on Colab

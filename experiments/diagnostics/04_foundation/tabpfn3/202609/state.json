@@ -1,0 +1,90 @@
+{
+  "artifacts": [
+    {
+      "bytes": 361969224,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202609/fitted_estimator.pkl",
+      "sha256": "071247f096622542e7cac83971dd7c2e3e23f20f7076f33521103b26ee157828"
+    },
+    {
+      "bytes": 2514,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202609/parameters.json",
+      "sha256": "29e304fb6b925ae4df56561c945f0a7c6db66568e68c752040e83191f12162f6"
+    },
+    {
+      "bytes": 136,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202609/metrics.json",
+      "sha256": "d45026ccbb627ce16c353a9f3da9c77849c34bad5c6d87576f9d8550e9ca490b"
+    },
+    {
+      "bytes": 342053,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202609/predictions.csv",
+      "sha256": "3fe3b0b3bccb563b8f3494c15c632760a931970595b897022126d784c3caf4f2"
+    },
+    {
+      "bytes": 212804803,
+      "path": "experiments/diagnostics/04_foundation/tabpfn3/202609/checkpoint/tabpfn-v3-classifier-v3_default.ckpt",
+      "sha256": "d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988"
+    }
+  ],
+  "context": {
+    "documented_max_training_rows": 1000000,
+    "external_training_subsample": false,
+    "inference_config": "InferenceConfig(PREPROCESS_TRANSFORMS=[PreprocessorConfig(name='squashing_scaler_default', categorical_name='ordinal_very_common_categories_shuffled', append_original=False, max_features_per_estimator=200, global_transformer_name='svd_quarter_components', max_onehot_cardinality=None, differentiable=False), PreprocessorConfig(name='quantile_uni', categorical_name='numeric', append_original=False, max_features_per_estimator=200, global_transformer_name=None, max_onehot_cardinality=None, differentiable=False)], MAX_UNIQUE_FOR_CATEGORICAL_FEATURES=30, MIN_UNIQUE_FOR_NUMERICAL_FEATURES=4, MIN_NUMBER_SAMPLES_FOR_CATEGORICAL_INFERENCE=100, MIN_CARDINALITY_FOR_TEXT=30, SOFTMAX_TEMPERATURE=0.9, N_ESTIMATORS='auto', TRANSFORM_DATES=False, TRANSFORM_TEXT=False, TEXT_N_COMPONENTS=30, OUTLIER_REMOVAL_STD='auto', FEATURE_SHIFT_METHOD='shuffle', CLASS_SHIFT_METHOD='shuffle', FINGERPRINT_FEATURE=True, POLYNOMIAL_FEATURES='no', SUBSAMPLE_SAMPLES=None, SAMPLE_SUBSAMPLING_METHOD='auto', ENABLE_GPU_PREPROCESSING=True, FEATURE_SUBSAMPLING_METHOD='auto', FEATURE_SUBSAMPLING_CONSTANT_FEATURE_COUNT=50, FEATURE_SUBSAMPLING_IMPORTANCE_TOP_K_COUNT=150, REGRESSION_Y_PREPROCESS_TRANSFORMS=(None, 'safepower'), USE_SKLEARN_16_DECIMAL_PRECISION=False, MAX_NUMBER_OF_CLASSES=160, MAX_NUMBER_OF_FEATURES=2000, MAX_NUMBER_OF_SAMPLES=1000000, MAX_CPU_SAMPLES=5000, FIX_NAN_BORDERS_AFTER_TARGET_TRANSFORM=True, PASSTHROUGH_INF=False, _REGRESSION_DEFAULT_OUTLIER_REMOVAL_STD=None, _CLASSIFICATION_DEFAULT_OUTLIER_REMOVAL_STD=12.0)",
+    "resolved_n_estimators": 8,
+    "selection": "ModelVersion.V3",
+    "version": "TabPFN-3"
+  },
+  "elapsed_seconds": 307.315063422,
+  "identity": {
+    "code_sha256": {
+      "ablation.py": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f",
+      "features.py": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7",
+      "foundation.py": "0b1436b31cbdc673ca14c13ecb65f0978eb1eae463d849fe2be569ffdab3c2a4"
+    },
+    "feature_columns": [
+      "edad",
+      "ingresos",
+      "ratio_deuda_ingresos",
+      "antiguedad_cuenta_meses",
+      "numero_productos",
+      "saldo_promedio",
+      "dias_ultima_transaccion",
+      "ocupacion",
+      "region",
+      "canal_adquisicion",
+      "banda_riesgo",
+      "tiene_tarjeta_credito",
+      "activo_movil",
+      "es_nuevo_cliente",
+      "tiene_prestamo",
+      "antiguedad_direccion_meses",
+      "visitas_web_ultimos_90_dias",
+      "distancia_sucursal_km",
+      "dispositivo_principal",
+      "dia_preferido_pago",
+      "tiene_seguro",
+      "dias_ultima_interaccion",
+      "n_observaciones_previas",
+      "mes_primera_aparicion",
+      "meses_desde_entrada",
+      "meses_en_riesgo",
+      "cliente_recurrente",
+      "month_index"
+    ],
+    "features_sha256": "ef1b1d87029e950683e95c3c3074be2fbcdb585e2c93d1a2b4022138c473659a",
+    "model": "tabpfn3",
+    "train_sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1",
+    "versions": {
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scikit-learn": "1.8.0",
+      "tabpfn": "9.0.0",
+      "torch": "2.14.1"
+    }
+  },
+  "n_train": 80300,
+  "n_validation": 9900,
+  "status": "complete",
+  "train_through": 202608,
+  "validation_month": 202609
+}
