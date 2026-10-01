@@ -1,0 +1,77 @@
+{
+  "group_diagnostic": {
+    "holdout_clients": 0.2,
+    "train_months": [
+      202601,
+      202602,
+      202603,
+      202604,
+      202605,
+      202606,
+      202607,
+      202608
+    ],
+    "train_rows": 64296,
+    "train_validation_client_overlap": 0,
+    "validation_month": 202609,
+    "validation_rows": 1978
+  },
+  "group_diagnostic_assignments": {
+    "bytes": 796271,
+    "path": "data/splits/temporal_202601-202609__202610-202611/group_diagnostic_assignments.csv",
+    "sha256": "330664219cc27d0bc2a7e70b5aa7b72284bce1bfebe26ea13a1d5ac76fc8bf18"
+  },
+  "inner_fold_assignments": {
+    "bytes": 4373781,
+    "path": "data/splits/temporal_202601-202609__202610-202611/inner_fold_assignments.csv",
+    "sha256": "9b156ff10a711e926e5da336901427f2d8f1a4d269514e8c80a77ccab30f6271"
+  },
+  "inner_folds": [
+    {
+      "fold": 1,
+      "train_rows": 50200,
+      "train_through": 202605,
+      "validation_month": 202606,
+      "validation_rows": 10350
+    },
+    {
+      "fold": 2,
+      "train_rows": 60550,
+      "train_through": 202606,
+      "validation_month": 202607,
+      "validation_rows": 9700
+    },
+    {
+      "fold": 3,
+      "train_rows": 70250,
+      "train_through": 202607,
+      "validation_month": 202608,
+      "validation_rows": 10050
+    },
+    {
+      "fold": 4,
+      "train_rows": 80300,
+      "train_through": 202608,
+      "validation_month": 202609,
+      "validation_rows": 9900
+    }
+  ],
+  "outer_train": {
+    "bytes": 15514936,
+    "path": "data/splits/temporal_202601-202609__202610-202611/train.csv",
+    "sha256": "69086631b20cb43eec0354f417a42d795635728c9e8bd50bf9b9ef8c1354932e"
+  },
+  "outer_validation": {
+    "bytes": 3430971,
+    "path": "data/splits/temporal_202601-202609__202610-202611/validation.csv",
+    "sha256": "896b402a78e89cbbf034244ccd09bdfd8bff529877bd31e7c37c58dc62c623d8"
+  },
+  "schema_version": 1,
+  "seed": 42,
+  "source": {
+    "bytes": 18949939,
+    "path": "data/train.csv",
+    "sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1"
+  },
+  "split_id": "temporal_202601-202609__202610-202611"
+}

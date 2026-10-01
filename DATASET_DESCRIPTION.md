@@ -6,10 +6,10 @@ El objetivo es estimar la probabilidad de conversión del cliente. Los datos de 
 
 ## Archivos
 
-- **train.csv**: contiene 110.100 observaciones de entrenamiento y 25 columnas. Incluye todas las variables predictoras y la columna objetivo, `objetivo`.
-- **test.csv**: contiene 9.900 observaciones de diciembre y 24 columnas. Incluye las mismas variables predictoras que `train.csv`, pero no contiene `objetivo`.
-- **sample_submission.csv**: muestra la estructura requerida para la entrega e incluye una fila por cada observación de `test.csv`.
-- **metaData.csv**: contiene las descripciones, tipos de datos y notas de las columnas del conjunto de datos y del archivo de entrega.
+- **data/train.csv**: contiene 110.100 observaciones de entrenamiento y 25 columnas. Incluye todas las variables predictoras y la columna objetivo, `objetivo`.
+- **data/test.csv**: contiene 9.900 observaciones de diciembre y 24 columnas. Incluye las mismas variables predictoras que `train.csv`, pero no contiene `objetivo`.
+- **data/sample_submission.csv**: muestra la estructura requerida para la entrega e incluye una fila por cada observación de `test.csv`.
+- **data/metaData.csv**: contiene las descripciones, tipos de datos y notas de las columnas del conjunto de datos y del archivo de entrega.
 
 ## Formato de los datos
 

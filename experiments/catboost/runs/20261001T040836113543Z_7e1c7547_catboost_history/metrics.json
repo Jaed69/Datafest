@@ -1,0 +1,274 @@
+{
+  "id_memorization_gate": null,
+  "inner_search": [
+    {
+      "best_iterations": [
+        169,
+        285,
+        514,
+        249
+      ],
+      "config": {
+        "depth": 5,
+        "l2_leaf_reg": 3.0,
+        "learning_rate": 0.03,
+        "name": "compact"
+      },
+      "fold_metrics": [
+        {
+          "gini": 0.2497165714285714,
+          "pr_auc": 0.2486432982580494,
+          "roc_auc": 0.6248582857142857,
+          "valid_month": 202606
+        },
+        {
+          "gini": 0.2678092891546682,
+          "pr_auc": 0.23957660793452928,
+          "roc_auc": 0.6339046445773341,
+          "valid_month": 202607
+        },
+        {
+          "gini": 0.26978815197070927,
+          "pr_auc": 0.2339189282314913,
+          "roc_auc": 0.6348940759853546,
+          "valid_month": 202608
+        },
+        {
+          "gini": 0.24541547685361254,
+          "pr_auc": 0.22950180970421724,
+          "roc_auc": 0.6227077384268063,
+          "valid_month": 202609
+        }
+      ],
+      "mean_gini": 0.25818237235189034,
+      "mean_pr_auc": 0.2379101610320718,
+      "mean_roc_auc": 0.6290911861759452
+    },
+    {
+      "best_iterations": [
+        179,
+        212,
+        272,
+        166
+      ],
+      "config": {
+        "depth": 6,
+        "l2_leaf_reg": 3.0,
+        "learning_rate": 0.05,
+        "name": "baseline"
+      },
+      "fold_metrics": [
+        {
+          "gini": 0.24841857142857138,
+          "pr_auc": 0.24620909262812735,
+          "roc_auc": 0.6242092857142857,
+          "valid_month": 202606
+        },
+        {
+          "gini": 0.2705688302577658,
+          "pr_auc": 0.24086717163680468,
+          "roc_auc": 0.6352844151288829,
+          "valid_month": 202607
+        },
+        {
+          "gini": 0.26510078072838716,
+          "pr_auc": 0.232944695528133,
+          "roc_auc": 0.6325503903641936,
+          "valid_month": 202608
+        },
+        {
+          "gini": 0.24215242360689238,
+          "pr_auc": 0.2263320253401641,
+          "roc_auc": 0.6210762118034462,
+          "valid_month": 202609
+        }
+      ],
+      "mean_gini": 0.2565601515054042,
+      "mean_pr_auc": 0.23658824628330727,
+      "mean_roc_auc": 0.6282800757527021
+    },
+    {
+      "best_iterations": [
+        54,
+        230,
+        83,
+        89
+      ],
+      "config": {
+        "depth": 6,
+        "l2_leaf_reg": 8.0,
+        "learning_rate": 0.1,
+        "name": "fast"
+      },
+      "fold_metrics": [
+        {
+          "gini": 0.2462065714285715,
+          "pr_auc": 0.24781564846288492,
+          "roc_auc": 0.6231032857142857,
+          "valid_month": 202606
+        },
+        {
+          "gini": 0.2649416112722327,
+          "pr_auc": 0.23244386644613757,
+          "roc_auc": 0.6324708056361164,
+          "valid_month": 202607
+        },
+        {
+          "gini": 0.26816717429537973,
+          "pr_auc": 0.2326203250023564,
+          "roc_auc": 0.6340835871476899,
+          "valid_month": 202608
+        },
+        {
+          "gini": 0.24227832811305006,
+          "pr_auc": 0.22714493348097775,
+          "roc_auc": 0.621139164056525,
+          "valid_month": 202609
+        }
+      ],
+      "mean_gini": 0.2553984212773085,
+      "mean_pr_auc": 0.23500619334808917,
+      "mean_roc_auc": 0.6276992106386543
+    },
+    {
+      "best_iterations": [
+        54,
+        211,
+        413,
+        213
+      ],
+      "config": {
+        "depth": 7,
+        "l2_leaf_reg": 5.0,
+        "learning_rate": 0.03,
+        "name": "regularized"
+      },
+      "fold_metrics": [
+        {
+          "gini": 0.24092899999999995,
+          "pr_auc": 0.2487311685062709,
+          "roc_auc": 0.6204645,
+          "valid_month": 202606
+        },
+        {
+          "gini": 0.2633616507969099,
+          "pr_auc": 0.23809040395600534,
+          "roc_auc": 0.6316808253984549,
+          "valid_month": 202607
+        },
+        {
+          "gini": 0.26404115142532825,
+          "pr_auc": 0.23364133233821294,
+          "roc_auc": 0.6320205757126641,
+          "valid_month": 202608
+        },
+        {
+          "gini": 0.23852701516617647,
+          "pr_auc": 0.22574688557040634,
+          "roc_auc": 0.6192635075830882,
+          "valid_month": 202609
+        }
+      ],
+      "mean_gini": 0.25171470434710363,
+      "mean_pr_auc": 0.23655244759272387,
+      "mean_roc_auc": 0.6258573521735518
+    },
+    {
+      "best_iterations": [
+        92,
+        14,
+        344,
+        114
+      ],
+      "config": {
+        "depth": 8,
+        "l2_leaf_reg": 5.0,
+        "learning_rate": 0.05,
+        "name": "deep"
+      },
+      "fold_metrics": [
+        {
+          "gini": 0.24737171428571436,
+          "pr_auc": 0.24816084595136434,
+          "roc_auc": 0.6236858571428572,
+          "valid_month": 202606
+        },
+        {
+          "gini": 0.2608007596950954,
+          "pr_auc": 0.22622877942573943,
+          "roc_auc": 0.6304003798475477,
+          "valid_month": 202607
+        },
+        {
+          "gini": 0.26298938549283557,
+          "pr_auc": 0.23096600207101342,
+          "roc_auc": 0.6314946927464178,
+          "valid_month": 202608
+        },
+        {
+          "gini": 0.2333767445094621,
+          "pr_auc": 0.22448962907930692,
+          "roc_auc": 0.616688372254731,
+          "valid_month": 202609
+        }
+      ],
+      "mean_gini": 0.25113465099577686,
+      "mean_pr_auc": 0.23246131413185603,
+      "mean_roc_auc": 0.6255673254978884
+    }
+  ],
+  "outer_holdout": {
+    "by_cohort": {
+      "nuevo": {
+        "gini": 0.2652826817543712,
+        "pr_auc": 0.2878516431418834,
+        "roc_auc": 0.6326413408771856
+      },
+      "recurrente": {
+        "gini": 0.24381434575680228,
+        "pr_auc": 0.2318665205145455,
+        "roc_auc": 0.6219071728784011
+      }
+    },
+    "by_month": {
+      "202610": {
+        "gini": 0.2678223709345462,
+        "pr_auc": 0.2539614646580746,
+        "roc_auc": 0.6339111854672731
+      },
+      "202611": {
+        "gini": 0.23065517024074333,
+        "pr_auc": 0.22811189944941968,
+        "roc_auc": 0.6153275851203717
+      }
+    },
+    "overall": {
+      "gini": 0.25037109109838274,
+      "pr_auc": 0.2414886553572968,
+      "roc_auc": 0.6251855455491914
+    }
+  },
+  "selected_inner_mean_gini": 0.25818237235189034,
+  "selected_inner_mean_pr_auc": 0.2379101610320718,
+  "selected_inner_mean_roc_auc": 0.6290911861759452,
+  "submission_columns": [
+    "id_cliente",
+    "prediccion"
+  ],
+  "test_rows": 9900,
+  "winner_assessment": {
+    "champion": "lightgbm/history",
+    "champion_month_gini_positive": true,
+    "champion_new_and_recurrent_gini_nonnegative": true,
+    "champion_vs_runner_up": {
+      "bootstrap_replicates": 2000,
+      "ci95_high": 0.004001528471595334,
+      "ci95_low": -0.0045592672852582,
+      "delta_gini": -0.0003358913646631656
+    },
+    "holdout_used_for_hyperparameter_selection": false,
+    "runner_up": "lightgbm/clean",
+    "selection_basis": "mean inner-fold Gini, before the outer holdout was scored",
+    "status": "no_conclusive_winner"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id_memorization_gate": {
+    "bootstrap": {
+      "resamples": 1000,
+      "seed": 42,
+      "unit": "id_cliente"
+    },
+    "criteria": {
+      "no_negative_delta_for_new_or_recurrent": false,
+      "temporal_delta_ci95_low_gt_zero": false,
+      "unseen_client_group_delta_ci95_low_gt_zero": false
+    },
+    "passed": false,
+    "temporal_cohort_delta_gini": {
+      "nuevo": -0.0002820915308430205,
+      "recurrente": -0.008774342036836025
+    },
+    "temporal_raw_id_vs_history": {
+      "bootstrap_replicates": 1000,
+      "ci95_high": 1.4824260245880521e-06,
+      "ci95_low": -0.013999471064925578,
+      "delta_gini": -0.0072081493040103695
+    },
+    "unseen_client_group_raw_id_vs_history": {
+      "bootstrap_replicates": 1000,
+      "ci95_high": 0.022028768200229424,
+      "ci95_low": -0.025643538126107302,
+      "delta_gini": -0.001576277030687967
+    }
+  },
+  "inner_search": [
+    {
+      "best_iterations": [
+        232,
+        45,
+        173,
+        128
+      ],
+      "config": {
+        "depth": 6,
+        "l2_leaf_reg": 3.0,
+        "learning_rate": 0.05,
+        "name": "baseline"
+      },
+      "fold_metrics": [
+        {
+          "gini": 0.24767300000000003,
+          "pr_auc": 0.24439766185665723,
+          "roc_auc": 0.6238365,
+          "valid_month": 202606
+        },
+        {
+          "gini": 0.26011104552181985,
+          "pr_auc": 0.23892479579026835,
+          "roc_auc": 0.6300555227609099,
+          "valid_month": 202607
+        },
+        {
+          "gini": 0.2632198303935158,
+          "pr_auc": 0.23595615375779577,
+          "roc_auc": 0.6316099151967579,
+          "valid_month": 202608
+        },
+        {
+          "gini": 0.24510577877211204,
+          "pr_auc": 0.22712787647487948,
+          "roc_auc": 0.622552889386056,
+          "valid_month": 202609
+        }
+      ],
+      "mean_gini": 0.25402741367186193,
+      "mean_pr_auc": 0.2366016219699002,
+      "mean_roc_auc": 0.627013706835931
+    }
+  ],
+  "outer_holdout": {
+    "by_cohort": {
+      "nuevo": {
+        "gini": 0.25703755554438334,
+        "pr_auc": 0.2896656032159577,
+        "roc_auc": 0.6285187777721917
+      },
+      "recurrente": {
+        "gini": 0.24153142874845823,
+        "pr_auc": 0.23168925215673403,
+        "roc_auc": 0.6207657143742291
+      }
+    },
+    "by_month": {
+      "202610": {
+        "gini": 0.25629585872403915,
+        "pr_auc": 0.2521717513239228,
+        "roc_auc": 0.6281479293620196
+      },
+      "202611": {
+        "gini": 0.2370178776681866,
+        "pr_auc": 0.23020432303196867,
+        "roc_auc": 0.6185089388340933
+      }
+    },
+    "overall": {
+      "gini": 0.24725121991362187,
+      "pr_auc": 0.2417081005421695,
+      "roc_auc": 0.6236256099568109
+    }
+  },
+  "selected_inner_mean_gini": 0.25402741367186193,
+  "selected_inner_mean_pr_auc": 0.2366016219699002,
+  "selected_inner_mean_roc_auc": 0.627013706835931,
+  "submission_columns": [
+    "id_cliente",
+    "prediccion"
+  ],
+  "test_rows": 9900,
+  "winner_assessment": {
+    "champion": "lightgbm/history",
+    "champion_month_gini_positive": true,
+    "champion_new_and_recurrent_gini_nonnegative": true,
+    "champion_vs_runner_up": {
+      "bootstrap_replicates": 2000,
+      "ci95_high": 0.004001528471595334,
+      "ci95_low": -0.0045592672852582,
+      "delta_gini": -0.0003358913646631656
+    },
+    "holdout_used_for_hyperparameter_selection": false,
+    "runner_up": "lightgbm/clean",
+    "selection_basis": "mean inner-fold Gini, before the outer holdout was scored",
+    "status": "no_conclusive_winner"
+  }
+}

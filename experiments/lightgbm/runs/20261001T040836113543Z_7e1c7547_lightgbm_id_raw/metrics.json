@@ -1,0 +1,132 @@
+{
+  "id_memorization_gate": {
+    "bootstrap": {
+      "resamples": 1000,
+      "seed": 42,
+      "unit": "id_cliente"
+    },
+    "criteria": {
+      "no_negative_delta_for_new_or_recurrent": false,
+      "temporal_delta_ci95_low_gt_zero": false,
+      "unseen_client_group_delta_ci95_low_gt_zero": false
+    },
+    "passed": false,
+    "temporal_cohort_delta_gini": {
+      "nuevo": 0.0009407876640794566,
+      "recurrente": -0.0013677617323712976
+    },
+    "temporal_raw_id_vs_history": {
+      "bootstrap_replicates": 1000,
+      "ci95_high": 0.004006229512869086,
+      "ci95_low": -0.00687025315886412,
+      "delta_gini": -0.0010927114259819959
+    },
+    "unseen_client_group_raw_id_vs_history": {
+      "bootstrap_replicates": 1000,
+      "ci95_high": 0.025935646171687667,
+      "ci95_low": -0.03423020356663263,
+      "delta_gini": -0.005377075020934763
+    }
+  },
+  "inner_search": [
+    {
+      "best_iterations": [
+        38,
+        46,
+        120,
+        59
+      ],
+      "config": {
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 20,
+        "name": "baseline",
+        "num_leaves": 31,
+        "reg_lambda": 0.0
+      },
+      "fold_metrics": [
+        {
+          "gini": 0.2526007142857143,
+          "pr_auc": 0.24427733139356891,
+          "roc_auc": 0.6263003571428571,
+          "valid_month": 202606
+        },
+        {
+          "gini": 0.28391704950850816,
+          "pr_auc": 0.2378729514197146,
+          "roc_auc": 0.6419585247542541,
+          "valid_month": 202607
+        },
+        {
+          "gini": 0.2528957062706929,
+          "pr_auc": 0.2270325506287037,
+          "roc_auc": 0.6264478531353465,
+          "valid_month": 202608
+        },
+        {
+          "gini": 0.24698810177100894,
+          "pr_auc": 0.22448436763078342,
+          "roc_auc": 0.6234940508855045,
+          "valid_month": 202609
+        }
+      ],
+      "mean_gini": 0.2591003929589811,
+      "mean_pr_auc": 0.23341680026819264,
+      "mean_roc_auc": 0.6295501964794905
+    }
+  ],
+  "outer_holdout": {
+    "by_cohort": {
+      "nuevo": {
+        "gini": 0.2736960363837464,
+        "pr_auc": 0.2883756459927299,
+        "roc_auc": 0.6368480181918732
+      },
+      "recurrente": {
+        "gini": 0.24329021188959832,
+        "pr_auc": 0.23222706386662886,
+        "roc_auc": 0.6216451059447992
+      }
+    },
+    "by_month": {
+      "202610": {
+        "gini": 0.2698663717815566,
+        "pr_auc": 0.2530296083117962,
+        "roc_auc": 0.6349331858907783
+      },
+      "202611": {
+        "gini": 0.23146854780595394,
+        "pr_auc": 0.23079843561209606,
+        "roc_auc": 0.615734273902977
+      }
+    },
+    "overall": {
+      "gini": 0.25186843324488883,
+      "pr_auc": 0.24210848669895563,
+      "roc_auc": 0.6259342166224444
+    }
+  },
+  "selected_inner_mean_gini": 0.2591003929589811,
+  "selected_inner_mean_pr_auc": 0.23341680026819264,
+  "selected_inner_mean_roc_auc": 0.6295501964794905,
+  "submission_columns": [
+    "id_cliente",
+    "prediccion"
+  ],
+  "test_rows": 9900,
+  "winner_assessment": {
+    "champion": "lightgbm/history",
+    "champion_month_gini_positive": true,
+    "champion_new_and_recurrent_gini_nonnegative": true,
+    "champion_vs_runner_up": {
+      "bootstrap_replicates": 2000,
+      "ci95_high": 0.004001528471595334,
+      "ci95_low": -0.0045592672852582,
+      "delta_gini": -0.0003358913646631656
+    },
+    "holdout_used_for_hyperparameter_selection": false,
+    "runner_up": "lightgbm/clean",
+    "selection_basis": "mean inner-fold Gini, before the outer holdout was scored",
+    "status": "no_conclusive_winner"
+  }
+}

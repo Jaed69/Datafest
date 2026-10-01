@@ -1,0 +1,71 @@
+{
+  "categorical_columns": [
+    "ocupacion",
+    "region",
+    "canal_adquisicion",
+    "banda_riesgo",
+    "dispositivo_principal"
+  ],
+  "category_maps": {
+    "banda_riesgo": {
+      "high": 0,
+      "low": 1,
+      "medium": 2
+    },
+    "canal_adquisicion": {
+      "branch": 0,
+      "call_center": 1,
+      "mobile": 2,
+      "partner": 3,
+      "web": 4
+    },
+    "dispositivo_principal": {
+      "android": 0,
+      "ios": 1,
+      "otro": 2,
+      "web": 3
+    },
+    "ocupacion": {
+      "clerical": 0,
+      "manager": 1,
+      "manual": 2,
+      "professional": 3,
+      "self_employed": 4
+    },
+    "region": {
+      "central": 0,
+      "east": 1,
+      "north": 2,
+      "south": 3,
+      "west": 4
+    }
+  },
+  "feature_columns": [
+    "mes",
+    "edad",
+    "ingresos",
+    "ratio_deuda_ingresos",
+    "antiguedad_cuenta_meses",
+    "numero_productos",
+    "saldo_promedio",
+    "dias_ultima_transaccion",
+    "ocupacion",
+    "region",
+    "canal_adquisicion",
+    "banda_riesgo",
+    "tiene_tarjeta_credito",
+    "activo_movil",
+    "es_nuevo_cliente",
+    "tiene_prestamo",
+    "antiguedad_direccion_meses",
+    "visitas_web_ultimos_90_dias",
+    "distancia_sucursal_km",
+    "dispositivo_principal",
+    "dia_preferido_pago",
+    "tiene_seguro",
+    "dias_ultima_interaccion"
+  ],
+  "feature_variant": "clean",
+  "history_features": [],
+  "unknown_category_code": "__UNKNOWN__ for CatBoost; next category code for LightGBM"
+}

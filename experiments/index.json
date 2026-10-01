@@ -1,0 +1,370 @@
+{
+  "batch_id": "20261001T040836113543Z_7e1c7547",
+  "data_report": {
+    "duplicate_client_months": 0,
+    "missing_values": 0,
+    "test_months": [
+      202612
+    ],
+    "test_rows": 9900,
+    "test_rows_with_seen_client": 8061,
+    "test_rows_with_unseen_client": 1839,
+    "train_months": [
+      202601,
+      202602,
+      202603,
+      202604,
+      202605,
+      202606,
+      202607,
+      202608,
+      202609,
+      202610,
+      202611
+    ],
+    "train_rows": 110100
+  },
+  "id_gates": {
+    "catboost": {
+      "bootstrap": {
+        "resamples": 1000,
+        "seed": 42,
+        "unit": "id_cliente"
+      },
+      "criteria": {
+        "no_negative_delta_for_new_or_recurrent": false,
+        "temporal_delta_ci95_low_gt_zero": false,
+        "unseen_client_group_delta_ci95_low_gt_zero": false
+      },
+      "passed": false,
+      "temporal_cohort_delta_gini": {
+        "nuevo": -0.0002820915308430205,
+        "recurrente": -0.008774342036836025
+      },
+      "temporal_raw_id_vs_history": {
+        "bootstrap_replicates": 1000,
+        "ci95_high": 1.4824260245880521e-06,
+        "ci95_low": -0.013999471064925578,
+        "delta_gini": -0.0072081493040103695
+      },
+      "unseen_client_group_raw_id_vs_history": {
+        "bootstrap_replicates": 1000,
+        "ci95_high": 0.022028768200229424,
+        "ci95_low": -0.025643538126107302,
+        "delta_gini": -0.001576277030687967
+      }
+    },
+    "lightgbm": {
+      "bootstrap": {
+        "resamples": 1000,
+        "seed": 42,
+        "unit": "id_cliente"
+      },
+      "criteria": {
+        "no_negative_delta_for_new_or_recurrent": false,
+        "temporal_delta_ci95_low_gt_zero": false,
+        "unseen_client_group_delta_ci95_low_gt_zero": false
+      },
+      "passed": false,
+      "temporal_cohort_delta_gini": {
+        "nuevo": 0.0009407876640794566,
+        "recurrente": -0.0013677617323712976
+      },
+      "temporal_raw_id_vs_history": {
+        "bootstrap_replicates": 1000,
+        "ci95_high": 0.004006229512869086,
+        "ci95_low": -0.00687025315886412,
+        "delta_gini": -0.0010927114259819959
+      },
+      "unseen_client_group_raw_id_vs_history": {
+        "bootstrap_replicates": 1000,
+        "ci95_high": 0.025935646171687667,
+        "ci95_low": -0.03423020356663263,
+        "delta_gini": -0.005377075020934763
+      }
+    }
+  },
+  "runs": [
+    {
+      "eligible_for_winner": true,
+      "feature_variant": "clean",
+      "id_gate_passed": false,
+      "inner_mean_gini": 0.25936780927432973,
+      "manifest": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_clean/manifest.json",
+      "manifest_sha256": "34144a4b7d5210e74b92b39c0d7380d90aca0c240bfc904282632ffb4704aff3",
+      "metrics": {
+        "by_cohort": {
+          "nuevo": {
+            "gini": 0.27077137564439213,
+            "pr_auc": 0.2905715511777456,
+            "roc_auc": 0.6353856878221961
+          },
+          "recurrente": {
+            "gini": 0.24703375426319796,
+            "pr_auc": 0.23403783943842527,
+            "roc_auc": 0.623516877131599
+          }
+        },
+        "by_month": {
+          "202610": {
+            "gini": 0.2722081847423845,
+            "pr_auc": 0.2562149888284494,
+            "roc_auc": 0.6361040923711923
+          },
+          "202611": {
+            "gini": 0.23329487570409757,
+            "pr_auc": 0.23051182910014828,
+            "roc_auc": 0.6166474378520488
+          }
+        },
+        "overall": {
+          "gini": 0.2539372807667706,
+          "pr_auc": 0.24376511550725433,
+          "roc_auc": 0.6269686403833853
+        }
+      },
+      "model_name": "lightgbm",
+      "run_dir": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_clean",
+      "run_id": "20261001T040836113543Z_7e1c7547_lightgbm_clean",
+      "submission": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_clean/submission.csv",
+      "winner_status": "no_conclusive_winner"
+    },
+    {
+      "eligible_for_winner": true,
+      "feature_variant": "history",
+      "id_gate_passed": false,
+      "inner_mean_gini": 0.26125512238511317,
+      "manifest": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_history/manifest.json",
+      "manifest_sha256": "976a3465c4b15c1680fea871a90ac4c2ece920ec34a57a4b78fb7e70f033ef5a",
+      "metrics": {
+        "by_cohort": {
+          "nuevo": {
+            "gini": 0.27381398964331716,
+            "pr_auc": 0.2954995067326974,
+            "roc_auc": 0.6369069948216586
+          },
+          "recurrente": {
+            "gini": 0.24606183051487562,
+            "pr_auc": 0.23383207189643887,
+            "roc_auc": 0.6230309152574378
+          }
+        },
+        "by_month": {
+          "202610": {
+            "gini": 0.27173363202774947,
+            "pr_auc": 0.25829214834544,
+            "roc_auc": 0.6358668160138747
+          },
+          "202611": {
+            "gini": 0.2330539228376678,
+            "pr_auc": 0.2296933275471979,
+            "roc_auc": 0.6165269614188339
+          }
+        },
+        "overall": {
+          "gini": 0.2536013894021074,
+          "pr_auc": 0.24460206857314243,
+          "roc_auc": 0.6268006947010537
+        }
+      },
+      "model_name": "lightgbm",
+      "run_dir": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_history",
+      "run_id": "20261001T040836113543Z_7e1c7547_lightgbm_history",
+      "submission": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_history/submission.csv",
+      "winner_status": "no_conclusive_winner"
+    },
+    {
+      "eligible_for_winner": false,
+      "feature_variant": "id_raw",
+      "id_gate_passed": false,
+      "inner_mean_gini": 0.2591003929589811,
+      "manifest": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_id_raw/manifest.json",
+      "manifest_sha256": "530bb9fe1e9e76b04bf34263674c6a801bd322b59321f9205ad5976ca5218baa",
+      "metrics": {
+        "by_cohort": {
+          "nuevo": {
+            "gini": 0.2736960363837464,
+            "pr_auc": 0.2883756459927299,
+            "roc_auc": 0.6368480181918732
+          },
+          "recurrente": {
+            "gini": 0.24329021188959832,
+            "pr_auc": 0.23222706386662886,
+            "roc_auc": 0.6216451059447992
+          }
+        },
+        "by_month": {
+          "202610": {
+            "gini": 0.2698663717815566,
+            "pr_auc": 0.2530296083117962,
+            "roc_auc": 0.6349331858907783
+          },
+          "202611": {
+            "gini": 0.23146854780595394,
+            "pr_auc": 0.23079843561209606,
+            "roc_auc": 0.615734273902977
+          }
+        },
+        "overall": {
+          "gini": 0.25186843324488883,
+          "pr_auc": 0.24210848669895563,
+          "roc_auc": 0.6259342166224444
+        }
+      },
+      "model_name": "lightgbm",
+      "run_dir": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_id_raw",
+      "run_id": "20261001T040836113543Z_7e1c7547_lightgbm_id_raw",
+      "submission": "experiments/lightgbm/runs/20261001T040836113543Z_7e1c7547_lightgbm_id_raw/submission.csv",
+      "winner_status": "no_conclusive_winner"
+    },
+    {
+      "eligible_for_winner": true,
+      "feature_variant": "clean",
+      "id_gate_passed": false,
+      "inner_mean_gini": 0.2575541407008443,
+      "manifest": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_clean/manifest.json",
+      "manifest_sha256": "7f4501d9eab8b0242884ddab73d5046bcb28acfb2295a6ceac4f6c581eb8b8fd",
+      "metrics": {
+        "by_cohort": {
+          "nuevo": {
+            "gini": 0.2589441442974434,
+            "pr_auc": 0.2939166903770007,
+            "roc_auc": 0.6294720721487217
+          },
+          "recurrente": {
+            "gini": 0.2384955566640976,
+            "pr_auc": 0.22969147426895437,
+            "roc_auc": 0.6192477783320488
+          }
+        },
+        "by_month": {
+          "202610": {
+            "gini": 0.2585238826688896,
+            "pr_auc": 0.25542950872830006,
+            "roc_auc": 0.6292619413344448
+          },
+          "202611": {
+            "gini": 0.22932583456977929,
+            "pr_auc": 0.22477048412504594,
+            "roc_auc": 0.6146629172848896
+          }
+        },
+        "overall": {
+          "gini": 0.24482718872564102,
+          "pr_auc": 0.24069590195526708,
+          "roc_auc": 0.6224135943628205
+        }
+      },
+      "model_name": "catboost",
+      "run_dir": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_clean",
+      "run_id": "20261001T040836113543Z_7e1c7547_catboost_clean",
+      "submission": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_clean/submission.csv",
+      "winner_status": "no_conclusive_winner"
+    },
+    {
+      "eligible_for_winner": true,
+      "feature_variant": "history",
+      "id_gate_passed": false,
+      "inner_mean_gini": 0.25818237235189034,
+      "manifest": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_history/manifest.json",
+      "manifest_sha256": "5bb40778f3381854256e9c63f1922ecd1c7e8166a08ad833106758df69d93f3a",
+      "metrics": {
+        "by_cohort": {
+          "nuevo": {
+            "gini": 0.2652826817543712,
+            "pr_auc": 0.2878516431418834,
+            "roc_auc": 0.6326413408771856
+          },
+          "recurrente": {
+            "gini": 0.24381434575680228,
+            "pr_auc": 0.2318665205145455,
+            "roc_auc": 0.6219071728784011
+          }
+        },
+        "by_month": {
+          "202610": {
+            "gini": 0.2678223709345462,
+            "pr_auc": 0.2539614646580746,
+            "roc_auc": 0.6339111854672731
+          },
+          "202611": {
+            "gini": 0.23065517024074333,
+            "pr_auc": 0.22811189944941968,
+            "roc_auc": 0.6153275851203717
+          }
+        },
+        "overall": {
+          "gini": 0.25037109109838274,
+          "pr_auc": 0.2414886553572968,
+          "roc_auc": 0.6251855455491914
+        }
+      },
+      "model_name": "catboost",
+      "run_dir": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_history",
+      "run_id": "20261001T040836113543Z_7e1c7547_catboost_history",
+      "submission": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_history/submission.csv",
+      "winner_status": "no_conclusive_winner"
+    },
+    {
+      "eligible_for_winner": false,
+      "feature_variant": "id_raw",
+      "id_gate_passed": false,
+      "inner_mean_gini": 0.25402741367186193,
+      "manifest": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_id_raw/manifest.json",
+      "manifest_sha256": "5e49d6a4eef1737f2d70510ca086742e19a5761e48335c531891b148886dbe85",
+      "metrics": {
+        "by_cohort": {
+          "nuevo": {
+            "gini": 0.25703755554438334,
+            "pr_auc": 0.2896656032159577,
+            "roc_auc": 0.6285187777721917
+          },
+          "recurrente": {
+            "gini": 0.24153142874845823,
+            "pr_auc": 0.23168925215673403,
+            "roc_auc": 0.6207657143742291
+          }
+        },
+        "by_month": {
+          "202610": {
+            "gini": 0.25629585872403915,
+            "pr_auc": 0.2521717513239228,
+            "roc_auc": 0.6281479293620196
+          },
+          "202611": {
+            "gini": 0.2370178776681866,
+            "pr_auc": 0.23020432303196867,
+            "roc_auc": 0.6185089388340933
+          }
+        },
+        "overall": {
+          "gini": 0.24725121991362187,
+          "pr_auc": 0.2417081005421695,
+          "roc_auc": 0.6236256099568109
+        }
+      },
+      "model_name": "catboost",
+      "run_dir": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_id_raw",
+      "run_id": "20261001T040836113543Z_7e1c7547_catboost_id_raw",
+      "submission": "experiments/catboost/runs/20261001T040836113543Z_7e1c7547_catboost_id_raw/submission.csv",
+      "winner_status": "no_conclusive_winner"
+    }
+  ],
+  "schema_version": 1,
+  "split_id": "temporal_202601-202609__202610-202611",
+  "winner_assessment": {
+    "champion": "lightgbm/history",
+    "champion_month_gini_positive": true,
+    "champion_new_and_recurrent_gini_nonnegative": true,
+    "champion_vs_runner_up": {
+      "bootstrap_replicates": 2000,
+      "ci95_high": 0.004001528471595334,
+      "ci95_low": -0.0045592672852582,
+      "delta_gini": -0.0003358913646631656
+    },
+    "holdout_used_for_hyperparameter_selection": false,
+    "runner_up": "lightgbm/clean",
+    "selection_basis": "mean inner-fold Gini, before the outer holdout was scored",
+    "status": "no_conclusive_winner"
+  }
+}
