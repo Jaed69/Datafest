@@ -1,0 +1,69 @@
+{
+  "defaults": true,
+  "device": "cuda",
+  "features": "exact D_month_index",
+  "identity": {
+    "code_sha256": {
+      "ablation.py": "714baf6aa570652c0ad3e3144194dbc46ac576b28daecb1012cdb65cb373cc3f",
+      "features.py": "72b738e2efc8ffc498966838f4ff33b6ba300fe92a2895bf7959c0695371e3f7",
+      "foundation35.py": "11872f9b42ed86c551403ada1c347842e7b18d1c242ed8aa68c21f543ad90f12"
+    },
+    "feature_columns": [
+      "edad",
+      "ingresos",
+      "ratio_deuda_ingresos",
+      "antiguedad_cuenta_meses",
+      "numero_productos",
+      "saldo_promedio",
+      "dias_ultima_transaccion",
+      "ocupacion",
+      "region",
+      "canal_adquisicion",
+      "banda_riesgo",
+      "tiene_tarjeta_credito",
+      "activo_movil",
+      "es_nuevo_cliente",
+      "tiene_prestamo",
+      "antiguedad_direccion_meses",
+      "visitas_web_ultimos_90_dias",
+      "distancia_sucursal_km",
+      "dispositivo_principal",
+      "dia_preferido_pago",
+      "tiene_seguro",
+      "dias_ultima_interaccion",
+      "n_observaciones_previas",
+      "mes_primera_aparicion",
+      "meses_desde_entrada",
+      "meses_en_riesgo",
+      "cliente_recurrente",
+      "month_index"
+    ],
+    "features_sha256": "ef1b1d87029e950683e95c3c3074be2fbcdb585e2c93d1a2b4022138c473659a",
+    "model": "tabpfn35",
+    "train_sha256": "7e1c7547810ee85762ca52ec51d41fd1edef727ae7b9faf284381233c0c5d6c1",
+    "versions": {
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scikit-learn": "1.8.0",
+      "tabpfn": "9.0.0",
+      "torch": "2.14.1"
+    }
+  },
+  "model": "tabpfn35",
+  "source_snapshot": {
+    "archive": {
+      "bytes": 61372,
+      "path": "experiments/diagnostics/04_foundation/source_snapshots/ba600f7983c5d14e8ad30a3afc330700ca120a46.tar.gz",
+      "sha256": "7c07d739400e42880589ee1700b3bb8008767fe8750585065451abbd6fc2c5b8"
+    },
+    "git_commit": "ba600f7983c5d14e8ad30a3afc330700ca120a46"
+  },
+  "timeout_seconds": 1800,
+  "versions": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.8.0",
+    "tabpfn": "9.0.0",
+    "torch": "2.14.1"
+  }
+}

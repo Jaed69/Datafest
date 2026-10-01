@@ -1,0 +1,22 @@
+{
+  "foundation_status": {
+    "bytes": 1915,
+    "path": "experiments/diagnostics/foundation_status.json",
+    "sha256": "ec9905763a389f36ddb9489e090b9aa009b034c880ac3d4047f864bfdbd38475"
+  },
+  "report": {
+    "bytes": 9563,
+    "path": "experiments/diagnostics/results.md",
+    "sha256": "0a64ffd8ca37548d613c9559cbde0887dbf26b872fb04c91534521d37a603e84"
+  },
+  "summary": {
+    "bytes": 8403,
+    "path": "experiments/diagnostics/summary.json",
+    "sha256": "d178dc0d733edf776f7b8d10cd10d4afea39940ef37a816f8294ff7359aca4b1"
+  },
+  "verification": {
+    "bytes": 2715,
+    "path": "experiments/diagnostics/verification.json",
+    "sha256": "fb85ac63cf1c723fbbea990e74166c5908ba249e0f1913a74b5523f951e2f932"
+  }
+}

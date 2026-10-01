@@ -1,0 +1,34 @@
+{
+  "context": {
+    "external_training_subsample": false,
+    "inference_config": "InferenceConfig(PREPROCESS_TRANSFORMS=[PreprocessorConfig(name='none', categorical_name='ordinal_shuffled', append_original=False, max_features_per_estimator=768, global_transformer_name=None, max_onehot_cardinality=None, differentiable=False)], MAX_UNIQUE_FOR_CATEGORICAL_FEATURES=1000000, MIN_UNIQUE_FOR_NUMERICAL_FEATURES=4, MIN_NUMBER_SAMPLES_FOR_CATEGORICAL_INFERENCE=100, MIN_CARDINALITY_FOR_TEXT=30, SOFTMAX_TEMPERATURE=1.0, N_ESTIMATORS=8, TRANSFORM_DATES=True, TRANSFORM_TEXT=True, TEXT_N_COMPONENTS=30, OUTLIER_REMOVAL_STD=12.0, FEATURE_SHIFT_METHOD='shuffle', CLASS_SHIFT_METHOD='shuffle', FINGERPRINT_FEATURE=True, POLYNOMIAL_FEATURES='no', SUBSAMPLE_SAMPLES=None, SAMPLE_SUBSAMPLING_METHOD='auto', ENABLE_GPU_PREPROCESSING=True, FEATURE_SUBSAMPLING_METHOD='balanced', FEATURE_SUBSAMPLING_CONSTANT_FEATURE_COUNT=50, FEATURE_SUBSAMPLING_IMPORTANCE_TOP_K_COUNT=150, REGRESSION_Y_PREPROCESS_TRANSFORMS=(None, 'safepower'), USE_SKLEARN_16_DECIMAL_PRECISION=False, MAX_NUMBER_OF_CLASSES=160, MAX_NUMBER_OF_FEATURES=20000, MAX_NUMBER_OF_SAMPLES=1000000, MAX_CPU_SAMPLES=5000, FIX_NAN_BORDERS_AFTER_TARGET_TRANSFORM=True, PASSTHROUGH_INF=False, _REGRESSION_DEFAULT_OUTLIER_REMOVAL_STD=None, _CLASSIFICATION_DEFAULT_OUTLIER_REMOVAL_STD=12.0)",
+    "published_defaults": true,
+    "resolved_n_estimators": 8,
+    "selection": "ModelVersion.V3_5",
+    "version": "TabPFN-3.5"
+  },
+  "defaults": {
+    "auto_scale_n_estimators": true,
+    "average_before_softmax": false,
+    "balance_probabilities": false,
+    "categorical_features_indices": null,
+    "device": "cuda",
+    "differentiable_input": false,
+    "eval_metric": null,
+    "fit_mode": "fit_preprocessors",
+    "ignore_pretraining_limits": false,
+    "inference_config": null,
+    "inference_precision": "auto",
+    "keep_cache_on_device": true,
+    "kv_cache_precision": null,
+    "memory_saving_mode": "auto",
+    "model_path": "/root/.cache/tabpfn/tabpfn-v3.5-20260909.safetensors",
+    "n_estimators": "auto",
+    "n_jobs": null,
+    "n_preprocessing_jobs": 1,
+    "random_state": 0,
+    "show_progress_bar": false,
+    "softmax_temperature": "auto",
+    "tuning_config": null
+  }
+}

@@ -1,4 +1,25 @@
 {
+  "ablation_batches": [
+    {
+      "batch_id": "20261001T051935820299Z_7e1c7547",
+      "index": "experiments/ablation/index.json",
+      "manifest": {
+        "bytes": 61768,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/manifest.json",
+        "sha256": "970f0174b981544dde4078d59e16a79ce01e468562401d2f4308303d6bd9e7a0"
+      },
+      "report": {
+        "bytes": 2894,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/results.md",
+        "sha256": "c16c50ebb00ba4ca580dd35f9c26cb8fca4c9826660491277a727ab4440099e9"
+      },
+      "summary": {
+        "bytes": 3014,
+        "path": "experiments/ablation/runs/20261001T051935820299Z_7e1c7547/summary.csv",
+        "sha256": "274eabadf5fed6c5fe711e7abb4c2b02405c276eb3250234f93313ac692e5878"
+      }
+    }
+  ],
   "batch_id": "20261001T040836113543Z_7e1c7547",
   "data_report": {
     "duplicate_client_months": 0,
@@ -23,6 +44,18 @@
       202611
     ],
     "train_rows": 110100
+  },
+  "diagnostics": {
+    "index": {
+      "bytes": 718,
+      "path": "experiments/diagnostics/index.json",
+      "sha256": "4d00f76940628d714711f70a58ac6332add4e269ce6ee13cd7ced0c06ea1902a"
+    },
+    "report": {
+      "bytes": 9563,
+      "path": "experiments/diagnostics/results.md",
+      "sha256": "0a64ffd8ca37548d613c9559cbde0887dbf26b872fb04c91534521d37a603e84"
+    }
   },
   "id_gates": {
     "catboost": {

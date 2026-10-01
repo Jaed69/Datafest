@@ -1,0 +1,92 @@
+[
+  {
+    "elapsed_seconds": 307.315063422,
+    "error": null,
+    "error_type": null,
+    "gini": 0.23650266985906043,
+    "model": "tabpfn3",
+    "month": 202609,
+    "rows": 9900,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 363.769400024,
+    "error": null,
+    "error_type": null,
+    "gini": 0.2432167741675264,
+    "model": "tabpfn3",
+    "month": 202610,
+    "rows": 10400,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 452.6552782969999,
+    "error": null,
+    "error_type": null,
+    "gini": 0.22351968946994583,
+    "model": "tabpfn3",
+    "month": 202611,
+    "rows": 9500,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 657.283257016,
+    "error": null,
+    "error_type": null,
+    "gini": 0.16332092881408178,
+    "model": "tabpfn35",
+    "month": 202609,
+    "rows": 9900,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 780.8200030140001,
+    "error": null,
+    "error_type": null,
+    "gini": 0.16980633319552618,
+    "model": "tabpfn35",
+    "month": 202610,
+    "rows": 10400,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 1038.0268084559998,
+    "error": null,
+    "error_type": null,
+    "gini": 0.137796418362798,
+    "model": "tabpfn35",
+    "month": 202611,
+    "rows": 9500,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 1344.269363386,
+    "error": null,
+    "error_type": null,
+    "gini": 0.15639913449934517,
+    "model": "tabfm",
+    "month": 202609,
+    "rows": 9900,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 1399.487402454,
+    "error": null,
+    "error_type": null,
+    "gini": 0.14606805381429178,
+    "model": "tabfm",
+    "month": 202610,
+    "rows": 10400,
+    "status": "complete"
+  },
+  {
+    "elapsed_seconds": 1412.042358856,
+    "error": null,
+    "error_type": null,
+    "gini": 0.15264075289710255,
+    "model": "tabfm",
+    "month": 202611,
+    "rows": 9500,
+    "status": "complete"
+  }
+]
