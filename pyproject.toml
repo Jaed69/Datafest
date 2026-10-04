@@ -14,9 +14,13 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest==8.3.5"]
+kumo = [
+    "structured-data-models",
+]
 
 [project.scripts]
 datafest = "datafest.cli:main"
+datafest-kumo = "datafest.kumo:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -29,3 +33,6 @@ packages = ["src/datafest"]
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = "-ra"
+
+[tool.uv.sources]
+structured-data-models = { git = "https://github.com/NVIDIA/structured-data-models.git", rev = "b982fbf4188ea8db17249fe81338723106100b63" }

@@ -89,6 +89,17 @@ Los tres modelos foundation completaron los tres folds: 9.900 filas de septiembr
 
 Los pesos y checkpoints, modelos serializados y cachés comprimidas de features permanecen en el workspace local y no se incluyen en el historial publicado. El repositorio conserva el código, los informes, las configuraciones, los manifiestos, las métricas y las predicciones tabulares. Para regenerar archivos locales se usan los comandos de ejecución descritos en el informe de diagnósticos.
 
+### NVIDIA Kumo Tabular
+
+La integración opcional usa la API oficial `structured-data-models` fijada al commit registrado en `pyproject.toml`. Instala el extra y ejecuta la arena rolling (requiere CUDA para inferencia acelerada):
+
+```sh
+uv sync --extra kumo
+uv run --extra kumo datafest-kumo --run-id <run_id> --max-context-limit 60000 --sizes medium large
+```
+
+Los folds y predicciones se guardan incrementalmente en `experiments/kumo/<run_id>/`; `--resume` reutiliza folds completos. La evaluación ejecutada en Colab T4 y sus detalles están en [`experiments/kumo/20261003_kumo_colab_t4_rolling/results.md`](experiments/kumo/20261003_kumo_colab_t4_rolling/results.md).
+
 ## Estructura del repositorio
 
 - `data/`: datos de entrenamiento, prueba, metadatos y formato de entrega.

@@ -1,0 +1,154 @@
+{
+  "run_id": "20261003_kumo_colab_t4_rolling",
+  "created_at_utc": "2026-10-04T04:45:46.870423+00:00",
+  "official_package": "structured-data-models",
+  "package_version": "0.1.0rc2.dev193+gb982fbf41",
+  "official_source": "https://github.com/NVIDIA/structured-data-models",
+  "official_source_commit": "b982fbf4188ea8db17249fe81338723106100b63",
+  "checkpoint_revision": "v1.0.0",
+  "sizes_offered_by_official_code": [
+    "small",
+    "medium",
+    "large"
+  ],
+  "checkpoint": "nvidia/Kumo-Tabular@v1.0.0/small/classifier.pt",
+  "checkpoints_by_size": {
+    "large": "nvidia/Kumo-Tabular@v1.0.0/large/classifier.pt",
+    "medium": "nvidia/Kumo-Tabular@v1.0.0/medium/classifier.pt",
+    "small": "nvidia/Kumo-Tabular@v1.0.0/small/classifier.pt"
+  },
+  "hardware": {
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "cpu_count": 2,
+    "gpu": "Tesla T4",
+    "gpu_total_gib": 14.563
+  },
+  "device": "cuda",
+  "dtype": "float16 autocast on CUDA; default float32 on CPU",
+  "seed": 42,
+  "inference": {
+    "estimators": [
+      1,
+      4,
+      8
+    ],
+    "batch_size": 256,
+    "context_limit_cli_override": 60000,
+    "max_context_limit": 60000,
+    "default_context_plan": {
+      "A_E1": 60000,
+      "D_E1": 60000,
+      "D_sampling_E1": 8192,
+      "D_estimators_4_8": 8192,
+      "D_medium_large_E1": 60000
+    },
+    "cache": "model.fit + model.predict; official KV cache"
+  },
+  "context": "NVIDIA source defines no universal hard inference row cap; its benchmark exposes optional max_context_size and the model article reports training contexts up to 60,000 rows. This run configured a max-context cap of 60,000 rows; realized per-estimator contexts were [8192, 60000]. An earlier local 100,600-row probe on GTX 1650 exceeded practical VRAM; this is a hardware observation, not a model-imposed limit.",
+  "total_inference_seconds": 426.38048420799987,
+  "max_vram_gib": 2.7554969787597656,
+  "fold_protocol": [
+    {
+      "train_through": 202608,
+      "valid_month": 202609
+    },
+    {
+      "train_through": 202609,
+      "valid_month": 202610
+    },
+    {
+      "train_through": 202610,
+      "valid_month": 202611
+    }
+  ],
+  "feature_definitions": {
+    "A": "original columns excluding id_cliente, mes, objetivo",
+    "D": "A + month_index (baseline D encoding, Jan 2026=0) + causal history fields from add_history_features"
+  },
+  "leakage_audit": {
+    "target_only_training": true,
+    "validation_target_passed_to_model": false,
+    "id_cliente_predictor": false,
+    "target_history_features": false,
+    "history_features": "covariate-only chronological counts/first occurrence/duration; no labels",
+    "sampled_context_query_client_overlap_by_fold": [
+      {
+        "valid_month": 202609,
+        "context_query_client_overlap": 8132
+      },
+      {
+        "valid_month": 202610,
+        "context_query_client_overlap": 7980
+      },
+      {
+        "valid_month": 202611,
+        "context_query_client_overlap": 7889
+      },
+      {
+        "valid_month": 202609,
+        "context_query_client_overlap": 3276
+      },
+      {
+        "valid_month": 202610,
+        "context_query_client_overlap": 3134
+      },
+      {
+        "valid_month": 202611,
+        "context_query_client_overlap": 3001
+      },
+      {
+        "valid_month": 202609,
+        "context_query_client_overlap": 3569
+      },
+      {
+        "valid_month": 202610,
+        "context_query_client_overlap": 3379
+      },
+      {
+        "valid_month": 202611,
+        "context_query_client_overlap": 3243
+      },
+      {
+        "valid_month": 202609,
+        "context_query_client_overlap": 3329
+      },
+      {
+        "valid_month": 202610,
+        "context_query_client_overlap": 3179
+      },
+      {
+        "valid_month": 202611,
+        "context_query_client_overlap": 2971
+      },
+      {
+        "valid_month": 202609,
+        "context_query_client_overlap": 6631
+      },
+      {
+        "valid_month": 202610,
+        "context_query_client_overlap": 6496
+      },
+      {
+        "valid_month": 202611,
+        "context_query_client_overlap": 6335
+      },
+      {
+        "valid_month": 202609,
+        "context_query_client_overlap": 7710
+      },
+      {
+        "valid_month": 202610,
+        "context_query_client_overlap": 7570
+      },
+      {
+        "valid_month": 202611,
+        "context_query_client_overlap": 7498
+      }
+    ]
+  },
+  "warnings": [
+    "Scores are in-context softmax probabilities; softmax scores are not claimed to be calibrated probabilities.",
+    "All official variants were checked in NVIDIA source; only requested/runtime-selected sizes were run."
+  ]
+}
