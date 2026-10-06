@@ -9,7 +9,7 @@ from datafest.ablation import run_ablation
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Entrena, registra y verifica experimentos Datafest")
-    parser.add_argument("command", nargs="?", default="run", choices=["run", "verify", "ablation", "diagnostics", "foundation", "final-fit", "hypotheses"])
+    parser.add_argument("command", nargs="?", default="run", choices=["run", "verify", "ablation", "diagnostics", "foundation", "final-fit", "hypotheses", "ensemble-search"])
     parser.add_argument("--model", choices=["lightgbm", "catboost", "ensemble-h4b2"], default="lightgbm", help="Modelo para final-fit")
     parser.add_argument("--variant", default="D", help="Variante de features para final-fit (A, B, C, D, B_month_index, D_month_index)")
     parser.add_argument("--compare-with", help="Submission previa para calcular Spearman en final-fit")
@@ -27,6 +27,12 @@ def main() -> None:
     parser.add_argument("--trials-lgbm", type=int, default=60, help="Optuna trials de LightGBM (round 2)")
     parser.add_argument("--trials-catboost", type=int, default=40, help="Optuna trials de CatBoost (round 2)")
     parser.add_argument("--cache-dir", help="Checkpoints por candidato para reanudar round 2 (gitignored)")
+    parser.add_argument("--neural-dir", default="experiments/neural", help="Directorio con oof_neural.csv/test_neural.csv/results.md (ensemble-search)")
+    parser.add_argument("--round1-oof", default="experiments/hypotheses/20261006T100749205414Z_a714ebcd/oof_predictions.csv")
+    parser.add_argument("--round2-oof", default="experiments/hypotheses/20261006T143722753859Z_a714ebcd_r2/oof_predictions.csv")
+    parser.add_argument("--h4b2-members", default="experiments/final/20261006T101910790713Z_a714ebcd_ensemble-h4b2/member_predictions.csv")
+    parser.add_argument("--current-submission", default="experiments/final/20261006T101910790713Z_a714ebcd_ensemble-h4b2/submission.csv")
+    parser.add_argument("--stack-step", type=float, default=0.1, help="Paso de la grilla simplex del stacking (ensemble-search)")
     parser.add_argument("--fold", type=int, choices=[202609, 202610, 202611])
     args = parser.parse_args()
     if args.command == "final-fit":
@@ -43,6 +49,15 @@ def main() -> None:
             args.model, args.variant, data_dir=args.data_dir,
             experiment_root=Path(args.experiment_root) / "final", seed=args.seed,
             compare_with=args.compare_with,
+        )
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+    if args.command == "ensemble-search":
+        from datafest.ensemble_search import run_ensemble_search
+        result = run_ensemble_search(
+            args.data_dir, Path(args.experiment_root) / "ensembles", round1_oof=args.round1_oof,
+            round2_oof=args.round2_oof, neural_dir=args.neural_dir, h4b2_members=args.h4b2_members,
+            current_submission=args.current_submission, replicates=args.replicates, seed=args.seed, step=args.stack_step,
         )
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return
