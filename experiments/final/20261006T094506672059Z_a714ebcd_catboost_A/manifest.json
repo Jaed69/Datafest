@@ -1,0 +1,170 @@
+{
+  "code": [
+    {
+      "bytes": 7987,
+      "path": "src\\datafest\\final_fit.py",
+      "sha256": "88f471d54df269e5ab0fe054dd6f2c3d2c9e6749226def113b454bdb8e47071a"
+    },
+    {
+      "bytes": 17426,
+      "path": "src\\datafest\\ablation.py",
+      "sha256": "f74af414d56bec8d1f46c9893490564080ec7f3d9933c72b927be192bddc4431"
+    },
+    {
+      "bytes": 2595,
+      "path": "src\\datafest\\features.py",
+      "sha256": "a0c4b6b386e76b8ee4f9d79fc44c1b5849ddc2f7445b8a72f0f8c224cc0f86dd"
+    },
+    {
+      "bytes": 6306,
+      "path": "src\\datafest\\models.py",
+      "sha256": "b118dd72e98e6cd4415bcfd7be213b0f12c727d74e4c960da85ddcd35bd7b4fb"
+    },
+    {
+      "bytes": 4379,
+      "path": "src\\datafest\\data.py",
+      "sha256": "e2074e7115984aa462d3840c5432eec1840c724f6f7ee7b6ca4967b53bbf112f"
+    },
+    {
+      "bytes": 4529,
+      "path": "src\\datafest\\lineage.py",
+      "sha256": "b7aee1152b7fa0027442fba5dce4589a787cd9b201cb2e4f95a80d53a35ebe60"
+    },
+    {
+      "bytes": 916,
+      "path": "pyproject.toml",
+      "sha256": "2b50ec1a789a69fd404bb3b97fd2046a426c858d9cb1d10250c61b3d6d821095"
+    },
+    {
+      "bytes": 105002,
+      "path": "uv.lock",
+      "sha256": "2e50caf8cbd0f4224d4b52d278a61e7a3812e0aacd87b0c090852222d90aa830"
+    }
+  ],
+  "created_at_utc": "2026-10-06T09:45:06.759513+00:00",
+  "environment": {
+    "datafest": "0.1.0",
+    "python": "3.12.13"
+  },
+  "extra": {},
+  "feature_variant": "A",
+  "features": [],
+  "inputs": [
+    {
+      "bytes": 19060040,
+      "path": "data\\train.csv",
+      "sha256": "a714ebcd8587b2cc0f75ae642aa3e4ca5904eea02e249d969a06e8e7380e0567"
+    },
+    {
+      "bytes": 1698039,
+      "path": "data\\test.csv",
+      "sha256": "81197145e28d1602a0195d93487dc924ae438d8b0eed411cf56cac13d786126f"
+    },
+    {
+      "bytes": 116729,
+      "path": "data\\sample_submission.csv",
+      "sha256": "d9e3caf0d5f5cde6fec0a146b4fc69abf98d703148a115ebf2631a61225f0fc5"
+    }
+  ],
+  "metrics": {
+    "prediction_distribution": {
+      "max": 0.426329686721447,
+      "mean": 0.14066321998514347,
+      "min": 0.02908734540618236,
+      "quantiles": {
+        "0.01": 0.04615641803962814,
+        "0.05": 0.05360085805345842,
+        "0.25": 0.11880425024384153,
+        "0.5": 0.1375584556187709,
+        "0.75": 0.1556870048376554,
+        "0.95": 0.25031721581775684,
+        "0.99": 0.3651599993403932
+      },
+      "rows": 9900,
+      "std": 0.05933188283118433
+    },
+    "spearman_vs_other": {
+      "other": "experiments/final/20261006T094413527919Z_a714ebcd_lightgbm_D_absolute/submission.csv",
+      "spearman": 0.8588352192322276
+    }
+  },
+  "model": {
+    "bytes": 214476,
+    "path": "experiments\\final\\20261006T094506672059Z_a714ebcd_catboost_A\\model.cbm",
+    "sha256": "c71349dcaae12a62d7ddc61c36b8fbb93dfbcc4761b5d8c35adc5e23235ae1d0"
+  },
+  "model_name": "catboost",
+  "outputs": [
+    {
+      "bytes": 263007,
+      "path": "experiments\\final\\20261006T094506672059Z_a714ebcd_catboost_A\\submission.csv",
+      "sha256": "ef7884562663add8d836d992e5e0b89bcabd96083681041fee40f58f7c515b79"
+    },
+    {
+      "bytes": 671,
+      "path": "experiments\\final\\20261006T094506672059Z_a714ebcd_catboost_A\\results.md",
+      "sha256": "9fc0c4f14d3a412a2ab222465957d7ef4d6e6221810e91548ee1e74a289d4be2"
+    }
+  ],
+  "parameters": {
+    "config": {
+      "depth": 6,
+      "l2_leaf_reg": 3.0,
+      "learning_rate": 0.05,
+      "name": "baseline"
+    },
+    "early_stopping": false,
+    "feature_columns": [
+      "edad",
+      "ingresos",
+      "ratio_deuda_ingresos",
+      "antiguedad_cuenta_meses",
+      "numero_productos",
+      "saldo_promedio",
+      "dias_ultima_transaccion",
+      "ocupacion",
+      "region",
+      "canal_adquisicion",
+      "banda_riesgo",
+      "tiene_tarjeta_credito",
+      "activo_movil",
+      "es_nuevo_cliente",
+      "tiene_prestamo",
+      "antiguedad_direccion_meses",
+      "visitas_web_ultimos_90_dias",
+      "distancia_sucursal_km",
+      "dispositivo_principal",
+      "dia_preferido_pago",
+      "tiene_seguro",
+      "dias_ultima_interaccion"
+    ],
+    "iterations": 192,
+    "iterations_source": "frozen by rolling ablation; not rescaled",
+    "score_months": [
+      202612
+    ],
+    "seed": 42,
+    "train_months": [
+      202601,
+      202602,
+      202603,
+      202604,
+      202605,
+      202606,
+      202607,
+      202608,
+      202609,
+      202610,
+      202611
+    ]
+  },
+  "repository": {
+    "commit": "27e4f3ce2906f23c97eed4dc90dc797a9dce732c",
+    "dirty": true
+  },
+  "run_id": "20261006T094506672059Z_a714ebcd_catboost_A",
+  "schema_version": 1,
+  "split": null,
+  "split_artifacts": [],
+  "validation_model": null
+}
