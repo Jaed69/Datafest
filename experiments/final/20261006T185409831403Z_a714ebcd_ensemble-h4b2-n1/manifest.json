@@ -1,0 +1,235 @@
+{
+  "code": [
+    {
+      "bytes": 18406,
+      "path": "src\\datafest\\final_ensemble_n1.py",
+      "sha256": "4d28472aad4ec806890dc26a561805111027d3aadc5f7139264888aa7523c50d"
+    },
+    {
+      "bytes": 10888,
+      "path": "src\\datafest\\final_ensemble.py",
+      "sha256": "f8634d14c3377b1f5a37d06d0f8c4cfd580c9258411a937f60c9092a7539f64f"
+    },
+    {
+      "bytes": 7987,
+      "path": "src\\datafest\\final_fit.py",
+      "sha256": "88f471d54df269e5ab0fe054dd6f2c3d2c9e6749226def113b454bdb8e47071a"
+    },
+    {
+      "bytes": 23215,
+      "path": "src\\datafest\\hypotheses.py",
+      "sha256": "ec417ca4b5f898dbbdc930e98e2fa32bb5f14ee63f22353d2b265418dfa0981c"
+    },
+    {
+      "bytes": 4529,
+      "path": "src\\datafest\\lineage.py",
+      "sha256": "b7aee1152b7fa0027442fba5dce4589a787cd9b201cb2e4f95a80d53a35ebe60"
+    },
+    {
+      "bytes": 4379,
+      "path": "src\\datafest\\data.py",
+      "sha256": "e2074e7115984aa462d3840c5432eec1840c724f6f7ee7b6ca4967b53bbf112f"
+    },
+    {
+      "bytes": 917,
+      "path": "pyproject.toml",
+      "sha256": "854538d0467d66a1f6e22acee3a5e9e5d17b47aae2096414d68abc1a7cbe1d18"
+    },
+    {
+      "bytes": 113761,
+      "path": "uv.lock",
+      "sha256": "c737d308b8d6162ef6ae383445ef48d6e4f7f2c7a68ece69cd1e21e2a376fc9c"
+    }
+  ],
+  "created_at_utc": "2026-10-06T18:54:10.049857+00:00",
+  "environment": {
+    "datafest": "0.1.0",
+    "python": "3.12.13"
+  },
+  "extra": {},
+  "feature_variant": "D_absolute+A(rank_interaccion)+N1(RealMLP D_absolute)",
+  "features": [],
+  "inputs": [
+    {
+      "bytes": 19060040,
+      "path": "data\\train.csv",
+      "sha256": "a714ebcd8587b2cc0f75ae642aa3e4ca5904eea02e249d969a06e8e7380e0567"
+    },
+    {
+      "bytes": 1698039,
+      "path": "data\\test.csv",
+      "sha256": "81197145e28d1602a0195d93487dc924ae438d8b0eed411cf56cac13d786126f"
+    },
+    {
+      "bytes": 116729,
+      "path": "data\\sample_submission.csv",
+      "sha256": "d9e3caf0d5f5cde6fec0a146b4fc69abf98d703148a115ebf2631a61225f0fc5"
+    },
+    {
+      "bytes": 1027234,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\member_predictions.csv",
+      "sha256": "051a9c87bcee59dd4ecab8872708e1985f2e2db5b38c13b1ded97eb6940940d9"
+    },
+    {
+      "bytes": 282631,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\neural\\test_neural.csv",
+      "sha256": "62287ceb01b1eaa754992a231c5863ba14b9296aa27c21d0d64fade0cf84b8ee"
+    },
+    {
+      "bytes": 39728,
+      "path": "experiments\\final\\20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1\\neural_seeds\\N1_D_s42.npy",
+      "sha256": "b5b8f743e2f4d0115b1efcdb2e18154f9bc5e13fb05733363f266603beec3e18"
+    },
+    {
+      "bytes": 39728,
+      "path": "experiments\\final\\20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1\\neural_seeds\\N1_D_s43.npy",
+      "sha256": "925fb5a602f0c3992612832a150f52985f997bdc5818f81425460577c4005ac5"
+    },
+    {
+      "bytes": 39728,
+      "path": "experiments\\final\\20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1\\neural_seeds\\N1_D_s44.npy",
+      "sha256": "2ecd244b51c0f7cc0a76bc19bbde3e748674ebb3bb4e8079c5ea58d1b4294dc8"
+    },
+    {
+      "bytes": 175,
+      "path": "experiments\\final\\20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1\\neural_seeds\\final_timings.csv",
+      "sha256": "fc41be5e8dc1f4b12c256237d5397422e05ff689c06843708ed8477ce13ad75d"
+    },
+    {
+      "bytes": 204413,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\model_lightgbm.txt",
+      "sha256": "770a2f780fac8cbcc809bdf9fa9514726670160b229fefec0f6b4de2c7cb64ba"
+    },
+    {
+      "bytes": 211744,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\model_catboost.cbm",
+      "sha256": "2d7ee6c7eb3b0fd906af97e11af6dbc1db3d52562ac42eb96ac06fc8ad51326b"
+    },
+    {
+      "bytes": 5508,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\results.md",
+      "sha256": "c7c6fde0680d7ae149388dffee6b2a9b01da84e0f243ae786fc5fd2d1a0d581b"
+    },
+    {
+      "bytes": 9589,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\neural\\results.md",
+      "sha256": "f19b382e5ab05e5fefd339c54c63ea3d86d5660a00c106eefe0f2b82cd7ba9f2"
+    },
+    {
+      "bytes": 262716,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\submission.csv",
+      "sha256": "918d3de5b95a89eb3e3bcfa58a3099ffbb74702e3fbd62649fcaee3c3ec29495"
+    }
+  ],
+  "metrics": {
+    "gates": {
+      "G1": {
+        "n_new": 1839,
+        "n_survivors": 8061,
+        "new_clients": 0.8417202176561364,
+        "overall": 0.8561372993414915,
+        "passed": true,
+        "range": [
+          0.8,
+          0.95
+        ],
+        "survivors": 0.8673060397660751
+      },
+      "G2": {
+        "expected_seeds": [
+          42,
+          43,
+          44
+        ],
+        "pairwise": {
+          "42-43": 0.9326836692787581,
+          "42-44": 0.9208627086142582,
+          "43-44": 0.940007430236014
+        },
+        "passed": true,
+        "problems": [],
+        "seed_mean_max_abs_diff": 1.4864730835117967e-08,
+        "seed_vs_b0": {
+          "42": 0.8232562099318724,
+          "43": 0.8501982678487299,
+          "44": 0.845726805699193
+        },
+        "seeds_found": [
+          42,
+          43,
+          44
+        ]
+      },
+      "G3": {
+        "finite": true,
+        "in_unit_interval": true,
+        "means": {
+          "B0 LightGBM": {
+            "new_clients": 0.17554796129978895,
+            "survivors": 0.1414923245386849
+          },
+          "CatBoost A rank": {
+            "new_clients": 0.1644407333509418,
+            "survivors": 0.13549918782636006
+          },
+          "N1": {
+            "new_clients": 0.20411143160195758,
+            "survivors": 0.18260556578774345
+          }
+        },
+        "passed": true,
+        "std": 0.056291329187211706
+      },
+      "G4": {
+        "compared_with": "experiments/final/20261006T101910790713Z_a714ebcd_ensemble-h4b2/submission.csv",
+        "finite": true,
+        "in_unit_interval": true,
+        "min_spearman": 0.95,
+        "passed": true,
+        "rows": 9900,
+        "spearman_vs_h4b2": 0.9877297708144317,
+        "validator": true
+      }
+    },
+    "submission_sha256": "bfdfd1a0584f9dcd9c0530f4c144755dca621de5a8e6b495a3c47d4acc0751ba"
+  },
+  "model": {
+    "bytes": 1307632,
+    "path": "experiments\\final\\20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1\\member_predictions.csv",
+    "sha256": "728b4488d52b282ce382554e775fb69bab9c88371fae373487a0754f68ab71ab"
+  },
+  "model_name": "ensemble-h4b2-n1",
+  "outputs": [
+    {
+      "bytes": 254290,
+      "path": "experiments\\final\\20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1\\submission.csv",
+      "sha256": "bfdfd1a0584f9dcd9c0530f4c144755dca621de5a8e6b495a3c47d4acc0751ba"
+    },
+    {
+      "bytes": 2674,
+      "path": "experiments\\final\\20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1\\results.md",
+      "sha256": "07503bf08a5f3a8a9c7cce1bc65f5514cbc643a8eeb180b2a0810c458da6af64"
+    }
+  ],
+  "parameters": {
+    "blend": "equal-weight mean of December percentile ranks (3 members)",
+    "decision": "two blind judges selected (b) H4b2+N1",
+    "members": [
+      "B0 LightGBM D (H4b2 final run)",
+      "CatBoost A + within-December rank (H4b2 final run)",
+      "RealMLP N1 seeds [42, 43, 44] mean probability"
+    ],
+    "neural_seeds_source": "C:/Users/Luciel/AppData/Local/Temp/claude/c--Users-Luciel-Documents-GitHub-Datafest/a1f235cd-b229-4b3e-87af-9d39300c3b91/scratchpad/neural/out/final",
+    "output_mapping": "quantile map onto sorted B0 LightGBM December probabilities",
+    "refit": false
+  },
+  "repository": {
+    "commit": "8ddc4dbe4b089df0103081acf59087cf77e09df0",
+    "dirty": true
+  },
+  "run_id": "20261006T185409831403Z_a714ebcd_ensemble-h4b2-n1",
+  "schema_version": 1,
+  "split": null,
+  "split_artifacts": [],
+  "validation_model": null
+}
