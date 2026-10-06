@@ -96,6 +96,7 @@ def fit_model(
     seed: int = SEED,
     iterations: int = MAX_ROUNDS,
     early_stopping_rounds: int | None = EARLY_STOPPING_ROUNDS,
+    sample_weight=None,
 ) -> FittedModel:
     if model_name not in MODEL_CONFIGS:
         raise ValueError(f"Modelo desconocido: {model_name}")
@@ -128,6 +129,8 @@ def fit_model(
             **config,
         )
         fit_args: dict[str, Any] = {}
+        if sample_weight is not None:
+            fit_args["sample_weight"] = np.asarray(sample_weight, dtype=float)
         if eval_set:
             fit_args["eval_set"] = eval_set
             fit_args["eval_metric"] = "auc"
@@ -148,6 +151,8 @@ def fit_model(
             **config,
         )
         fit_args = {"cat_features": categorical}
+        if sample_weight is not None:
+            fit_args["sample_weight"] = np.asarray(sample_weight, dtype=float)
         if eval_set:
             fit_args["eval_set"] = eval_set[0]
             if early_stopping_rounds:
