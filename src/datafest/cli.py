@@ -9,7 +9,10 @@ from datafest.ablation import run_ablation
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Entrena, registra y verifica experimentos Datafest")
-    parser.add_argument("command", nargs="?", default="run", choices=["run", "verify", "ablation", "diagnostics", "foundation"])
+    parser.add_argument("command", nargs="?", default="run", choices=["run", "verify", "ablation", "diagnostics", "foundation", "final-fit"])
+    parser.add_argument("--model", choices=["lightgbm", "catboost"], default="lightgbm", help="Modelo para final-fit")
+    parser.add_argument("--variant", default="D", help="Variante de features para final-fit (A, B, C, D, B_month_index, D_month_index)")
+    parser.add_argument("--compare-with", help="Submission previa para calcular Spearman en final-fit")
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--experiment-root", default="experiments")
     parser.add_argument("--split-root", default="data/splits")
@@ -21,6 +24,15 @@ def main() -> None:
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--fold", type=int, choices=[202609, 202610, 202611])
     args = parser.parse_args()
+    if args.command == "final-fit":
+        from datafest.final_fit import run_final_fit
+        result = run_final_fit(
+            args.model, args.variant, data_dir=args.data_dir,
+            experiment_root=Path(args.experiment_root) / "final", seed=args.seed,
+            compare_with=args.compare_with,
+        )
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
     if args.command == "diagnostics":
         from datafest.diagnostics import run_diagnostics
         result = run_diagnostics(args.data_dir, args.baseline, Path(args.experiment_root)/"diagnostics")

@@ -5,6 +5,7 @@ __pycache__/
 *.py[cod]
 data/processed/
 experiments/*/runs/*/*model.*
+experiments/final/*/model.*
 
 .env
 .env.*
