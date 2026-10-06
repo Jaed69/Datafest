@@ -11,3 +11,4 @@ experiments/final/*/model.*
 .env.*
 experiments/hypotheses/*/oof_predictions.csv
 experiments/final/*/model_*
+experiments/hypotheses/.cache*/

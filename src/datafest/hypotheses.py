@@ -106,7 +106,7 @@ class Spec:
     config_extra: dict = field(default_factory=dict)
     monotone: bool = False
     seeds: tuple[int, ...] = (SEED,)
-
+    iterations: int | None = None  # None -> FINAL_ITERATIONS[model]
 
 def _transform(matrix: pd.DataFrame, frame: pd.DataFrame, how: str) -> pd.DataFrame:
     out = matrix.copy()
@@ -151,11 +151,15 @@ def _prepare_logistic(matrix: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def predict_folds(spec: Spec, matrix: pd.DataFrame, frame: pd.DataFrame) -> pd.DataFrame:
-    """Out-of-fold predictions for Sep/Oct/Nov with fixed structural settings."""
+def predict_folds(spec: Spec, matrix: pd.DataFrame, frame: pd.DataFrame, cuts=ROLLING_CUTS) -> pd.DataFrame:
+    """Out-of-fold predictions (default Sep/Oct/Nov) with fixed structural settings.
+
+    ``cuts`` is a sequence of ``(train_through, valid_month)`` pairs; round 2 reuses this
+    function on the inner folds (validation months <= August) for selection and tuning.
+    """
     matrix = _transform(matrix, frame, spec.transform)
     pieces = []
-    for train_through, valid_month in ROLLING_CUTS:
+    for train_through, valid_month in cuts:
         in_window = frame["mes"].le(train_through).to_numpy()
         if spec.window is not None:
             in_window = in_window & recent_window_mask(frame["mes"], train_through, spec.window)
@@ -181,7 +185,7 @@ def predict_folds(spec: Spec, matrix: pd.DataFrame, frame: pd.DataFrame) -> pd.D
             for seed in spec.seeds:
                 fitted = fit_model(
                     spec.model, x_train, y_train, config=config, seed=seed,
-                    iterations=FINAL_ITERATIONS[spec.model], early_stopping_rounds=None,
+                    iterations=spec.iterations or FINAL_ITERATIONS[spec.model], early_stopping_rounds=None,
                     sample_weight=weights,
                 )
                 runs.append(fitted.predict_proba(x_valid))

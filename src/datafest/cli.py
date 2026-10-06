@@ -23,6 +23,10 @@ def main() -> None:
     parser.add_argument("--foundation-model", choices=["tabpfn3", "tabfm"], default="tabpfn3")
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--replicates", type=int, default=2000, help="Bootstrap resamples para hypotheses")
+    parser.add_argument("--round", type=int, choices=[1, 2], default=1, help="Ronda de hypotheses (2 = features + GBDT)")
+    parser.add_argument("--trials-lgbm", type=int, default=60, help="Optuna trials de LightGBM (round 2)")
+    parser.add_argument("--trials-catboost", type=int, default=40, help="Optuna trials de CatBoost (round 2)")
+    parser.add_argument("--cache-dir", help="Checkpoints por candidato para reanudar round 2 (gitignored)")
     parser.add_argument("--fold", type=int, choices=[202609, 202610, 202611])
     args = parser.parse_args()
     if args.command == "final-fit":
@@ -40,6 +44,13 @@ def main() -> None:
             experiment_root=Path(args.experiment_root) / "final", seed=args.seed,
             compare_with=args.compare_with,
         )
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+    if args.command == "hypotheses" and args.round == 2:
+        from datafest.round2 import run_round2
+        result = run_round2(args.data_dir, Path(args.experiment_root) / "hypotheses", seed=args.seed,
+                            replicates=args.replicates, trials_lgbm=args.trials_lgbm,
+                            trials_catboost=args.trials_catboost, cache_dir=args.cache_dir)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return
     if args.command == "hypotheses":
