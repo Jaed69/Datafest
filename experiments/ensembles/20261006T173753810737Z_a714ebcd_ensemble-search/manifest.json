@@ -1,0 +1,257 @@
+{
+  "code": [
+    {
+      "bytes": 28670,
+      "path": "src\\datafest\\ensemble_search.py",
+      "sha256": "d7b084642575a2132b102b70a5bec53e7cbb4bc1c0bd29d787cb84156cc13c8b"
+    },
+    {
+      "bytes": 23215,
+      "path": "src\\datafest\\hypotheses.py",
+      "sha256": "ec417ca4b5f898dbbdc930e98e2fa32bb5f14ee63f22353d2b265418dfa0981c"
+    },
+    {
+      "bytes": 12941,
+      "path": "src\\datafest\\diagnostics.py",
+      "sha256": "4688c4ac2f6bd72a704baa697aa922ae089011fe69ed5803d4c6524178b244f3"
+    },
+    {
+      "bytes": 2566,
+      "path": "src\\datafest\\metrics.py",
+      "sha256": "ce49b8b340932b2f4b1f7156e866663a509405ab368c1ef805cbb7bc716d6d6a"
+    },
+    {
+      "bytes": 4529,
+      "path": "src\\datafest\\lineage.py",
+      "sha256": "b7aee1152b7fa0027442fba5dce4589a787cd9b201cb2e4f95a80d53a35ebe60"
+    },
+    {
+      "bytes": 917,
+      "path": "pyproject.toml",
+      "sha256": "854538d0467d66a1f6e22acee3a5e9e5d17b47aae2096414d68abc1a7cbe1d18"
+    },
+    {
+      "bytes": 113761,
+      "path": "uv.lock",
+      "sha256": "c737d308b8d6162ef6ae383445ef48d6e4f7f2c7a68ece69cd1e21e2a376fc9c"
+    }
+  ],
+  "created_at_utc": "2026-10-06T17:39:08.880974+00:00",
+  "environment": {
+    "datafest": "0.1.0",
+    "python": "3.12.13"
+  },
+  "extra": {},
+  "feature_variant": "rank-blend-candidates",
+  "features": [],
+  "inputs": [
+    {
+      "bytes": 19060040,
+      "path": "data\\train.csv",
+      "sha256": "a714ebcd8587b2cc0f75ae642aa3e4ca5904eea02e249d969a06e8e7380e0567"
+    },
+    {
+      "bytes": 116729,
+      "path": "data\\sample_submission.csv",
+      "sha256": "d9e3caf0d5f5cde6fec0a146b4fc69abf98d703148a115ebf2631a61225f0fc5"
+    },
+    {
+      "bytes": 5769582,
+      "path": "experiments\\hypotheses\\20261006T100749205414Z_a714ebcd\\oof_predictions.csv",
+      "sha256": "4ac3cecc789215889c4c0c1e948595661f376e655699a87723e07ea51e2e945d"
+    },
+    {
+      "bytes": 9891027,
+      "path": "experiments\\hypotheses\\20261006T143722753859Z_a714ebcd_r2\\oof_predictions.csv",
+      "sha256": "a062bf5a479283c2cad7593fec004d39b9fbf1b2892deb73be269ec54157d77e"
+    },
+    {
+      "bytes": 1027234,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\member_predictions.csv",
+      "sha256": "051a9c87bcee59dd4ecab8872708e1985f2e2db5b38c13b1ded97eb6940940d9"
+    },
+    {
+      "bytes": 262716,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\submission.csv",
+      "sha256": "918d3de5b95a89eb3e3bcfa58a3099ffbb74702e3fbd62649fcaee3c3ec29495"
+    },
+    {
+      "bytes": 1645584,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\neural\\oof_neural.csv",
+      "sha256": "a43e7920a17ebdcd1876aa488d1b3f9a5d298194f8f276f7213a0bd8355b353b"
+    },
+    {
+      "bytes": 282631,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\neural\\test_neural.csv",
+      "sha256": "62287ceb01b1eaa754992a231c5863ba14b9296aa27c21d0d64fade0cf84b8ee"
+    },
+    {
+      "bytes": 9589,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\neural\\results.md",
+      "sha256": "f19b382e5ab05e5fefd339c54c63ea3d86d5660a00c106eefe0f2b82cd7ba9f2"
+    }
+  ],
+  "metrics": {
+    "december": {
+      "top2_buildable": [
+        "B0+N1",
+        "0.5*rank(H4b2)+0.5*rank(N1)"
+      ]
+    },
+    "mean_gini": {
+      "0.5*rank(H4b2)+0.5*rank(N1)": 0.25455058327580143,
+      "B0+N1": 0.25466307935315863,
+      "BESTOF_LOMO": 0.25224969970344135,
+      "E1": 0.25348643043737984,
+      "E1+N1": 0.2548157981880974,
+      "H4b2": 0.2524506308082605,
+      "H4b2+N1": 0.25431775497312775,
+      "STACK_LOMO": 0.2504726745713041
+    }
+  },
+  "model": {
+    "bytes": 716,
+    "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\stack_weights.json",
+    "sha256": "e86bb5e23462caddd8a321493decd72b87160fb8bf88c2461b3b12f807524aa7"
+  },
+  "model_name": "ensemble-search",
+  "outputs": [
+    {
+      "bytes": 5508,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\results.md",
+      "sha256": "c7c6fde0680d7ae149388dffee6b2a9b01da84e0f243ae786fc5fd2d1a0d581b"
+    },
+    {
+      "bytes": 3218,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\summary.csv",
+      "sha256": "3eaac1e2cbd8c7c826b5ae35522070587cb2f0808fb136b99ef3b1705f5541c8"
+    },
+    {
+      "bytes": 2527642,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\joined_oof.csv",
+      "sha256": "720832e4bbc1cecb063dfea6b385c7f128ed3aa0e3f246ff5b0a78b8ad8f6e8d"
+    },
+    {
+      "bytes": 905,
+      "path": "experiments\\ensembles\\20261006T173753810737Z_a714ebcd_ensemble-search\\december_spearman.json",
+      "sha256": "6531768a7b32f28b8d255755c3501b80f1d89b3d60363645261aaf8ced7aa7ca"
+    }
+  ],
+  "parameters": {
+    "baseline": "H4b2",
+    "candidates": {
+      "0.5*rank(H4b2)+0.5*rank(N1)": [
+        [
+          0.5,
+          [
+            "B0",
+            "H1b"
+          ]
+        ],
+        [
+          0.5,
+          [
+            "N1"
+          ]
+        ]
+      ],
+      "B0+N1": [
+        [
+          1.0,
+          [
+            "B0"
+          ]
+        ],
+        [
+          1.0,
+          [
+            "N1"
+          ]
+        ]
+      ],
+      "E1": [
+        [
+          1.0,
+          [
+            "B0",
+            "catF1"
+          ]
+        ]
+      ],
+      "E1+N1": [
+        [
+          1.0,
+          [
+            "B0"
+          ]
+        ],
+        [
+          1.0,
+          [
+            "catF1"
+          ]
+        ],
+        [
+          1.0,
+          [
+            "N1"
+          ]
+        ]
+      ],
+      "H4b2": [
+        [
+          1.0,
+          [
+            "B0",
+            "H1b"
+          ]
+        ]
+      ],
+      "H4b2+N1": [
+        [
+          1.0,
+          [
+            "B0"
+          ]
+        ],
+        [
+          1.0,
+          [
+            "H1b"
+          ]
+        ],
+        [
+          1.0,
+          [
+            "N1"
+          ]
+        ]
+      ]
+    },
+    "grid_step": 0.1,
+    "holm_family": "all non-baseline rows (fixed candidates + LOMO procedures)",
+    "months": [
+      202609,
+      202610,
+      202611
+    ],
+    "replicates": 2000,
+    "seed": 42,
+    "stack_members": [
+      "B0",
+      "H1b",
+      "catF1",
+      "N1",
+      "xgb"
+    ]
+  },
+  "repository": {
+    "commit": "113607ea3f8cf51075ed99846e68991fe2915eee",
+    "dirty": true
+  },
+  "run_id": "20261006T173753810737Z_a714ebcd_ensemble-search",
+  "schema_version": 1,
+  "split": null,
+  "split_artifacts": [],
+  "validation_model": null
+}
