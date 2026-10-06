@@ -1,0 +1,196 @@
+{
+  "code": [
+    {
+      "bytes": 10888,
+      "path": "src\\datafest\\final_ensemble.py",
+      "sha256": "f8634d14c3377b1f5a37d06d0f8c4cfd580c9258411a937f60c9092a7539f64f"
+    },
+    {
+      "bytes": 7987,
+      "path": "src\\datafest\\final_fit.py",
+      "sha256": "88f471d54df269e5ab0fe054dd6f2c3d2c9e6749226def113b454bdb8e47071a"
+    },
+    {
+      "bytes": 22927,
+      "path": "src\\datafest\\hypotheses.py",
+      "sha256": "7b81af8446d9d4d1c024dcfc934b745ead62f157b7417724789b346ebe27b3f9"
+    },
+    {
+      "bytes": 17426,
+      "path": "src\\datafest\\ablation.py",
+      "sha256": "f74af414d56bec8d1f46c9893490564080ec7f3d9933c72b927be192bddc4431"
+    },
+    {
+      "bytes": 2595,
+      "path": "src\\datafest\\features.py",
+      "sha256": "a0c4b6b386e76b8ee4f9d79fc44c1b5849ddc2f7445b8a72f0f8c224cc0f86dd"
+    },
+    {
+      "bytes": 6569,
+      "path": "src\\datafest\\models.py",
+      "sha256": "ab8b0c3764049150aa4fa259093806a8b5183c9712570fda71749efe9fd2c9c4"
+    },
+    {
+      "bytes": 4379,
+      "path": "src\\datafest\\data.py",
+      "sha256": "e2074e7115984aa462d3840c5432eec1840c724f6f7ee7b6ca4967b53bbf112f"
+    },
+    {
+      "bytes": 4529,
+      "path": "src\\datafest\\lineage.py",
+      "sha256": "b7aee1152b7fa0027442fba5dce4589a787cd9b201cb2e4f95a80d53a35ebe60"
+    },
+    {
+      "bytes": 916,
+      "path": "pyproject.toml",
+      "sha256": "2b50ec1a789a69fd404bb3b97fd2046a426c858d9cb1d10250c61b3d6d821095"
+    },
+    {
+      "bytes": 105002,
+      "path": "uv.lock",
+      "sha256": "2e50caf8cbd0f4224d4b52d278a61e7a3812e0aacd87b0c090852222d90aa830"
+    }
+  ],
+  "created_at_utc": "2026-10-06T10:19:11.045341+00:00",
+  "environment": {
+    "datafest": "0.1.0",
+    "python": "3.12.13"
+  },
+  "extra": {},
+  "feature_variant": "D_absolute+A(rank_interaccion)",
+  "features": [],
+  "inputs": [
+    {
+      "bytes": 19060040,
+      "path": "data\\train.csv",
+      "sha256": "a714ebcd8587b2cc0f75ae642aa3e4ca5904eea02e249d969a06e8e7380e0567"
+    },
+    {
+      "bytes": 1698039,
+      "path": "data\\test.csv",
+      "sha256": "81197145e28d1602a0195d93487dc924ae438d8b0eed411cf56cac13d786126f"
+    },
+    {
+      "bytes": 116729,
+      "path": "data\\sample_submission.csv",
+      "sha256": "d9e3caf0d5f5cde6fec0a146b4fc69abf98d703148a115ebf2631a61225f0fc5"
+    }
+  ],
+  "metrics": {
+    "checks": {
+      "finite": true,
+      "in_unit_interval": true,
+      "n_new": 1839,
+      "n_other": 0,
+      "n_survivors": 8061,
+      "new_clients": {
+        "mean": 0.17399864727058115,
+        "p10": 0.10513857513775267,
+        "p50": 0.1518023462621148,
+        "p90": 0.26779108168288346,
+        "rows": 1839
+      },
+      "rows": 9900,
+      "spearman": {
+        "new_clients": 0.9603439424454582,
+        "other": "experiments/final/20261006T094413527919Z_a714ebcd_lightgbm_D_absolute/submission.csv",
+        "overall": 0.9627821973286776,
+        "survivors": 0.9632719311380519
+      },
+      "survivors": {
+        "mean": 0.14183660336557208,
+        "p10": 0.06280384444033159,
+        "p50": 0.14359876777143735,
+        "p90": 0.1983690684683142,
+        "rows": 8061
+      }
+    }
+  },
+  "model": {
+    "bytes": 204413,
+    "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\model_lightgbm.txt",
+    "sha256": "770a2f780fac8cbcc809bdf9fa9514726670160b229fefec0f6b4de2c7cb64ba"
+  },
+  "model_name": "ensemble-h4b2",
+  "outputs": [
+    {
+      "bytes": 262716,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\submission.csv",
+      "sha256": "918d3de5b95a89eb3e3bcfa58a3099ffbb74702e3fbd62649fcaee3c3ec29495"
+    },
+    {
+      "bytes": 1645,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\results.md",
+      "sha256": "d8a98fb3eff3fdf2bef3f8292f6dab6944302d6ea19e11e778a169fa4362e580"
+    },
+    {
+      "bytes": 1027234,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\member_predictions.csv",
+      "sha256": "051a9c87bcee59dd4ecab8872708e1985f2e2db5b38c13b1ded97eb6940940d9"
+    },
+    {
+      "bytes": 211744,
+      "path": "experiments\\final\\20261006T101910790713Z_a714ebcd_ensemble-h4b2\\model_catboost.cbm",
+      "sha256": "2d7ee6c7eb3b0fd906af97e11af6dbc1db3d52562ac42eb96ac06fc8ad51326b"
+    }
+  ],
+  "parameters": {
+    "blend": "equal-weight mean of December percentile ranks",
+    "early_stopping": false,
+    "hypotheses_run": "20261006T100749205414Z_a714ebcd (H4b2_rank_lgbm_catboost)",
+    "iterations": {
+      "catboost": 192,
+      "lightgbm": 58
+    },
+    "members": {
+      "catboost": {
+        "config": {
+          "depth": 6,
+          "l2_leaf_reg": 3.0,
+          "learning_rate": 0.05,
+          "name": "baseline"
+        },
+        "features": "A",
+        "transform": "rank_interaccion (per month; December-only for test)"
+      },
+      "lightgbm": {
+        "config": {
+          "learning_rate": 0.05,
+          "max_depth": -1,
+          "min_child_samples": 20,
+          "name": "baseline",
+          "num_leaves": 31,
+          "reg_lambda": 0.0
+        },
+        "features": "D_absolute"
+      }
+    },
+    "output_mapping": "quantile map onto sorted LightGBM December probabilities",
+    "score_months": [
+      202612
+    ],
+    "seed": 42,
+    "train_months": [
+      202601,
+      202602,
+      202603,
+      202604,
+      202605,
+      202606,
+      202607,
+      202608,
+      202609,
+      202610,
+      202611
+    ]
+  },
+  "repository": {
+    "commit": "bfc451d98e0e29c8c2363fbb616738620e57c059",
+    "dirty": true
+  },
+  "run_id": "20261006T101910790713Z_a714ebcd_ensemble-h4b2",
+  "schema_version": 1,
+  "split": null,
+  "split_artifacts": [],
+  "validation_model": null
+}
