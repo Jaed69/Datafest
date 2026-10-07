@@ -125,6 +125,7 @@ def fit_model(
             random_state=seed,
             n_jobs=4,
             verbosity=-1,
+            is_unbalance=True,
             **config,
         )
         fit_args: dict[str, Any] = {}
@@ -145,6 +146,7 @@ def fit_model(
             verbose=False,
             allow_writing_files=False,
             thread_count=4,
+            auto_class_weights="Balanced",
             **config,
         )
         fit_args = {"cat_features": categorical}

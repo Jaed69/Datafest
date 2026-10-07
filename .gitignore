@@ -8,3 +8,9 @@ experiments/*/runs/*/*model.*
 
 .env
 .env.*
+
+
+
+experiments/
+
+

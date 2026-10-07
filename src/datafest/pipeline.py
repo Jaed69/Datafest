@@ -403,6 +403,44 @@ def run_pipeline(
     train = pd.read_csv(train_path).reset_index(drop=True)
     test = pd.read_csv(test_path).reset_index(drop=True)
     train["objetivo"] = train["objetivo"].astype(int)
+
+    def generar_nuevas_variables(df):
+        import numpy as np
+        import pandas as pd
+        df = df.copy()
+        monto_deuda = df['ingresos'] * df['ratio_deuda_ingresos']
+        df['deuda_sobre_saldo'] = monto_deuda / (df['saldo_promedio'] + 1e-6)
+        df['ingreso_libre'] = df['ingresos'] - (df['ingresos'] * df['ratio_deuda_ingresos'])
+        df['ratio_ahorro_ingreso'] = df['saldo_promedio'] / (df['ingreso_libre'] + 1e-6)
+        df['cuenta_congelada'] = ((df['dias_ultima_transaccion'] > 60) & (df['dias_ultima_interaccion'] > 60)).astype(int)
+        df['perfil_digital'] = df['dispositivo_principal'] + "_" + np.where(df['activo_movil'], "App", "NoApp")
+        df['dependencia_web_sin_app'] = df['visitas_web_ultimos_90_dias'] * (~df['activo_movil']).astype(int)
+        df['delta_interaccion_transaccion'] = df['dias_ultima_interaccion'] - df['dias_ultima_transaccion']
+        
+        df['perfil_digital'] = pd.factorize(df['perfil_digital'])[0]
+        
+        return df
+    def agregar_features_avanzadas(df):
+        df = df.copy()
+        df['media_saldo_por_ocupacion'] = df.groupby('ocupacion')['saldo_promedio'].transform('mean')
+        df['ratio_saldo_vs_peer'] = df['saldo_promedio'] / (df['media_saldo_por_ocupacion'] + 1e-6)
+        
+        df['saldo_por_producto'] = df['saldo_promedio'] / df['numero_productos'].clip(lower=1)
+        df['meses_por_producto'] = df['antiguedad_cuenta_meses'] / df['numero_productos'].clip(lower=1)
+        
+        visitas_mensuales_estimadas = df['visitas_web_ultimos_90_dias'] / 3.0
+        df['ratio_visitas_vs_contacto'] = visitas_mensuales_estimadas / (df['dias_ultima_interaccion'] + 1)
+        
+        df['alerta_sobreendeudamiento'] = (df['ratio_deuda_ingresos'] > 0.5).astype(int)
+        
+        return df
+
+    train = generar_nuevas_variables(train)
+    test = generar_nuevas_variables(test)
+    
+    train = agregar_features_avanzadas(train)
+    test = agregar_features_avanzadas(test)
+
     report = validate_competition_data(train, test)
     sample = pd.read_csv(sample_path)
     validate_submission(sample, test)
@@ -750,3 +788,6 @@ def run_pipeline(
     }
     write_json(experiment_root / "index.json", _jsonable(index))
     return index
+
+if __name__ == "__main__":
+    run_pipeline()
