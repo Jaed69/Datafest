@@ -1,0 +1,827 @@
+{
+  "candidates": {
+    "B0_lgbm_D": {
+      "config_extra": {},
+      "description": "LightGBM D (history + month)",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "baseline",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "B0_lgbm_D",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "E1_rank_inner_selected": {
+      "config_extra": {},
+      "description": "rank-average B0_lgbm_D + cat_A_H1b+F1_calendar",
+      "features": "-",
+      "half_life": null,
+      "hypothesis": "E blend",
+      "iterations": null,
+      "model": "blend",
+      "monotone": false,
+      "name": "E1_rank_inner_selected",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "E2_rank_tuned": {
+      "config_extra": {},
+      "description": "rank-average tuned_B0_lgbm_D + tuned_cat_A_H1b+F1_calendar",
+      "features": "-",
+      "half_life": null,
+      "hypothesis": "E blend",
+      "iterations": null,
+      "model": "blend",
+      "monotone": false,
+      "name": "E2_rank_tuned",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "E3_rank_tuned_plus_xgb": {
+      "config_extra": {},
+      "description": "rank-average tuned_B0_lgbm_D + tuned_cat_A_H1b+F1_calendar + xgb_D",
+      "features": "-",
+      "half_life": null,
+      "hypothesis": "E blend",
+      "iterations": null,
+      "model": "blend",
+      "monotone": false,
+      "name": "E3_rank_tuned_plus_xgb",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H1b_catboost": {
+      "config_extra": {},
+      "description": "CatBoost A + within-month rank of dias_ultima_interaccion",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "baseline",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "H1b_catboost",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "H4b2_rank_lgbm_catboost": {
+      "config_extra": {},
+      "description": "rank-average B0_lgbm_D + H1b_catboost (round-1 champion)",
+      "features": "-",
+      "half_life": null,
+      "hypothesis": "baseline",
+      "iterations": null,
+      "model": "blend",
+      "monotone": false,
+      "name": "H4b2_rank_lgbm_catboost",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "cat_A_H1b+F1_calendar": {
+      "config_extra": {},
+      "description": "catboost on A + F1 calendar",
+      "features": "A+F1_calendar",
+      "half_life": null,
+      "hypothesis": "F1 calendar",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+F1_calendar",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "cat_A_H1b+F1g_calendar_flags": {
+      "config_extra": {},
+      "description": "catboost on A + F1 calendar+flags",
+      "features": "A+F1g_calendar_flags",
+      "half_life": null,
+      "hypothesis": "F1 calendar+flags",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+F1g_calendar_flags",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "cat_A_H1b+F2_ratios": {
+      "config_extra": {},
+      "description": "catboost on A + F2 ratios",
+      "features": "A+F2_ratios",
+      "half_life": null,
+      "hypothesis": "F2 ratios",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+F2_ratios",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "cat_A_H1b+F3_rank_all": {
+      "config_extra": {},
+      "description": "catboost on A + F3 ranks (add)",
+      "features": "A+F3_rank_all",
+      "half_life": null,
+      "hypothesis": "F3 ranks (add)",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+F3_rank_all",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "cat_A_H1b+F3r_rank_replace": {
+      "config_extra": {},
+      "description": "catboost on A + F3 ranks (replace)",
+      "features": "A+F3r_rank_replace",
+      "half_life": null,
+      "hypothesis": "F3 ranks (replace)",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+F3r_rank_replace",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "cat_A_H1b+F4_target_enc": {
+      "config_extra": {},
+      "description": "catboost on A + F4 causal target enc",
+      "features": "A+F4_target_enc",
+      "half_life": null,
+      "hypothesis": "F4 causal target enc",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+F4_target_enc",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "cat_A_H1b+F5_cohort": {
+      "config_extra": {},
+      "description": "catboost on A + F5 cohort/hazard",
+      "features": "A+F5_cohort",
+      "half_life": null,
+      "hypothesis": "F5 cohort/hazard",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+F5_cohort",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "cat_A_H1b+UNION": {
+      "config_extra": {},
+      "description": "catboost on A + union of inner-fold helpers ['F1g_calendar_flags']",
+      "features": "cat_A_H1b|A+UNION",
+      "half_life": null,
+      "hypothesis": "G3 union",
+      "iterations": null,
+      "model": "catboost",
+      "monotone": false,
+      "name": "cat_A_H1b+UNION",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "lgbm_D+F1_calendar": {
+      "config_extra": {},
+      "description": "lightgbm on D_absolute + F1 calendar",
+      "features": "D_absolute+F1_calendar",
+      "half_life": null,
+      "hypothesis": "F1 calendar",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "lgbm_D+F1_calendar",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "lgbm_D+F1g_calendar_flags": {
+      "config_extra": {},
+      "description": "lightgbm on D_absolute + F1 calendar+flags",
+      "features": "D_absolute+F1g_calendar_flags",
+      "half_life": null,
+      "hypothesis": "F1 calendar+flags",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "lgbm_D+F1g_calendar_flags",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "lgbm_D+F2_ratios": {
+      "config_extra": {},
+      "description": "lightgbm on D_absolute + F2 ratios",
+      "features": "D_absolute+F2_ratios",
+      "half_life": null,
+      "hypothesis": "F2 ratios",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "lgbm_D+F2_ratios",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "lgbm_D+F3_rank_all": {
+      "config_extra": {},
+      "description": "lightgbm on D_absolute + F3 ranks (add)",
+      "features": "D_absolute+F3_rank_all",
+      "half_life": null,
+      "hypothesis": "F3 ranks (add)",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "lgbm_D+F3_rank_all",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "lgbm_D+F3r_rank_replace": {
+      "config_extra": {},
+      "description": "lightgbm on D_absolute + F3 ranks (replace)",
+      "features": "D_absolute+F3r_rank_replace",
+      "half_life": null,
+      "hypothesis": "F3 ranks (replace)",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "lgbm_D+F3r_rank_replace",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "lgbm_D+F4_target_enc": {
+      "config_extra": {},
+      "description": "lightgbm on D_absolute + F4 causal target enc",
+      "features": "D_absolute+F4_target_enc",
+      "half_life": null,
+      "hypothesis": "F4 causal target enc",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "lgbm_D+F4_target_enc",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "lgbm_D+F5_cohort": {
+      "config_extra": {},
+      "description": "lightgbm on D_absolute + F5 cohort/hazard",
+      "features": "D_absolute+F5_cohort",
+      "half_life": null,
+      "hypothesis": "F5 cohort/hazard",
+      "iterations": null,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "lgbm_D+F5_cohort",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "tuned_B0_lgbm_D": {
+      "config_extra": {
+        "colsample_bytree": 0.6565390411921224,
+        "learning_rate": 0.012769876990392672,
+        "max_depth": 8,
+        "min_child_samples": 164,
+        "num_leaves": 29,
+        "reg_lambda": 1.4717066948494213,
+        "subsample": 0.6641231892897964,
+        "subsample_freq": 1
+      },
+      "description": "B0_lgbm_D with Optuna-tuned config (60 trials, inner folds <=Aug)",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "G2 optuna",
+      "iterations": 50,
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "tuned_B0_lgbm_D",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "tuned_H1b_catboost": {
+      "config_extra": {
+        "depth": 4,
+        "l2_leaf_reg": 19.539952831089575,
+        "learning_rate": 0.05362225400869414,
+        "random_strength": 0.290927818546996
+      },
+      "description": "H1b_catboost with Optuna-tuned config (40 trials, inner folds <=Aug)",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "G2 optuna",
+      "iterations": 308,
+      "model": "catboost",
+      "monotone": false,
+      "name": "tuned_H1b_catboost",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "tuned_cat_A_H1b+F1_calendar": {
+      "config_extra": {
+        "depth": 4,
+        "l2_leaf_reg": 15.963092968590562,
+        "learning_rate": 0.04061197804311964,
+        "random_strength": 0.5870442813379326
+      },
+      "description": "cat_A_H1b+F1_calendar with Optuna-tuned config (40 trials, inner folds <=Aug)",
+      "features": "A+F1_calendar",
+      "half_life": null,
+      "hypothesis": "G2 optuna",
+      "iterations": 398,
+      "model": "catboost",
+      "monotone": false,
+      "name": "tuned_cat_A_H1b+F1_calendar",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "xgb_D": {
+      "config_extra": {},
+      "description": "XGBoost hist on feature set D",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "xgb_D+F1_calendar": {
+      "config_extra": {},
+      "description": "xgboost on D_absolute + F1 calendar",
+      "features": "D_absolute+F1_calendar",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D+F1_calendar",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "xgb_D+F1g_calendar_flags": {
+      "config_extra": {},
+      "description": "xgboost on D_absolute + F1 calendar+flags",
+      "features": "D_absolute+F1g_calendar_flags",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D+F1g_calendar_flags",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "xgb_D+F2_ratios": {
+      "config_extra": {},
+      "description": "xgboost on D_absolute + F2 ratios",
+      "features": "D_absolute+F2_ratios",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D+F2_ratios",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "xgb_D+F3_rank_all": {
+      "config_extra": {},
+      "description": "xgboost on D_absolute + F3 ranks (add)",
+      "features": "D_absolute+F3_rank_all",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D+F3_rank_all",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "xgb_D+F3r_rank_replace": {
+      "config_extra": {},
+      "description": "xgboost on D_absolute + F3 ranks (replace)",
+      "features": "D_absolute+F3r_rank_replace",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D+F3r_rank_replace",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "xgb_D+F4_target_enc": {
+      "config_extra": {},
+      "description": "xgboost on D_absolute + F4 causal target enc",
+      "features": "D_absolute+F4_target_enc",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D+F4_target_enc",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "xgb_D+F5_cohort": {
+      "config_extra": {},
+      "description": "xgboost on D_absolute + F5 cohort/hazard",
+      "features": "D_absolute+F5_cohort",
+      "half_life": null,
+      "hypothesis": "G1 xgboost",
+      "iterations": 100,
+      "model": "xgboost",
+      "monotone": false,
+      "name": "xgb_D+F5_cohort",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    }
+  },
+  "code": [
+    {
+      "bytes": 28744,
+      "path": "src\\datafest\\round2.py",
+      "sha256": "780461fb862c31ef4fccc4feb6baa81e0f837d7b77be36104521657f6aca647f"
+    },
+    {
+      "bytes": 7970,
+      "path": "src\\datafest\\round2_features.py",
+      "sha256": "8a7f6d60cb038f4c5577e5e0f31331f1033155d030b520c944eb181678a2350b"
+    },
+    {
+      "bytes": 4416,
+      "path": "src\\datafest\\calendar_features.py",
+      "sha256": "c402f5841462d34f3217198ffd3b41d476b30f2fb22584ca8550b9f0ec8c91a6"
+    },
+    {
+      "bytes": 23215,
+      "path": "src\\datafest\\hypotheses.py",
+      "sha256": "ec417ca4b5f898dbbdc930e98e2fa32bb5f14ee63f22353d2b265418dfa0981c"
+    },
+    {
+      "bytes": 8274,
+      "path": "src\\datafest\\models.py",
+      "sha256": "c0373b1c6ee2d5788d31281677218f452654b87f031c02ebc1fa6d5f98e7b1d4"
+    },
+    {
+      "bytes": 17426,
+      "path": "src\\datafest\\ablation.py",
+      "sha256": "f74af414d56bec8d1f46c9893490564080ec7f3d9933c72b927be192bddc4431"
+    },
+    {
+      "bytes": 2595,
+      "path": "src\\datafest\\features.py",
+      "sha256": "a0c4b6b386e76b8ee4f9d79fc44c1b5849ddc2f7445b8a72f0f8c224cc0f86dd"
+    },
+    {
+      "bytes": 2566,
+      "path": "src\\datafest\\metrics.py",
+      "sha256": "ce49b8b340932b2f4b1f7156e866663a509405ab368c1ef805cbb7bc716d6d6a"
+    },
+    {
+      "bytes": 7987,
+      "path": "src\\datafest\\final_fit.py",
+      "sha256": "88f471d54df269e5ab0fe054dd6f2c3d2c9e6749226def113b454bdb8e47071a"
+    },
+    {
+      "bytes": 4529,
+      "path": "src\\datafest\\lineage.py",
+      "sha256": "b7aee1152b7fa0027442fba5dce4589a787cd9b201cb2e4f95a80d53a35ebe60"
+    },
+    {
+      "bytes": 12941,
+      "path": "src\\datafest\\diagnostics.py",
+      "sha256": "4688c4ac2f6bd72a704baa697aa922ae089011fe69ed5803d4c6524178b244f3"
+    },
+    {
+      "bytes": 917,
+      "path": "pyproject.toml",
+      "sha256": "854538d0467d66a1f6e22acee3a5e9e5d17b47aae2096414d68abc1a7cbe1d18"
+    },
+    {
+      "bytes": 113761,
+      "path": "uv.lock",
+      "sha256": "c737d308b8d6162ef6ae383445ef48d6e4f7f2c7a68ece69cd1e21e2a376fc9c"
+    }
+  ],
+  "created_at_utc": "2026-10-06T14:37:24.062436+00:00",
+  "environment": {
+    "catboost": "1.2.8",
+    "datafest": "0.1.0",
+    "lightgbm": "4.6.0",
+    "optuna": "5.0.0",
+    "python": "3.12.13",
+    "xgboost": "3.4.1"
+  },
+  "inputs": [
+    {
+      "bytes": 19060040,
+      "path": "data\\train.csv",
+      "sha256": "a714ebcd8587b2cc0f75ae642aa3e4ca5904eea02e249d969a06e8e7380e0567"
+    },
+    {
+      "bytes": 1698039,
+      "path": "data\\test.csv",
+      "sha256": "81197145e28d1602a0195d93487dc924ae438d8b0eed411cf56cac13d786126f"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 14980,
+      "path": "experiments\\hypotheses\\20261006T143722753859Z_a714ebcd_r2\\summary.csv",
+      "sha256": "0f4e5d759e6101f5fa2b3f7a9418c6cfc655a4df36b1392f9a267f0b094900fd"
+    },
+    {
+      "bytes": 7147,
+      "path": "experiments\\hypotheses\\20261006T143722753859Z_a714ebcd_r2\\results.md",
+      "sha256": "e3ce18f998d5c26a22b625d1f3c2748af8f3cd61212cf806689dc4ed2e90f6d0"
+    },
+    {
+      "bytes": 9891027,
+      "path": "experiments\\hypotheses\\20261006T143722753859Z_a714ebcd_r2\\oof_predictions.csv",
+      "sha256": "a062bf5a479283c2cad7593fec004d39b9fbf1b2892deb73be269ec54157d77e"
+    },
+    {
+      "bytes": 6855,
+      "path": "experiments\\hypotheses\\20261006T143722753859Z_a714ebcd_r2\\optuna_tuned_B0_lgbm_D.csv",
+      "sha256": "1e06ccb24b555783c89ccfdcfbf681491881fd9ad88943a118ff788ad215d311"
+    },
+    {
+      "bytes": 3547,
+      "path": "experiments\\hypotheses\\20261006T143722753859Z_a714ebcd_r2\\optuna_tuned_H1b_catboost.csv",
+      "sha256": "71ead80c84131d44ce8f29eb57ac977f7829875affce9e5d6bfb96e0f22cefba"
+    },
+    {
+      "bytes": 3536,
+      "path": "experiments\\hypotheses\\20261006T143722753859Z_a714ebcd_r2\\optuna_tuned_cat_A_H1b+F1_calendar.csv",
+      "sha256": "06d847ff2fdd5c90f95ce773cd287586466e1f551efaa56cc426ace1498c5b50"
+    }
+  ],
+  "protocol": {
+    "b0_minus_reference_mean_gini": 0.0,
+    "bootstrap": {
+      "multiplicity": "Holm across all candidates, separately per baseline (B0, H4b2)",
+      "p_value": "two-sided centered, plus-one",
+      "resamples": 2000,
+      "seed": 42,
+      "unit": "id_cliente"
+    },
+    "holiday_source": "https://www.gob.pe/feriados (non-working bridge days not included)",
+    "holidays_2026": [
+      "2026-01-01",
+      "2026-04-02",
+      "2026-04-03",
+      "2026-05-01",
+      "2026-06-07",
+      "2026-06-29",
+      "2026-07-23",
+      "2026-07-28",
+      "2026-07-29",
+      "2026-08-06",
+      "2026-08-30",
+      "2026-10-08",
+      "2026-11-01",
+      "2026-12-08",
+      "2026-12-09",
+      "2026-12-25"
+    ],
+    "inner_cuts_selection": [
+      {
+        "train_through": 202604,
+        "valid_month": 202605
+      },
+      {
+        "train_through": 202605,
+        "valid_month": 202606
+      },
+      {
+        "train_through": 202606,
+        "valid_month": 202607
+      },
+      {
+        "train_through": 202607,
+        "valid_month": 202608
+      }
+    ],
+    "iterations_frozen": {
+      "catboost": 192,
+      "lightgbm": 58,
+      "xgboost": 100
+    },
+    "optuna": {
+      "sampler": "TPE",
+      "seed": 42,
+      "trials": {
+        "catboost": 40,
+        "lightgbm": 60
+      }
+    },
+    "optuna_cuts": [
+      {
+        "train_through": 202605,
+        "valid_month": 202606
+      },
+      {
+        "train_through": 202606,
+        "valid_month": 202607
+      },
+      {
+        "train_through": 202607,
+        "valid_month": 202608
+      }
+    ],
+    "rolling_cuts": [
+      {
+        "train_through": 202608,
+        "valid_month": 202609
+      },
+      {
+        "train_through": 202609,
+        "valid_month": 202610
+      },
+      {
+        "train_through": 202610,
+        "valid_month": 202611
+      }
+    ],
+    "selected_by_inner": {
+      "cat_A_H1b": "cat_A_H1b+F1_calendar",
+      "lgbm_D": "B0_lgbm_D",
+      "xgb_D": "xgb_D"
+    },
+    "selection_data": "inner folds with validation months <= 202608 only (feature-set pick, helper union, XGBoost iterations, Optuna objective)",
+    "tuned": {
+      "tuned_B0_lgbm_D": {
+        "base_objective_jun_aug": 0.2579244458930865,
+        "config": {
+          "colsample_bytree": 0.6565390411921224,
+          "learning_rate": 0.012769876990392672,
+          "max_depth": 8,
+          "min_child_samples": 164,
+          "num_leaves": 29,
+          "reg_lambda": 1.4717066948494213,
+          "subsample": 0.6641231892897964,
+          "subsample_freq": 1
+        },
+        "iterations": 50,
+        "objective_jun_aug": 0.2607358216715292,
+        "source": "B0_lgbm_D",
+        "trials": 60
+      },
+      "tuned_H1b_catboost": {
+        "base_objective_jun_aug": 0.25402660234736224,
+        "config": {
+          "depth": 4,
+          "l2_leaf_reg": 19.539952831089575,
+          "learning_rate": 0.05362225400869414,
+          "random_strength": 0.290927818546996
+        },
+        "iterations": 308,
+        "objective_jun_aug": 0.2602571825210597,
+        "source": "H1b_catboost",
+        "trials": 40
+      },
+      "tuned_cat_A_H1b+F1_calendar": {
+        "base_objective_jun_aug": 0.2549953948036979,
+        "config": {
+          "depth": 4,
+          "l2_leaf_reg": 15.963092968590562,
+          "learning_rate": 0.04061197804311964,
+          "random_strength": 0.5870442813379326
+        },
+        "iterations": 398,
+        "objective_jun_aug": 0.2614610667350878,
+        "source": "cat_A_H1b+F1_calendar",
+        "trials": 40
+      }
+    },
+    "union_families": {
+      "cat_A_H1b": [
+        "F1g_calendar_flags"
+      ],
+      "lgbm_D": [],
+      "xgb_D": []
+    },
+    "validation_months_used_for_search_or_early_stopping": false,
+    "xgboost": {
+      "config": {
+        "colsample_bytree": 0.8,
+        "learning_rate": 0.05,
+        "max_depth": 5,
+        "min_child_weight": 10.0,
+        "name": "baseline",
+        "reg_lambda": 5.0,
+        "subsample": 0.8
+      },
+      "device": "cuda",
+      "early_stopping_rounds": 50,
+      "inner_best_rounds": [
+        106,
+        4,
+        95,
+        216
+      ]
+    }
+  },
+  "repository": {
+    "commit": "cdfbf2e7e4cf92aa449020018df3f0a1710cd8be",
+    "dirty": true
+  },
+  "run_id": "20261006T143722753859Z_a714ebcd_r2",
+  "schema_version": 1
+}

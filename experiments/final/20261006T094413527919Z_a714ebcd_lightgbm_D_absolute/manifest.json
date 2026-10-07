@@ -1,0 +1,175 @@
+{
+  "code": [
+    {
+      "bytes": 7817,
+      "path": "src\\datafest\\final_fit.py",
+      "sha256": "510a7d908e708ae67de7b57a9b78242428280388458e4e03c9cb9a3d2fd0d11b"
+    },
+    {
+      "bytes": 17426,
+      "path": "src\\datafest\\ablation.py",
+      "sha256": "f74af414d56bec8d1f46c9893490564080ec7f3d9933c72b927be192bddc4431"
+    },
+    {
+      "bytes": 2595,
+      "path": "src\\datafest\\features.py",
+      "sha256": "a0c4b6b386e76b8ee4f9d79fc44c1b5849ddc2f7445b8a72f0f8c224cc0f86dd"
+    },
+    {
+      "bytes": 6306,
+      "path": "src\\datafest\\models.py",
+      "sha256": "b118dd72e98e6cd4415bcfd7be213b0f12c727d74e4c960da85ddcd35bd7b4fb"
+    },
+    {
+      "bytes": 4379,
+      "path": "src\\datafest\\data.py",
+      "sha256": "e2074e7115984aa462d3840c5432eec1840c724f6f7ee7b6ca4967b53bbf112f"
+    },
+    {
+      "bytes": 4529,
+      "path": "src\\datafest\\lineage.py",
+      "sha256": "b7aee1152b7fa0027442fba5dce4589a787cd9b201cb2e4f95a80d53a35ebe60"
+    },
+    {
+      "bytes": 916,
+      "path": "pyproject.toml",
+      "sha256": "2b50ec1a789a69fd404bb3b97fd2046a426c858d9cb1d10250c61b3d6d821095"
+    },
+    {
+      "bytes": 105002,
+      "path": "uv.lock",
+      "sha256": "2e50caf8cbd0f4224d4b52d278a61e7a3812e0aacd87b0c090852222d90aa830"
+    }
+  ],
+  "created_at_utc": "2026-10-06T09:44:13.610829+00:00",
+  "environment": {
+    "datafest": "0.1.0",
+    "python": "3.12.13"
+  },
+  "extra": {},
+  "feature_variant": "D_absolute",
+  "features": [],
+  "inputs": [
+    {
+      "bytes": 19060040,
+      "path": "data\\train.csv",
+      "sha256": "a714ebcd8587b2cc0f75ae642aa3e4ca5904eea02e249d969a06e8e7380e0567"
+    },
+    {
+      "bytes": 1698039,
+      "path": "data\\test.csv",
+      "sha256": "81197145e28d1602a0195d93487dc924ae438d8b0eed411cf56cac13d786126f"
+    },
+    {
+      "bytes": 116729,
+      "path": "data\\sample_submission.csv",
+      "sha256": "d9e3caf0d5f5cde6fec0a146b4fc69abf98d703148a115ebf2631a61225f0fc5"
+    }
+  ],
+  "metrics": {
+    "prediction_distribution": {
+      "max": 0.47826588159941,
+      "mean": 0.14781841706430823,
+      "min": 0.029288164860638302,
+      "quantiles": {
+        "0.01": 0.031695061057593746,
+        "0.05": 0.061737261645339846,
+        "0.25": 0.133042040696486,
+        "0.5": 0.14503870025477766,
+        "0.75": 0.1594436638857716,
+        "0.95": 0.2554194097274774,
+        "0.99": 0.3670896408067094
+      },
+      "rows": 9900,
+      "std": 0.06223833244536158
+    },
+    "spearman_vs_other": null
+  },
+  "model": {
+    "bytes": 204413,
+    "path": "experiments\\final\\20261006T094413527919Z_a714ebcd_lightgbm_D_absolute\\model.txt",
+    "sha256": "770a2f780fac8cbcc809bdf9fa9514726670160b229fefec0f6b4de2c7cb64ba"
+  },
+  "model_name": "lightgbm",
+  "outputs": [
+    {
+      "bytes": 262708,
+      "path": "experiments\\final\\20261006T094413527919Z_a714ebcd_lightgbm_D_absolute\\submission.csv",
+      "sha256": "b80b5aaafe88401cac5135ef4d4b77f65ba3eaef2787cc0b2d4b90b42b7d888d"
+    },
+    {
+      "bytes": 508,
+      "path": "experiments\\final\\20261006T094413527919Z_a714ebcd_lightgbm_D_absolute\\results.md",
+      "sha256": "8d078d7cd6b637207567d41f0bae923184d2f0e9c966e19808e868efb13e2710"
+    }
+  ],
+  "parameters": {
+    "config": {
+      "learning_rate": 0.05,
+      "max_depth": -1,
+      "min_child_samples": 20,
+      "name": "baseline",
+      "num_leaves": 31,
+      "reg_lambda": 0.0
+    },
+    "early_stopping": false,
+    "feature_columns": [
+      "mes",
+      "edad",
+      "ingresos",
+      "ratio_deuda_ingresos",
+      "antiguedad_cuenta_meses",
+      "numero_productos",
+      "saldo_promedio",
+      "dias_ultima_transaccion",
+      "ocupacion",
+      "region",
+      "canal_adquisicion",
+      "banda_riesgo",
+      "tiene_tarjeta_credito",
+      "activo_movil",
+      "es_nuevo_cliente",
+      "tiene_prestamo",
+      "antiguedad_direccion_meses",
+      "visitas_web_ultimos_90_dias",
+      "distancia_sucursal_km",
+      "dispositivo_principal",
+      "dia_preferido_pago",
+      "tiene_seguro",
+      "dias_ultima_interaccion",
+      "n_observaciones_previas",
+      "mes_primera_aparicion",
+      "meses_desde_entrada",
+      "meses_en_riesgo",
+      "cliente_recurrente"
+    ],
+    "iterations": 58,
+    "iterations_source": "frozen by rolling ablation; not rescaled",
+    "score_months": [
+      202612
+    ],
+    "seed": 42,
+    "train_months": [
+      202601,
+      202602,
+      202603,
+      202604,
+      202605,
+      202606,
+      202607,
+      202608,
+      202609,
+      202610,
+      202611
+    ]
+  },
+  "repository": {
+    "commit": "27e4f3ce2906f23c97eed4dc90dc797a9dce732c",
+    "dirty": true
+  },
+  "run_id": "20261006T094413527919Z_a714ebcd_lightgbm_D_absolute",
+  "schema_version": 1,
+  "split": null,
+  "split_artifacts": [],
+  "validation_model": null
+}

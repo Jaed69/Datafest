@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from catboost import CatBoostClassifier
 from lightgbm import LGBMClassifier
+from xgboost import XGBClassifier
 
 from datafest.features import CATEGORICAL_COLUMNS
 
@@ -28,7 +29,25 @@ MODEL_CONFIGS: dict[str, list[dict[str, Any]]] = {
         {"name": "deep", "depth": 8, "learning_rate": 0.05, "l2_leaf_reg": 5.0},
         {"name": "fast", "depth": 6, "learning_rate": 0.1, "l2_leaf_reg": 8.0},
     ],
+    "xgboost": [
+        {"name": "baseline", "max_depth": 5, "learning_rate": 0.05, "min_child_weight": 10.0, "reg_lambda": 5.0,
+         "subsample": 0.8, "colsample_bytree": 0.8},
+    ],
 }
+_XGBOOST_DEVICE: str | None = None
+
+
+def xgboost_device() -> str:
+    """``cuda`` when XGBoost can train on the GPU in this environment, else ``cpu`` (probed once)."""
+    global _XGBOOST_DEVICE
+    if _XGBOOST_DEVICE is None:
+        try:
+            probe = XGBClassifier(n_estimators=1, tree_method="hist", device="cuda", verbosity=0)
+            probe.fit(np.random.default_rng(0).random((64, 2)), np.arange(64) % 2)
+            _XGBOOST_DEVICE = "cuda"
+        except Exception:  # noqa: BLE001 - any CUDA/driver failure means CPU
+            _XGBOOST_DEVICE = "cpu"
+    return _XGBOOST_DEVICE
 
 
 @dataclass
@@ -62,6 +81,9 @@ class FittedModel:
 
     @property
     def best_iteration(self) -> int:
+        if self.model_name == "xgboost":
+            best = getattr(self.estimator, "best_iteration", None)
+            return max(1, int(best) + 1) if best is not None else max(1, int(self.estimator.n_estimators))
         value = getattr(self.estimator, "best_iteration_", None)
         if value is None or int(value) <= 0:
             value = getattr(self.estimator, "tree_count_", None)
@@ -96,6 +118,7 @@ def fit_model(
     seed: int = SEED,
     iterations: int = MAX_ROUNDS,
     early_stopping_rounds: int | None = EARLY_STOPPING_ROUNDS,
+    sample_weight=None,
 ) -> FittedModel:
     if model_name not in MODEL_CONFIGS:
         raise ValueError(f"Modelo desconocido: {model_name}")
@@ -128,6 +151,8 @@ def fit_model(
             **config,
         )
         fit_args: dict[str, Any] = {}
+        if sample_weight is not None:
+            fit_args["sample_weight"] = np.asarray(sample_weight, dtype=float)
         if eval_set:
             fit_args["eval_set"] = eval_set
             fit_args["eval_metric"] = "auc"
@@ -136,7 +161,28 @@ def fit_model(
                     lgb.early_stopping(early_stopping_rounds, verbose=False)
                 ]
         estimator.fit(x_fit, y_fit, **fit_args)
+    elif model_name == "xgboost":
+        estimator = XGBClassifier(
+            objective="binary:logistic",
+            n_estimators=iterations,
+            random_state=seed,
+            n_jobs=4,
+            verbosity=0,
+            tree_method="hist",
+            device=xgboost_device(),
+            enable_categorical=True,
+            eval_metric="auc",
+            early_stopping_rounds=early_stopping_rounds if eval_set and early_stopping_rounds else None,
+            **config,
+        )
+        fit_args = {"verbose": False}
+        if sample_weight is not None:
+            fit_args["sample_weight"] = np.asarray(sample_weight, dtype=float)
+        if eval_set:
+            fit_args["eval_set"] = eval_set
+        estimator.fit(x_fit, y_fit, **fit_args)
     else:
+        thread_count = config.pop("thread_count", 4)
         estimator = CatBoostClassifier(
             iterations=iterations,
             loss_function="Logloss",
@@ -144,10 +190,12 @@ def fit_model(
             random_seed=seed,
             verbose=False,
             allow_writing_files=False,
-            thread_count=4,
+            thread_count=thread_count,
             **config,
         )
         fit_args = {"cat_features": categorical}
+        if sample_weight is not None:
+            fit_args["sample_weight"] = np.asarray(sample_weight, dtype=float)
         if eval_set:
             fit_args["eval_set"] = eval_set[0]
             if early_stopping_rounds:

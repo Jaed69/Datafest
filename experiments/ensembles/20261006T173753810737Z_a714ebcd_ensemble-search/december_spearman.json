@@ -1,0 +1,34 @@
+{
+  "buildable": [
+    "H4b2",
+    "H4b2+N1",
+    "B0+N1",
+    "0.5*rank(H4b2)+0.5*rank(N1)"
+  ],
+  "id_checks": {
+    "members_same_order_as_sample": true,
+    "neural_same_order_as_sample": true
+  },
+  "not_buildable": [
+    "E1",
+    "E1+N1"
+  ],
+  "pairwise_spearman": {
+    "B0+N1 vs 0.5*rank(H4b2)+0.5*rank(N1)": 0.9888765715948449,
+    "H4b2 vs 0.5*rank(H4b2)+0.5*rank(N1)": 0.9756594660502548,
+    "H4b2 vs B0+N1": 0.9693164155313149,
+    "H4b2 vs H4b2+N1": 0.9877306867811231,
+    "H4b2+N1 vs 0.5*rank(H4b2)+0.5*rank(N1)": 0.9978358087893249,
+    "H4b2+N1 vs B0+N1": 0.9879596305508207
+  },
+  "spearman_vs_current_submission": {
+    "0.5*rank(H4b2)+0.5*rank(N1)": 0.975658722656193,
+    "B0+N1": 0.9693150552622509,
+    "H4b2": 0.9999997554640014,
+    "H4b2+N1": 0.9877300253197412
+  },
+  "top2_buildable": [
+    "B0+N1",
+    "0.5*rank(H4b2)+0.5*rank(N1)"
+  ]
+}

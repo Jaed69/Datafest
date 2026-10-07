@@ -1,0 +1,428 @@
+{
+  "candidates": {
+    "B0_lgbm_D": {
+      "config_extra": {},
+      "description": "LightGBM D (history + month)",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "baseline",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "B0_lgbm_D",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "B1_catboost_A": {
+      "config_extra": {},
+      "description": "CatBoost A (base features)",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "baseline",
+      "model": "catboost",
+      "monotone": false,
+      "name": "B1_catboost_A",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H1a_catboost": {
+      "config_extra": {},
+      "description": "CatBoost A: drop dias_ultima_interaccion",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "H1 drift",
+      "model": "catboost",
+      "monotone": false,
+      "name": "H1a_catboost",
+      "seeds": [
+        42
+      ],
+      "transform": "drop_interaccion",
+      "window": null
+    },
+    "H1a_lgbm": {
+      "config_extra": {},
+      "description": "LightGBM D: drop dias_ultima_interaccion",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "H1 drift",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "H1a_lgbm",
+      "seeds": [
+        42
+      ],
+      "transform": "drop_interaccion",
+      "window": null
+    },
+    "H1b_catboost": {
+      "config_extra": {},
+      "description": "CatBoost A: dias_ultima_interaccion -> within-month percentile rank",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "H1 drift",
+      "model": "catboost",
+      "monotone": false,
+      "name": "H1b_catboost",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "H1b_lgbm": {
+      "config_extra": {},
+      "description": "LightGBM D: dias_ultima_interaccion -> within-month percentile rank",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "H1 drift",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "H1b_lgbm",
+      "seeds": [
+        42
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "H1c_catboost": {
+      "config_extra": {},
+      "description": "CatBoost A: drop both dias_ultima_* columns",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "H1 drift",
+      "model": "catboost",
+      "monotone": false,
+      "name": "H1c_catboost",
+      "seeds": [
+        42
+      ],
+      "transform": "drop_both",
+      "window": null
+    },
+    "H1c_lgbm": {
+      "config_extra": {},
+      "description": "LightGBM D: drop both dias_ultima_* columns",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "H1 drift",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "H1c_lgbm",
+      "seeds": [
+        42
+      ],
+      "transform": "drop_both",
+      "window": null
+    },
+    "H2a_B0_lgbm_D": {
+      "config_extra": {},
+      "description": "B0_lgbm_D + time-decay weights, half-life 3 months",
+      "features": "D_absolute",
+      "half_life": 3,
+      "hypothesis": "H2 recency",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "H2a_B0_lgbm_D",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H2b_B0_lgbm_D": {
+      "config_extra": {},
+      "description": "B0_lgbm_D + time-decay weights, half-life 6 months",
+      "features": "D_absolute",
+      "half_life": 6,
+      "hypothesis": "H2 recency",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "H2b_B0_lgbm_D",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H2c_B0_lgbm_D": {
+      "config_extra": {},
+      "description": "B0_lgbm_D + train window = last 6 months",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "H2 recency",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "H2c_B0_lgbm_D",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": 6
+    },
+    "H3a_logistic": {
+      "config_extra": {},
+      "description": "Logistic C=0.1, 10 quantile bins + one-hot (features A)",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "H3 robustness",
+      "model": "logistic",
+      "monotone": false,
+      "name": "H3a_logistic",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H3b_lgbm_monotone": {
+      "config_extra": {},
+      "description": "LightGBM D with monotone constraints (banda_riesgo_ord -, numero_productos +, dias_ultima_transaccion -)",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "H3 robustness",
+      "model": "lightgbm",
+      "monotone": true,
+      "name": "H3b_lgbm_monotone",
+      "seeds": [
+        42
+      ],
+      "transform": "ordinal_band",
+      "window": null
+    },
+    "H4a_bag5_catboost": {
+      "config_extra": {},
+      "description": "H1b_catboost, 5 seeds averaged",
+      "features": "A",
+      "half_life": null,
+      "hypothesis": "H4 ensembles",
+      "model": "catboost",
+      "monotone": false,
+      "name": "H4a_bag5_catboost",
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "transform": "rank_interaccion",
+      "window": null
+    },
+    "H4a_bag5_lgbm": {
+      "config_extra": {
+        "colsample_bytree": 0.8,
+        "subsample": 0.8,
+        "subsample_freq": 1
+      },
+      "description": "B0_lgbm_D, 5 seeds averaged (subsample 0.8 / colsample 0.8)",
+      "features": "D_absolute",
+      "half_life": null,
+      "hypothesis": "H4 ensembles",
+      "model": "lightgbm",
+      "monotone": false,
+      "name": "H4a_bag5_lgbm",
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H4b2_rank_lgbm_catboost": {
+      "config_extra": {},
+      "description": "rank-average B0_lgbm_D + H1b_catboost",
+      "features": "-",
+      "half_life": null,
+      "hypothesis": "H4 ensembles",
+      "model": "blend",
+      "monotone": false,
+      "name": "H4b2_rank_lgbm_catboost",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H4b2bag_rank_bagged": {
+      "config_extra": {},
+      "description": "rank-average of the two 5-seed bags",
+      "features": "-",
+      "half_life": null,
+      "hypothesis": "H4 ensembles",
+      "model": "blend",
+      "monotone": false,
+      "name": "H4b2bag_rank_bagged",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    },
+    "H4b3_rank_lgbm_catboost_logistic": {
+      "config_extra": {},
+      "description": "rank-average B0_lgbm_D + H1b_catboost + H3a_logistic",
+      "features": "-",
+      "half_life": null,
+      "hypothesis": "H4 ensembles",
+      "model": "blend",
+      "monotone": false,
+      "name": "H4b3_rank_lgbm_catboost_logistic",
+      "seeds": [
+        42
+      ],
+      "transform": "none",
+      "window": null
+    }
+  },
+  "code": [
+    {
+      "bytes": 22927,
+      "path": "src\\datafest\\hypotheses.py",
+      "sha256": "7b81af8446d9d4d1c024dcfc934b745ead62f157b7417724789b346ebe27b3f9"
+    },
+    {
+      "bytes": 6569,
+      "path": "src\\datafest\\models.py",
+      "sha256": "ab8b0c3764049150aa4fa259093806a8b5183c9712570fda71749efe9fd2c9c4"
+    },
+    {
+      "bytes": 17426,
+      "path": "src\\datafest\\ablation.py",
+      "sha256": "f74af414d56bec8d1f46c9893490564080ec7f3d9933c72b927be192bddc4431"
+    },
+    {
+      "bytes": 12941,
+      "path": "src\\datafest\\diagnostics.py",
+      "sha256": "4688c4ac2f6bd72a704baa697aa922ae089011fe69ed5803d4c6524178b244f3"
+    },
+    {
+      "bytes": 2595,
+      "path": "src\\datafest\\features.py",
+      "sha256": "a0c4b6b386e76b8ee4f9d79fc44c1b5849ddc2f7445b8a72f0f8c224cc0f86dd"
+    },
+    {
+      "bytes": 2566,
+      "path": "src\\datafest\\metrics.py",
+      "sha256": "ce49b8b340932b2f4b1f7156e866663a509405ab368c1ef805cbb7bc716d6d6a"
+    },
+    {
+      "bytes": 7987,
+      "path": "src\\datafest\\final_fit.py",
+      "sha256": "88f471d54df269e5ab0fe054dd6f2c3d2c9e6749226def113b454bdb8e47071a"
+    },
+    {
+      "bytes": 4529,
+      "path": "src\\datafest\\lineage.py",
+      "sha256": "b7aee1152b7fa0027442fba5dce4589a787cd9b201cb2e4f95a80d53a35ebe60"
+    }
+  ],
+  "created_at_utc": "2026-10-06T10:07:50.320047+00:00",
+  "environment": {
+    "datafest": "0.1.0",
+    "python": "3.12.13"
+  },
+  "inputs": [
+    {
+      "bytes": 19060040,
+      "path": "data\\train.csv",
+      "sha256": "a714ebcd8587b2cc0f75ae642aa3e4ca5904eea02e249d969a06e8e7380e0567"
+    },
+    {
+      "bytes": 1698039,
+      "path": "data\\test.csv",
+      "sha256": "81197145e28d1602a0195d93487dc924ae438d8b0eed411cf56cac13d786126f"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 8313,
+      "path": "experiments\\hypotheses\\20261006T100749205414Z_a714ebcd\\summary.csv",
+      "sha256": "ad556365c90f946f30fa14b716ec15b2accf13f21b401daea71130a089a81ab0"
+    },
+    {
+      "bytes": 4777,
+      "path": "experiments\\hypotheses\\20261006T100749205414Z_a714ebcd\\results.md",
+      "sha256": "4748274c85d5bea0cb19e7c255ec4cd59bf6ee54b77fad72ca7b3474d9433457"
+    },
+    {
+      "bytes": 5769582,
+      "path": "experiments\\hypotheses\\20261006T100749205414Z_a714ebcd\\oof_predictions.csv",
+      "sha256": "4ac3cecc789215889c4c0c1e948595661f376e655699a87723e07ea51e2e945d"
+    }
+  ],
+  "protocol": {
+    "b0_minus_reference_mean_gini": 0.0,
+    "bag_params": {
+      "colsample_bytree": 0.8,
+      "subsample": 0.8,
+      "subsample_freq": 1
+    },
+    "bag_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "bootstrap": {
+      "multiplicity": "Holm across all candidates vs B0",
+      "p_value": "two-sided centered, plus-one",
+      "resamples": 2000,
+      "seed": 42,
+      "unit": "id_cliente"
+    },
+    "h2_base": "B0_lgbm_D",
+    "h4_best_catboost": "H1b_catboost",
+    "h4_best_lgbm": "B0_lgbm_D",
+    "iterations": {
+      "catboost": 192,
+      "lightgbm": 58
+    },
+    "logistic": {
+      "C": 0.1,
+      "bins": 10
+    },
+    "monotone_direction_evidence": {
+      "banda_riesgo_ord": -0.10843866846488158,
+      "dias_ultima_transaccion": -0.05718376696291693,
+      "numero_productos": 0.07844128779260319
+    },
+    "monotone_directions": {
+      "banda_riesgo_ord": -1,
+      "dias_ultima_transaccion": -1,
+      "numero_productos": 1
+    },
+    "rolling_cuts": [
+      {
+        "train_through": 202608,
+        "valid_month": 202609
+      },
+      {
+        "train_through": 202609,
+        "valid_month": 202610
+      },
+      {
+        "train_through": 202610,
+        "valid_month": 202611
+      }
+    ],
+    "selection_note": "'best of' choices use mean rolling Gini on Sep-Nov; downstream comparisons are exploratory",
+    "structural_config": "MODEL_CONFIGS[model][0] (baseline)",
+    "tuning_or_early_stopping_on_validation": false
+  },
+  "repository": {
+    "commit": "dc30616e2b5074649f045802d84dbc1b039eb474",
+    "dirty": true
+  },
+  "run_id": "20261006T100749205414Z_a714ebcd",
+  "schema_version": 1
+}
